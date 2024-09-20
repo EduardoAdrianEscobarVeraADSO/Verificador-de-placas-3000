@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificacion de placas con multa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Placas</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+  <div class="video-container">
+    <video autoplay muted loop id="background-video">
+      <source src="video.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+  </div>
+
+  <div class="form-container">
+    <form id="placa-form">
+      <h1>Consulta de Placas</h1>
+      <p>Ingrese las placas separadas por comas (Ejemplo: ABC123, DEF456)</p>
+      <input type="text" id="placa-input" placeholder="Ingrese las placas" required>
+      <button type="submit">Consultar</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
