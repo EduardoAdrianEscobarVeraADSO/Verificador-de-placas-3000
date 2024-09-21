@@ -2,9 +2,13 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "express": "^4.21.0",
+    "fs": "^0.0.1-security",
     "node-fetch": "^3.3.2",
+    "path": "^0.12.7",
     "puppeteer": "^23.4.0",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "xlsx-style": "^0.8.13",
+    "xslx": "^1.0.0"
   },
   "name": "verificador-de-placas-3000",
   "version": "1.0.0",

@@ -29,5 +29,17 @@
         "valor_a_pagar": "$ 572.520  Detalle Pago"
       }
     ]
+  },
+  {
+    "placa": "ACD176",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SSD223",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "ACV123",
+    "mensaje": "No tiene comparendos ni multas"
   }
 ]

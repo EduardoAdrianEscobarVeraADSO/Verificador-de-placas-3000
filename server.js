@@ -2,30 +2,27 @@ const express = require('express');
 const puppeteer = require('puppeteer');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const path = require('path'); // Asegúrate de requerir 'path' para resolver rutas
-const XLSX = require('xlsx');  // Añadimos el paquete 'xlsx' para manejar Excel
+const path = require('path');
+const XLSX = require('xlsx');
 
 const app = express();
 const port = 3000;
 
-// Middleware para servir archivos estáticos (HTML, CSS, JS)
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Ruta para servir el archivo index.html en la raíz "/"
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Ruta para manejar la petición POST del formulario
 app.post('/consultar', async (req, res) => {
     const inputPlacas = req.body.placa;
     const placasArray = inputPlacas.split(',').map(placa => placa.trim());
-
+    
     const resultados = [];
     
     const browser = await puppeteer.launch({
-        headless: true,  // Para asegurarte de que esté en modo "sin cabeza"
+        headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']
     });
     
@@ -45,7 +42,7 @@ app.post('/consultar', async (req, res) => {
 
             const datosTabla = await page.evaluate(() => {
                 const tabla = document.querySelector('#multaTable');
-                if (!tabla) return 'Tabla no encontrada';
+                if (!tabla) return [];
 
                 const filas = Array.from(tabla.querySelectorAll('tbody tr'));
                 return filas.map(fila => {
@@ -55,7 +52,7 @@ app.post('/consultar', async (req, res) => {
                         notificacion: celdas[1] ? celdas[1].innerText.replace(/\n/g, ' ').trim() : '',
                         placa: celdas[2] ? celdas[2].innerText.replace(/\n/g, ' ').trim() : '',
                         secretaria: celdas[3] ? celdas[3].innerText.replace(/\n/g, ' ').trim() : '',
-                        infraccion: celdas[4] ? celdas[4].innerText.replace(/\n/g, ' '). trim() : '',
+                        infraccion: celdas[4] ? celdas[4].innerText.replace(/\n/g, ' ').trim() : '',
                         estado: celdas[5] ? celdas[5].innerText.replace(/\n/g, ' ').trim() : '',
                         valor: celdas[6] ? celdas[6].innerText.replace(/\n/g, ' ').trim() : '',
                         valor_a_pagar: celdas[7] ? celdas[7].innerText.replace(/\n/g, ' ').trim() : ''
@@ -83,9 +80,9 @@ app.post('/consultar', async (req, res) => {
                     acuerdos_de_pago: datosResumen.acuerdos_de_pago || 'No disponible',
                     total: datosResumen.total || 'No disponible'
                 },
-                tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : 'No hay multas registradas'
+                tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : []
             };
-
+            
             resultados.push(resultado);
 
         } catch (error) {
@@ -106,62 +103,100 @@ app.post('/consultar', async (req, res) => {
     res.json({ message: 'Consulta completada y resultados guardados', resultados });
 });
 
-// Nueva ruta para generar y descargar el archivo Excel
 app.get('/download-excel', (req, res) => {
     const filePath = path.join(__dirname, 'resultados_placas.json');
-    
-    // Leer el archivo JSON con los resultados
     const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    
-    // Convertir el JSON a una hoja de Excel
-    const workBook = XLSX.utils.book_new();
-    const workSheet = XLSX.utils.json_to_sheet(jsonData);
-    XLSX.utils.book_append_sheet(workBook, workSheet, 'Resultados');
-    
-    // Guardar el archivo Excel en el servidor
-    const excelFilePath = path.join(__dirname, 'resultados.xlsx');
-    XLSX.writeFile(workBook, excelFilePath);
-    
-    // Enviar el archivo Excel como respuesta para descarga
-    res.download(excelFilePath, 'resultados.xlsx', (err) => {
-        if (err) {
-            console.error('Error al enviar el archivo:', err);
+
+    const wb = XLSX.utils.book_new();
+
+    const summaryData = [];
+
+    jsonData.forEach(item => {
+        const baseRow = {
+            Placa: item.placa,
+            Comparendos: item.resumen?.comparendos || 'No disponible',
+            Multas: item.resumen?.multas || 'No disponible',
+            Acuerdos_de_pago: item.resumen?.acuerdos_de_pago || 'No disponible',
+            Total: item.resumen?.total || 'No disponible'
+        };
+
+        if (item.tabla_multa && item.tabla_multa.length > 0) {
+            item.tabla_multa.forEach(mult => {
+                summaryData.push({
+                    ...baseRow,
+                    Tipo: mult.tipo,
+                    Notificacion: mult.notificacion,
+                    Secretaria: mult.secretaria,
+                    Infraccion: mult.infraccion,
+                    Estado: mult.estado,
+                    Valor: mult.valor,
+                    Valor_a_pagar: mult.valor_a_pagar
+                });
+            });
+        } else {
+            summaryData.push({ ...baseRow, Tipo: 'N/A', Notificacion: 'N/A', Secretaria: 'N/A', Infraccion: 'N/A', Estado: 'N/A', Valor: 'N/A', Valor_a_pagar: 'N/A' });
         }
     });
-});
 
-// Iniciar el servidor
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
-});
+    const ws = XLSX.utils.json_to_sheet(summaryData);
 
-function validarFor(event) {
-    let input = document.getElementById("placa-input").value;
+    // Estilo para el encabezado
+    const headerCellStyle = {
+        font: { bold: true, sz: 14, color: { rgb: "FFFFFF" } },
+        fill: { fgColor: { rgb: "0070C0" } },
+        alignment: { horizontal: "center" },
+        border: {
+            top: { style: "thin", color: { rgb: "000000" } },
+            bottom: { style: "thin", color: { rgb: "000000" } },
+            left: { style: "thin", color: { rgb: "000000" } },
+            right: { style: "thin", color: { rgb: "000000" } },
+        }
+    };
 
-    if (input === "") {
-        alert("Los campos no pueden quedar vacíos");
-        event.preventDefault(); // Esto previene que se envíe el formulario si está vacío
-        return false;
+    // Estilo para el contenido
+    const cellStyle = {
+        border: {
+            top: { style: "thin", color: { rgb: "000000" } },
+            bottom: { style: "thin", color: { rgb: "000000" } },
+            left: { style: "thin", color: { rgb: "000000" } },
+            right: { style: "thin", color: { rgb: "000000" } },
+        }
+    };
+
+    // Aplicar estilos a las celdas del contenido
+    for (let row = 2; row <= summaryData.length + 1; row++) {
+        for (let col = 0; col < Object.keys(summaryData[0]).length; col++) {
+            const cellAddress = XLSX.utils.encode_cell({ r: row, c: col });
+            if (ws[cellAddress]) {
+                ws[cellAddress].s = cellStyle; // Aplicar estilo a la celda
+            }
+        }
     }
 
-    return true; // Permite el envío si el campo no está vacío
-}
-
-async function consultarPlacas(event) {
-    // Llamamos a validarFor para evitar el envío si es necesario
-    if (!validarFor(event)) {
-        return;
+    // Establecer estilos en las celdas de la cabecera
+    for (let col in ws) {
+        if (col[0] === '!') continue; // Ignorar metadatos
+        if (ws[col].v === 'Placa' || ws[col].v === 'Comparendos' || ws[col].v === 'Multas' || 
+            ws[col].v === 'Acuerdos_de_pago' || ws[col].v === 'Total' || ws[col].v === 'Tipo' ||
+            ws[col].v === 'Notificacion' || ws[col].v === 'Secretaria' || ws[col].v === 'Infraccion' ||
+            ws[col].v === 'Estado' || ws[col].v === 'Valor' || ws[col].v === 'Valor_a_pagar') {
+            ws[col].s = headerCellStyle; // Aplicar estilo a la cabecera
+        }
     }
 
-    const placaInput = document.getElementById('placa-input').value;
-    const response = await fetch('/consultar', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `placa=${encodeURIComponent(placaInput)}`
+    XLSX.utils.book_append_sheet(wb, ws, 'Resultados');
+
+    const excelFilePath = path.join(__dirname, 'resultados_placas.xlsx');
+    XLSX.writeFile(wb, excelFilePath);
+
+    res.download(excelFilePath, 'resultados_placas.xlsx', (err) => {
+        if (err) {
+            console.error(err);
+        }
+        fs.unlinkSync(excelFilePath);
     });
-    const result = await response.json();
-    console.log(result);
-    alert(result.message);
-}
+});
+
+app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+});
