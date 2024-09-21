@@ -1,28 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consulta de Placas</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Placas</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script>
+        function validarFor(event) {
+            let input = document.getElementById("placa-input").value;
+
+            if (input === "") {
+                alert("Los campos no pueden quedar vacíos");
+                event.preventDefault(); // Esto previene que se envíe el formulario si está vacío
+                return false;
+            }
+
+            return true; // Permite el envío si el campo no está vacío
+        }
+
+        async function consultarPlacas(event) {
+            // Llamamos a validarFor para evitar el envío si es necesario
+            if (!validarFor(event)) {
+                return;
+            }
+
+            const placaInput = document.getElementById('placa-input').value;
+            const response = await fetch('/consultar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `placa=${encodeURIComponent(placaInput)}`
+            });
+            const result = await response.json();
+            console.log(result);
+            alert(result.message);
+        }
+    </script>
+    <style>
+        /* Reset para eliminar márgenes y rellenos predeterminados */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            /* Color de fondo suave */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            /* Verde suave */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="video-container">
-    <video autoplay muted loop id="background-video">
-      <source src="video.mp4" type="video/mp4">
-      Tu navegador no soporta videos.
-    </video>
-  </div>
-
-  <div class="form-container">
-    <form id="placa-form">
-      <h1>Consulta de Placas</h1>
-      <p>Ingrese las placas separadas por comas (Ejemplo: ABC123, DEF456)</p>
-      <input type="text" id="placa-input" placeholder="Ingrese las placas" required>
-      <button type="submit">Consultar</button>
+    <h1>Consultar Placas</h1>
+    <form id="placa-form" onsubmit="event.preventDefault(); consultarPlacas(event);">
+        <label for="placa-input">Ingrese placas separadas por comas:</label>
+        <input type="text" id="placa-input" name="placa" placeholder="ABC123, XYZ987">
+        <button type="submit">Consultar</button>
     </form>
-  </div>
-
-  <script src="script.js"></script>
 </body>
+
 </html>

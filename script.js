@@ -4,8 +4,20 @@ const fs = require('fs');
 // Función de espera
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-(async () => {
-    const placas = ['SXT074', 'SXR069', 'XVX840', 'JUZ743', 'SXT180', 'DFG456', 'HIJ789', 'KLM321', 'NOP654', 'QRS987', 'TUV432', 'WXY765', 'ZAB098', 'CDE210'];
+// Captura del formulario en el HTML
+document.getElementById('placa-form').addEventListener('submit', async function (event) {
+    event.preventDefault(); // Evita que el formulario se envíe de forma normal
+
+    // Obtener el valor del input
+    const inputPlacas = document.getElementById('placa-input').value;
+
+    // Convertir la cadena de texto en un array separando por comas y eliminando espacios
+    const placasArray = inputPlacas.split(',').map(placa => placa.trim());
+
+    // Asegurarse de que cada placa tenga comillas simples
+    const placas = placasArray.map(placa => placa);
+
+    console.log("Placas ingresadas:", placas);
 
     const resultados = [];
 
@@ -85,7 +97,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
             console.log(`Datos procesados para la placa: ${placa}`);
 
             // Espera 5 segundos antes de cargar la siguiente placa
-            await delay(5000); 
+            await delay(5000);
 
         } catch (error) {
             console.error(`Error al procesar la placa ${placa}:`, error);
@@ -106,4 +118,4 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
     await browser.close();
 
     console.log('Datos de todas las placas organizados y guardados en resultados_placas.json');
-})();
+});
