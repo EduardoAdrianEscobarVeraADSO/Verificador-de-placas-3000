@@ -20,7 +20,14 @@
             <button type="submit">Consultar</button>
         </form>
         <button id="download-btn" onclick="descargarExcel()">Descargar Excel</button>
+        <button id="download-btnWord" onclick="descargarCartas()">Descargar Cartas</button>
+        <!-- Loader -->
+        <div id="loader" style="display: none;">
+            <img src="/assets/loader.gif" alt="Cargando...">
+            <p>Consultando información, por favor espere...</p>
+        </div>
     </main>
+    
 
     <!-- Sello de calidad en la esquina inferior derecha -->
     <div id="sello-calidad">
@@ -29,5 +36,6 @@
 
     <audio id="sonido-notificacion" src="/assets/notificacion.mp3" preload="auto"></audio>
     <script src="/main.js"></script>
+
 </body>
 </html>

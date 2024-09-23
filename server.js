@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
+const { Document, Packer, Paragraph, TextRun } = require('docx');
+
 
 const app = express();
 const port = 3000;
@@ -18,14 +20,14 @@ app.get('/', (req, res) => {
 app.post('/consultar', async (req, res) => {
     const inputPlacas = req.body.placa;
     const placasArray = inputPlacas.split(',').map(placa => placa.trim());
-    
+
     const resultados = [];
-    
+
     const browser = await puppeteer.launch({
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']
     });
-    
+
     for (const placa of placasArray) {
         const page = await browser.newPage();
         try {
@@ -82,7 +84,7 @@ app.post('/consultar', async (req, res) => {
                 },
                 tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : []
             };
-            
+
             resultados.push(resultado);
 
         } catch (error) {
@@ -140,49 +142,24 @@ app.get('/download-excel', (req, res) => {
 
     const ws = XLSX.utils.json_to_sheet(summaryData);
 
-    // Estilo para el encabezado
-    const headerCellStyle = {
-        font: { bold: true, sz: 14, color: { rgb: "FFFFFF" } },
-        fill: { fgColor: { rgb: "0070C0" } },
-        alignment: { horizontal: "center" },
-        border: {
-            top: { style: "thin", color: { rgb: "000000" } },
-            bottom: { style: "thin", color: { rgb: "000000" } },
-            left: { style: "thin", color: { rgb: "000000" } },
-            right: { style: "thin", color: { rgb: "000000" } },
-        }
-    };
+    // Ajustar el ancho de las columnas
+    ws['!cols'] = [
+        { wch: 15 }, // Ancho para la columna "Placa"
+        { wch: 20 }, // Ancho para "Comparendos"
+        { wch: 15 }, // Ancho para "Multas"
+        { wch: 20 }, // Ancho para "Acuerdos de pago"
+        { wch: 15 }, // Ancho para "Total"
+        { wch: 25 }, // Ancho para "Tipo"
+        { wch: 25 }, // Ancho para "Notificacion"
+        { wch: 25 }, // Ancho para "Secretaria"
+        { wch: 20 }, // Ancho para "Infraccion"
+        { wch: 15 }, // Ancho para "Estado"
+        { wch: 15 }, // Ancho para "Valor"
+        { wch: 20 }  // Ancho para "Valor a pagar"
+    ];
 
-    // Estilo para el contenido
-    const cellStyle = {
-        border: {
-            top: { style: "thin", color: { rgb: "000000" } },
-            bottom: { style: "thin", color: { rgb: "000000" } },
-            left: { style: "thin", color: { rgb: "000000" } },
-            right: { style: "thin", color: { rgb: "000000" } },
-        }
-    };
-
-    // Aplicar estilos a las celdas del contenido
-    for (let row = 2; row <= summaryData.length + 1; row++) {
-        for (let col = 0; col < Object.keys(summaryData[0]).length; col++) {
-            const cellAddress = XLSX.utils.encode_cell({ r: row, c: col });
-            if (ws[cellAddress]) {
-                ws[cellAddress].s = cellStyle; // Aplicar estilo a la celda
-            }
-        }
-    }
-
-    // Establecer estilos en las celdas de la cabecera
-    for (let col in ws) {
-        if (col[0] === '!') continue; // Ignorar metadatos
-        if (ws[col].v === 'Placa' || ws[col].v === 'Comparendos' || ws[col].v === 'Multas' || 
-            ws[col].v === 'Acuerdos_de_pago' || ws[col].v === 'Total' || ws[col].v === 'Tipo' ||
-            ws[col].v === 'Notificacion' || ws[col].v === 'Secretaria' || ws[col].v === 'Infraccion' ||
-            ws[col].v === 'Estado' || ws[col].v === 'Valor' || ws[col].v === 'Valor_a_pagar') {
-            ws[col].s = headerCellStyle; // Aplicar estilo a la cabecera
-        }
-    }
+    // Agregar el autofiltro a la primera fila
+    ws['!autofilter'] = { ref: "A1:L1" };
 
     XLSX.utils.book_append_sheet(wb, ws, 'Resultados');
 
@@ -196,6 +173,109 @@ app.get('/download-excel', (req, res) => {
         fs.unlinkSync(excelFilePath);
     });
 });
+
+const archiver = require('archiver');
+
+app.get('/descargar-cartas', async (req, res) => {
+    const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
+    const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
+
+    const zipFilePath = path.join(__dirname, 'cartas.zip');
+    const output = fs.createWriteStream(zipFilePath);
+    const archive = archiver('zip', { zlib: { level: 9 } });
+
+    output.on('close', () => {
+        res.download(zipFilePath, 'cartas.zip', (err) => {
+            if (err) {
+                console.error(err);
+            }
+            fs.unlinkSync(zipFilePath); // Elimina el archivo ZIP después de enviarlo
+        });
+    });
+
+    archive.pipe(output);
+
+    for (const item of placasConMultas) {
+        const doc = new Document({
+            creator: "Buscador de placas",
+            title: `Resultados de ${item.placa}`,
+            description: `Carta con la información de las multas de ${item.placa}`,
+            sections: [],
+        });
+
+        const texto = [];
+
+        const paragraphStyle = {
+            alignment: 'left',
+            spacing: {
+                after: 200, // Espaciado después del párrafo
+            },
+        };
+        
+        // Función para crear un nuevo párrafo con estilo
+        const createParagraph = (text, isBold = false) => {
+            return new Paragraph({
+                ...paragraphStyle,
+                children: [
+                    new TextRun({
+                        text,
+                        size: 28, // Tamaño de letra en puntos
+                        font: "Arial", // Tipo de letra
+                        color: "000000", // Color del texto
+                        bold: isBold,
+                    }),
+                ],
+            });
+        };
+
+        // Añadir los párrafos usando el estilo base
+        texto.push(createParagraph(`La placa ${item.placa} tiene ${item.tabla_multa.length} multas o comparendos.`));
+        texto.push(createParagraph(""));
+        texto.push(createParagraph(""));
+        
+        // Resumen
+        texto.push(createParagraph("Resumen:", true));
+        texto.push(createParagraph(""));
+        texto.push(createParagraph(""));
+        
+        // Datos del resumen
+        texto.push(createParagraph(`Comparendos: ${item.resumen.comparendos}`));
+        texto.push(createParagraph(`Multas: ${item.resumen.multas}`));
+        texto.push(createParagraph(`Acuerdos de pago: ${item.resumen.acuerdos_de_pago}`));
+        texto.push(createParagraph(`Total: ${item.resumen.total}`));
+        
+        // Más párrafos vacíos
+        texto.push(createParagraph(""));
+        texto.push(createParagraph(""));
+        
+        // Detalles de las multas
+        texto.push(createParagraph("Detalles de las multas:", true));
+        texto.push(createParagraph(""));
+        texto.push(createParagraph(""));
+        
+        item.tabla_multa.forEach(multa => {
+            texto.push(createParagraph(`Tipo: ${multa.tipo}`));
+            texto.push(createParagraph(`Notificación: ${multa.notificacion}`));
+            texto.push(createParagraph(`Infracción: ${multa.infraccion}`));
+            texto.push(createParagraph(`Estado: ${multa.estado}`));
+            texto.push(createParagraph(`Valor: $${multa.valor}`));
+            texto.push(createParagraph(`Valor a pagar: $${multa.valor_a_pagar}`));
+            texto.push(createParagraph("\n-----------------------------------"));
+        });
+
+        doc.addSection({
+            children: texto
+        });
+
+        const buffer = await Packer.toBuffer(doc);
+        archive.append(buffer, { name: `Carta_${item.placa}.docx` });
+    }
+
+    await archive.finalize();
+});
+
+
+
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);

@@ -100,6 +100,22 @@ button:hover {
     margin-top: 1rem;
     display: none;
 }
+#download-btnWord {
+    margin-top: 1rem;
+    display: none;
+}
+
+#loader {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+#loader img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
 
 /* Estilos para el sello de calidad en la esquina inferior derecha */
 #sello-calidad {
@@ -120,30 +136,7 @@ button:hover {
     opacity: 1;
 }
 
-/* Footer styling */
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    z-index: 2;
-}
 
-footer p {
-    margin: 0;
-    color: white;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
