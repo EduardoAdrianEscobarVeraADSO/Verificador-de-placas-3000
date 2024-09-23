@@ -5,137 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Placas</title>
     <link rel="stylesheet" href="/styles.css">
-    <script>
-        function validarFor(event) {
-            let input = document.getElementById("placa-input").value;
-
-            if (input === "") {
-                alert("Los campos no pueden quedar vacíos");
-                event.preventDefault();
-                return false;
-            }
-
-            return true;
-        }
-
-        async function consultarPlacas(event) {
-            if (!validarFor(event)) {
-                return;
-            }
-
-            const placaInput = document.getElementById('placa-input').value;
-            const response = await fetch('/consultar', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `placa=${encodeURIComponent(placaInput)}`
-            });
-            const result = await response.json();
-            console.log(result);
-            alert(result.message);
-
-            // Mostrar el botón de descarga después de la consulta
-            document.getElementById('download-btn').style.display = 'block';
-        }
-
-        function descargarExcel() {
-            window.location.href = '/download-excel';
-        }
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-
-        #background-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        h1 {
-            color: #ff7f50;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        form {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            z-index: 1;
-        }
-
-        label {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        input[type="text"] {
-            padding: 0.8rem;
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            transition: border-color 0.3s;
-        }
-
-        input[type="text"]:focus {
-            border-color: #ff7f50;
-            outline: none;
-        }
-
-        button {
-            background-color: #ff7f50;
-            color: white;
-            font-size: 1rem;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #ff5722;
-        }
-
-        #download-btn {
-            margin-top: 1rem;
-            display: none;
-        }
-    </style>
+    <link rel="icon" href="/assets/logo.png" type="image/png">
 </head>
 <body>
-    <video autoplay muted loop id="background-video">
-        <source src="video.mp4" type="video/mp4">
-    </video>
+    <header>
+        <img src="/assets/logofrima.png" alt="Logo" id="logo">
+    </header>
 
-    <form id="placa-form" onsubmit="event.preventDefault(); consultarPlacas(event);">
-        <h1>Consultar Placas</h1>
-        <label for="placa-input">Ingrese placas separadas por comas:</label>
-        <input type="text" id="placa-input" name="placa" placeholder="ABC123, XYZ987">
-        <button type="submit">Consultar</button>
-    </form>
-    <button id="download-btn" onclick="descargarExcel()">Descargar Excel</button>
+    <main>
+        <form id="placa-form" onsubmit="event.preventDefault(); consultarPlacas(event);">
+            <h1>Consultar Placas</h1>
+            <label for="placa-input">Ingrese placas separadas por comas:</label>
+            <input type="text" id="placa-input" name="placa" placeholder="ABC123, XYZ987">
+            <button type="submit">Consultar</button>
+        </form>
+        <button id="download-btn" onclick="descargarExcel()">Descargar Excel</button>
+    </main>
+
+    <!-- Sello de calidad en la esquina inferior derecha -->
+    <div id="sello-calidad">
+        <img src="/assets/logoSoft.png" alt="Sello de calidad">
+    </div>
+
+    <audio id="sonido-notificacion" src="/assets/notificacion.mp3" preload="auto"></audio>
+    <script src="/main.js"></script>
 </body>
 </html>

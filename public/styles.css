@@ -1,0 +1,161 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 0 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#logo {
+    width: 250px;
+    height: auto;
+    
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1;
+}
+
+h1 {
+    color: #ff7f50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+}
+
+input[type="text"] {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #ff7f50;
+    outline: none;
+}
+
+button {
+    background: linear-gradient(135deg, #ff7f50, #ff4500, #ff6347);
+    color: white;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.6s ease, filter 0.6s ease;
+    background-size: 200%;
+    background-position: left;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #888888, #666666, #444444);
+    filter: grayscale(100%);
+    background-position: right;
+}
+
+#download-btn {
+    margin-top: 1rem;
+    display: none;
+}
+
+/* Estilos para el sello de calidad en la esquina inferior derecha */
+#sello-calidad {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+}
+
+#sello-calidad img {
+    width: 150px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#sello-calidad img:hover {
+    opacity: 1;
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+
+    #logo {
+        width: 120px;
+    }
+
+    #sello-calidad img {
+        width: 100px;
+    }
+}
