@@ -1,4 +1,11 @@
 {
+  "name": "verificador-de-placas-3000",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "archiver": "^7.0.1",
     "body-parser": "^1.20.3",
@@ -12,12 +19,6 @@
     "xlsx-style": "^0.8.13",
     "xslx": "^1.0.0",
     "zip-a-folder": "^3.1.7"
-  },
-  "name": "verificador-de-placas-3000",
-  "version": "1.0.0",
-  "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

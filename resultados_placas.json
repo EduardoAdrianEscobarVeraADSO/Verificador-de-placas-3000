@@ -1,33 +1,196 @@
 [
   {
-    "placa": "SXT074",
+    "placa": "XVU692",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "TTR946",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "WFE956",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SXT094",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "TVB337",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SQM125",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "TTX353",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "XVU695",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "TTX102",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SXT315",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SRN969",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "GQW745",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "XVP786",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SSZ189",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "TTX144",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SNR650",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "TTW973",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "XVP067",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "TTX101",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SUE679",
     "resumen": {
       "comparendos": "2",
       "multas": "0",
       "acuerdos_de_pago": "0",
-      "total": "$ 1.145.148"
+      "total": "$ 1.169.144"
     },
     "tabla_multa": [
       {
-        "tipo": "05001000000042039050  Comparendo  Fecha imposición: 11/03/2024",
-        "notificacion": "26/04/2024",
-        "placa": "SXT074",
+        "tipo": "47053000000045460245  Comparendo  Fecha imposición: 30/08/2024",
+        "notificacion": "30/08/2024",
+        "placa": "SUE679",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "47189000000044922292  Comparendo  Fecha imposición: 10/09/2024",
+        "notificacion": "10/09/2024",
+        "placa": "SUE679",
+        "secretaria": "Cienaga",
+        "infraccion": "C29...  Fotodetección  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.518",
+        "valor_a_pagar": "$ 596.624  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa": "STJ073",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SXS177",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "TTW911",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 587.229"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "20011000000044258528  Comparendo  Fecha imposición: 16/04/2024",
+        "notificacion": "16/04/2024",
+        "placa": "TTW911",
+        "secretaria": "Aguachica",
+        "infraccion": "C29...  Fotodetección  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.498",
+        "valor_a_pagar": "$ 587.229  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa": "SUE924",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "XVW259",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 572.628"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "05001000000041914710  Comparendo  Fecha imposición: 04/01/2024",
+        "notificacion": "11/06/2024",
+        "placa": "XVW259",
         "secretaria": "Medellin",
         "infraccion": "C26...  Fotodetección  Proyección pago",
         "estado": "Pendiente  No tiene curso",
         "valor": "$ 572.628",
         "valor_a_pagar": "$ 572.628  Detalle Pago"
-      },
-      {
-        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
-        "notificacion": "01/09/2024",
-        "placa": "SXT074",
-        "secretaria": "Aracataca",
-        "infraccion": "C29...  Fotodetección",
-        "estado": "Pendiente  No tiene curso",
-        "valor": "$ 572.520",
-        "valor_a_pagar": "$ 572.520  Detalle Pago"
       }
     ]
+  },
+  {
+    "placa": "GQW093",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "TTX178",
+    "mensaje": "No tiene comparendos ni multas"
+  },
+  {
+    "placa": "SUE251",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 545.377"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "38-2011  Multa  Fecha resolución: 08/07/2011",
+        "notificacion": "No aplica",
+        "placa": "SUE251",
+        "secretaria": "Aratoca  VÍA NACIONAL",
+        "infraccion": "B01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 142.800  Interés $ 402.577",
+        "valor_a_pagar": "$ 545.377  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa": "TTW823",
+    "mensaje": "No tiene comparendos ni multas"
   }
 ]

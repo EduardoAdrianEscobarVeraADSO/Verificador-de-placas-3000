@@ -258,8 +258,8 @@ app.get('/descargar-cartas', async (req, res) => {
             texto.push(createParagraph(`Notificación: ${multa.notificacion}`));
             texto.push(createParagraph(`Infracción: ${multa.infraccion}`));
             texto.push(createParagraph(`Estado: ${multa.estado}`));
-            texto.push(createParagraph(`Valor: $${multa.valor}`));
-            texto.push(createParagraph(`Valor a pagar: $${multa.valor_a_pagar}`));
+            texto.push(createParagraph(`Valor: ${multa.valor}`));
+            texto.push(createParagraph(`Valor a pagar: ${multa.valor_a_pagar}`));
             texto.push(createParagraph("\n-----------------------------------"));
         });
 
