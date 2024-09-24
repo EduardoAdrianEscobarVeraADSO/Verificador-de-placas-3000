@@ -77,10 +77,10 @@ app.post('/consultar', async (req, res) => {
             const resultado = {
                 placa: placa,
                 resumen: {
-                    comparendos: datosResumen.comparendos || 'No tiene comparendos ni multas comparendos ni multas',
-                    multas: datosResumen.multas || 'No tiene comparendos ni multas comparendos ni multas',
-                    acuerdos_de_pago: datosResumen.acuerdos_de_pago || 'No tiene comparendos ni multas comparendos ni multas',
-                    total: datosResumen.total || 'No tiene comparendos ni multas comparendos ni multas'
+                    comparendos: datosResumen.comparendos || 'No tiene comparendos ni multas',
+                    multas: datosResumen.multas || 'No tiene comparendos ni multas',
+                    acuerdos_de_pago: datosResumen.acuerdos_de_pago || 'No tiene comparendos ni multas',
+                    total: datosResumen.total || 'No tiene comparendos ni multas comparendos'
                 },
                 tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : []
             };
@@ -142,23 +142,23 @@ app.get('/download-excel', (req, res) => {
 
     const ws = XLSX.utils.json_to_sheet(summaryData);
 
-    // Ajustar el ancho de las columnas
+    
     ws['!cols'] = [
-        { wch: 15 }, // Ancho para la columna "Placa"
-        { wch: 20 }, // Ancho para "Comparendos"
-        { wch: 15 }, // Ancho para "Multas"
-        { wch: 20 }, // Ancho para "Acuerdos de pago"
-        { wch: 15 }, // Ancho para "Total"
-        { wch: 25 }, // Ancho para "Tipo"
-        { wch: 25 }, // Ancho para "Notificacion"
-        { wch: 25 }, // Ancho para "Secretaria"
-        { wch: 20 }, // Ancho para "Infraccion"
-        { wch: 15 }, // Ancho para "Estado"
-        { wch: 15 }, // Ancho para "Valor"
-        { wch: 20 }  // Ancho para "Valor a pagar"
+        { wch: 15 }, 
+        { wch: 20 }, 
+        { wch: 15 }, 
+        { wch: 20 }, 
+        { wch: 15 }, 
+        { wch: 25 }, 
+        { wch: 25 }, 
+        { wch: 25 }, 
+        { wch: 20 }, 
+        { wch: 15 }, 
+        { wch: 15 }, 
+        { wch: 20 }  
     ];
 
-    // Agregar el autofiltro a la primera fila
+  
     ws['!autofilter'] = { ref: "A1:L1" };
 
     XLSX.utils.book_append_sheet(wb, ws, 'Resultados');
@@ -189,7 +189,7 @@ app.get('/descargar-cartas', async (req, res) => {
             if (err) {
                 console.error(err);
             }
-            fs.unlinkSync(zipFilePath); // Elimina el archivo ZIP después de enviarlo
+            fs.unlinkSync(zipFilePath); // Eliminar el archivo ZIP después de enviarlo
         });
     });
 
@@ -226,7 +226,7 @@ app.get('/descargar-cartas', async (req, res) => {
             });
         };
 
-        // Agregar encabezados y fecha
+        
         const texto = [];
         texto.push(createParagraph(`Floridablanca, ${dia}/${mes}/${anio}`));
        
@@ -301,8 +301,6 @@ app.get('/descargar-cartas', async (req, res) => {
 
     await archive.finalize();
 });
-
-
 
 
 app.listen(port, () => {
