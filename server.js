@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
-const { Document, Packer, Paragraph, TextRun } = require('docx');
+const { Document, Packer, Paragraph, Table, TableCell, TableRow, TextRun} = require('docx');
 
 
 const app = express();
@@ -39,7 +39,7 @@ app.post('/consultar', async (req, res) => {
 
             const textoResumen = await page.evaluate(() => {
                 const contenedor = document.querySelector('#resumenEstadoCuenta');
-                return contenedor ? contenedor.innerText : 'Contenedor no encontrado';
+                return contenedor ? contenedor.innerText : 'Contenedor No disponible';
             });
 
             const datosTabla = await page.evaluate(() => {
@@ -77,10 +77,10 @@ app.post('/consultar', async (req, res) => {
             const resultado = {
                 placa: placa,
                 resumen: {
-                    comparendos: datosResumen.comparendos || 'No disponible',
-                    multas: datosResumen.multas || 'No disponible',
-                    acuerdos_de_pago: datosResumen.acuerdos_de_pago || 'No disponible',
-                    total: datosResumen.total || 'No disponible'
+                    comparendos: datosResumen.comparendos || 'No tiene comparendos ni multas comparendos ni multas',
+                    multas: datosResumen.multas || 'No tiene comparendos ni multas comparendos ni multas',
+                    acuerdos_de_pago: datosResumen.acuerdos_de_pago || 'No tiene comparendos ni multas comparendos ni multas',
+                    total: datosResumen.total || 'No tiene comparendos ni multas comparendos ni multas'
                 },
                 tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : []
             };
@@ -91,7 +91,7 @@ app.post('/consultar', async (req, res) => {
             console.error(`Error al procesar la placa ${placa}:`, error);
             resultados.push({
                 placa: placa,
-                mensaje: 'No tiene comparendos ni multas'
+                mensaje: 'No tiene comparendos ni multas comparendos ni multas'
             });
         } finally {
             await page.close();
@@ -116,10 +116,10 @@ app.get('/download-excel', (req, res) => {
     jsonData.forEach(item => {
         const baseRow = {
             Placa: item.placa,
-            Comparendos: item.resumen?.comparendos || 'No disponible',
-            Multas: item.resumen?.multas || 'No disponible',
-            Acuerdos_de_pago: item.resumen?.acuerdos_de_pago || 'No disponible',
-            Total: item.resumen?.total || 'No disponible'
+            Comparendos: item.resumen?.comparendos || 'No tiene comparendos ni multas',
+            Multas: item.resumen?.multas || 'No tiene comparendos ni multas',
+            Acuerdos_de_pago: item.resumen?.acuerdos_de_pago || 'No tiene comparendos ni multas',
+            Total: item.resumen?.total || 'No tiene comparendos ni multas'
         };
 
         if (item.tabla_multa && item.tabla_multa.length > 0) {
@@ -196,6 +196,11 @@ app.get('/descargar-cartas', async (req, res) => {
     archive.pipe(output);
 
     for (const item of placasConMultas) {
+        const hoy = new Date();
+        const dia = hoy.getDate();
+        const mes = hoy.getMonth() + 1;
+        const anio = hoy.getFullYear();
+
         const doc = new Document({
             creator: "Buscador de placas",
             title: `Resultados de ${item.placa}`,
@@ -203,68 +208,91 @@ app.get('/descargar-cartas', async (req, res) => {
             sections: [],
         });
 
-        const texto = [];
-
-        const paragraphStyle = {
-            alignment: 'left',
-            spacing: {
-                after: 200, // Espaciado después del párrafo
-            },
-        };
-        
-        // Función para crear un nuevo párrafo con estilo
         const createParagraph = (text, isBold = false) => {
             return new Paragraph({
-                ...paragraphStyle,
+                alignment: 'left',
+                spacing: {
+                    after: 200,
+                },
                 children: [
                     new TextRun({
                         text,
-                        size: 28, // Tamaño de letra en puntos
-                        font: "Arial", // Tipo de letra
-                        color: "000000", // Color del texto
+                        size: 22,
+                        font: "Arial",
+                        color: "000000",
                         bold: isBold,
                     }),
                 ],
             });
         };
 
-        // Añadir los párrafos usando el estilo base
-        texto.push(createParagraph(`La placa ${item.placa} tiene ${item.tabla_multa.length} multas o comparendos.`));
+        // Agregar encabezados y fecha
+        const texto = [];
+        texto.push(createParagraph(`Floridablanca, ${dia}/${mes}/${anio}`));
+       
         texto.push(createParagraph(""));
+        texto.push(createParagraph(`Señor: propietario del vehiculo con placas ${item.placa}`));
+        texto.push(createParagraph(`Propietario del vehiculo con placas ${item.placa}`));
+        
+        texto.push(createParagraph(""));
+        texto.push(createParagraph("E.S.M"));
+        
+        texto.push(createParagraph(""));
+        texto.push(createParagraph("ASUNTO: Notificacion de comparendo", true));
         texto.push(createParagraph(""));
         
-        // Resumen
-        texto.push(createParagraph("Resumen:", true));
-        texto.push(createParagraph(""));
-        texto.push(createParagraph(""));
-        
-        // Datos del resumen
-        texto.push(createParagraph(`Comparendos: ${item.resumen.comparendos}`));
-        texto.push(createParagraph(`Multas: ${item.resumen.multas}`));
-        texto.push(createParagraph(`Acuerdos de pago: ${item.resumen.acuerdos_de_pago}`));
-        texto.push(createParagraph(`Total: ${item.resumen.total}`));
-        
-        // Más párrafos vacíos
-        texto.push(createParagraph(""));
-        texto.push(createParagraph(""));
-        
-        // Detalles de las multas
-        texto.push(createParagraph("Detalles de las multas:", true));
-        texto.push(createParagraph(""));
-        texto.push(createParagraph(""));
-        
-        item.tabla_multa.forEach(multa => {
-            texto.push(createParagraph(`Tipo: ${multa.tipo}`));
-            texto.push(createParagraph(`Notificación: ${multa.notificacion}`));
-            texto.push(createParagraph(`Infracción: ${multa.infraccion}`));
-            texto.push(createParagraph(`Estado: ${multa.estado}`));
-            texto.push(createParagraph(`Valor: ${multa.valor}`));
-            texto.push(createParagraph(`Valor a pagar: ${multa.valor_a_pagar}`));
-            texto.push(createParagraph("\n-----------------------------------"));
-        });
+        texto.push(createParagraph("Cordial Saludo."));
+        texto.push(createParagraph(`En la revisión realizada en la plataforma del SIMIT y del RUNT, se identificó y detectó que el conductor del vehiculo identificado con placas ${item.placa} presenta el (los) siguiente (s) comparendos:`));
 
+    
+        // Crear tabla para las multas
+        const table = new Table({
+            rows: [
+                new TableRow({
+                    children: [
+                        new TableCell({ children: [createParagraph("Tipo", true)] }),
+                        new TableCell({ children: [createParagraph("Notificación", true)] }),
+                        new TableCell({ children: [createParagraph("Infracción", true)] }),
+                        new TableCell({ children: [createParagraph("Estado", true)] }),
+                        new TableCell({ children: [createParagraph("Valor", true)] }),
+                        
+                    ],
+                }),
+                ...item.tabla_multa.map(multa => new TableRow({
+                    children: [
+                        new TableCell({ children: [createParagraph(multa.tipo)] }),
+                        new TableCell({ children: [createParagraph(multa.notificacion)] }),
+                        new TableCell({ children: [createParagraph(multa.infraccion.substring(0, 5))] }),
+                        new TableCell({ children: [createParagraph(multa.estado)] }),
+                        new TableCell({ children: [createParagraph(multa.valor.toString())] }),
+                        
+                    ],
+                })),
+                new TableRow({
+                    children: [
+                        new TableCell({ children: [createParagraph("Total")], columnSpan: 4 }), 
+                        new TableCell({ children: [createParagraph(item.resumen.total.toString())] })
+                    ],
+                }),
+            ],
+        });
+        
+        // Agregar la tabla al documento
         doc.addSection({
-            children: texto
+            children: [
+                ...texto,
+                table, 
+                createParagraph(""),
+                createParagraph("Es importante que tenga en cuenta que para Frimac S.A., es indispensable estar a paz y salvo con los requerimientos exigidos por el Ministerio de Transporte, Secretaría de Tránsito, entre otros Organismos de Tránsito. Por tanto, solicitamos su colaboración en la gestión correspondiente para el pago inmediato de los comparendos y/o multas y pendientes hacernos llegar el respectivo paz y salvo o realizar acuerdos de pago y enviar soporte de la evidencia del trámite realizado."),
+                createParagraph(""),
+                createParagraph("Atentamente, "),
+                createParagraph("GISVELL BERNAL", true),
+                createParagraph("Jefe Operación de Distribución Urbana Centro", true),
+                createParagraph("Recibido: "),
+                createParagraph(""),
+                createParagraph("Nombre: _______________________________"),
+                createParagraph("Firma: _______________________________"),
+            ],
         });
 
         const buffer = await Packer.toBuffer(doc);
