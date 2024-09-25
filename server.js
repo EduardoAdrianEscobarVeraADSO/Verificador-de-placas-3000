@@ -27,9 +27,11 @@ app.post('/consultar', async (req, res) => {
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']
     });
-
+    
+    
     for (const placa of placasArray) {
         const page = await browser.newPage();
+        
         try {
             const url = `https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`;
             await page.goto(url, { waitUntil: 'networkidle2' });
@@ -74,8 +76,13 @@ app.post('/consultar', async (req, res) => {
                 return acc;
             }, {});
 
+            const nombreConductor = await obtenerNombreConductor(placa);
+            const idconductor = await obtenerIdConductor(placa);
+
             const resultado = {
                 placa: placa,
+                nombre_conductor: nombreConductor,
+                Id_conductor: idconductor,  // Agregar nombre del conductor
                 resumen: {
                     comparendos: datosResumen.comparendos || 'No tiene comparendos ni multas',
                     multas: datosResumen.multas || 'No tiene comparendos ni multas',
@@ -105,6 +112,76 @@ app.post('/consultar', async (req, res) => {
     res.json({ message: 'Consulta completada y resultados guardados', resultados });
 });
 
+async function obtenerNombreConductor(placa) {
+    const endPoint = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewVehicle?";
+  
+    const consultaSQL = "$filter=(SocId%20eq%2053)%20and%20((VcnType%20eq%20%27TRUCK%27)%20%20%20%20%20%20%20%20%20or%20(VcnType%20eq%20%27HEAD%27)%20or%20(VcnType%20eq%20%27SET%27))%20and%20contains(Plate,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(DriverName,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(CarrierName,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(Trailer,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(TraPlate,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(OwnerName,%27" + 
+                        placa + 
+                        "%27)";
+  
+    const URL = endPoint + consultaSQL;
+  
+    try {
+      let response = await fetch(URL, { method: "GET" });
+      
+      if (!response.ok) {
+        throw new Error("Error en la petición: " + response.statusText);
+      }
+      
+      let responseData = await response.json();
+  
+      console.log(responseData.value[0].DriverName);
+      return responseData.value[0].DriverName; 
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  async function obtenerIdConductor(placa) {
+    const endPoint = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewVehicle?";
+  
+    const consultaSQL = "$filter=(SocId%20eq%2053)%20and%20((VcnType%20eq%20%27TRUCK%27)%20%20%20%20%20%20%20%20%20or%20(VcnType%20eq%20%27HEAD%27)%20or%20(VcnType%20eq%20%27SET%27))%20and%20contains(Plate,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(DriverName,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(CarrierName,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(Trailer,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(TraPlate,%27" + 
+                        placa + 
+                        "%27)%20or%20contains(OwnerName,%27" + 
+                        placa + 
+                        "%27)";
+  
+    const URL = endPoint + consultaSQL;
+  
+    try {
+      let response = await fetch(URL, { method: "GET" });
+      
+      if (!response.ok) {
+        throw new Error("Error en la petición: " + response.statusText);
+      }
+      
+      let responseData = await response.json();
+
+      return responseData.value[0].DriverCode; 
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+  
+
 app.get('/download-excel', (req, res) => {
     const filePath = path.join(__dirname, 'resultados_placas.json');
     const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
@@ -116,6 +193,8 @@ app.get('/download-excel', (req, res) => {
     jsonData.forEach(item => {
         const baseRow = {
             Placa: item.placa,
+            Nombre_Conductor: item.nombre_conductor || 'No disponible',
+            ID_conductor: item.Id_conductor,
             Comparendos: item.resumen?.comparendos || 'No tiene comparendos ni multas',
             Multas: item.resumen?.multas || 'No tiene comparendos ni multas',
             Acuerdos_de_pago: item.resumen?.acuerdos_de_pago || 'No tiene comparendos ni multas',
@@ -231,7 +310,8 @@ app.get('/descargar-cartas', async (req, res) => {
         texto.push(createParagraph(`Floridablanca, ${dia}/${mes}/${anio}`));
        
         texto.push(createParagraph(""));
-        texto.push(createParagraph(`Señor: propietario del vehiculo con placas ${item.placa}`));
+        texto.push(createParagraph(`Señor:`));
+        texto.push(createParagraph(`${item.nombre_conductor} identificado con el numero de identificacion ${item.Id_conductor}`));
         texto.push(createParagraph(`Propietario del vehiculo con placas ${item.placa}`));
         
         texto.push(createParagraph(""));
@@ -242,7 +322,7 @@ app.get('/descargar-cartas', async (req, res) => {
         texto.push(createParagraph(""));
         
         texto.push(createParagraph("Cordial Saludo."));
-        texto.push(createParagraph(`En la revisión realizada en la plataforma del SIMIT y del RUNT, se identificó y detectó que el conductor del vehiculo identificado con placas ${item.placa} presenta el (los) siguiente (s) comparendos:`));
+        texto.push(createParagraph(`En la revisión realizada en la plataforma del SIMIT y del RUNT, se identificó y detectó que el conductor ${item.nombre_conductor} del vehiculo identificado con placas ${item.placa} presenta el (los) siguiente (s) comparendos:`));
 
     
         // Crear tabla para las multas

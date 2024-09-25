@@ -1,127 +1,367 @@
 [
   {
-    "placa": "SXS146",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "XVL130",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "THY690",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "XVW610",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "XMB034",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "TTW650",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "SNR650",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "TTW792",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "SXR215",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "TTW819",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "XVU692",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "SMT515",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "SXT075",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "SRZ506",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "TTX362",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ576",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "TTW973",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ694",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "TTW882",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ695",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "TTW962",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ696",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "TTW957",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ714",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "SXT087",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ715",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "SQM125",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ716",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "SSZ380",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ717",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "TDU497",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ718",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "XVX837",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ719",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "XVX839",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ720",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "R37020",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ721",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "R81265",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "TTX242",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "SXS580",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "TTX243",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "VLH079",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "TTX244",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "R39625",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "TTX245",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "SXT091",
+    "placa": "TTX261",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "JUZ722",
+    "nombre_conductor": "JOSE DANIEL ACOSTA ESPINOSA",
+    "Id_conductor": "1013640923",
     "resumen": {
       "comparendos": "0",
       "multas": "1",
       "acuerdos_de_pago": "0",
-      "total": "$ 416.170"
+      "total": "$ 606.417"
     },
     "tabla_multa": [
       {
-        "tipo": "17787  Multa  Fecha coactivo: 04/09/2020",
+        "tipo": "905249  Multa  Fecha resolución: 03/05/2023",
         "notificacion": "No aplica",
-        "placa": "SXT091",
-        "secretaria": "Lebrija  VÍA NACIONAL",
-        "infraccion": "B02...",
-        "estado": "Cobro coactivo",
-        "valor": "$ 208.331  Interés $ 166.173",
-        "valor_a_pagar": "$ 416.170  Detalle Pago"
+        "placa": "JUZ722",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C29...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 522.900  Interés $ 83.517",
+        "valor_a_pagar": "$ 606.417  Detalle Pago"
       }
     ]
   },
   {
-    "placa": "TTW965",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ723",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "R48858",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "JUZ731",
+    "nombre_conductor": "EDISON ALBERTO ESTUPIÑAN",
+    "Id_conductor": "1058430710",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 572.520"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "17380000000046111463  Comparendo  Fecha imposición: 29/08/2024",
+        "notificacion": "13/09/2024",
+        "placa": "JUZ731",
+        "secretaria": "La Dorada",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa": "JUZ732",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "JUZ734",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "JUZ743",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVP341",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "JUZ735",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT180",
+    "nombre_conductor": "FERNEY PADILLA PULGARIN",
+    "Id_conductor": "1095933906",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 578.762"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "DOF2024007788  Multa  Fecha resolución: 22/08/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT180",
+        "secretaria": "La Dorada",
+        "infraccion": "C29...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.520  Interés $ 6.242",
+        "valor_a_pagar": "$ 578.762  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa": "TTV701",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW903",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW812",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTU835",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR068",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "LLP923",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR069",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW811",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW813",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "LLP138",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "LLP924",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR071",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR073",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXS202",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT075",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT076",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT077",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT078",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT083",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVU978",
+    "nombre_conductor": "PABLO ANTONIO TORO GARCIA",
+    "Id_conductor": "72193731",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 802.282"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "RO3039  Multa  Fecha resolución: 13/02/2017",
+        "notificacion": "No aplica",
+        "placa": "XVU978",
+        "secretaria": "Ibague",
+        "infraccion": "C14...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 344.730  Interés $ 457.552",
+        "valor_a_pagar": "$ 802.282  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa": "XVX749",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVX751",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVX840",
+    "nombre_conductor": "ALEXANDER PINZON VERGARA",
+    "Id_conductor": "91537685",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 614.134"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47288000000044826785  Comparendo  Fecha imposición: 11/09/2024",
+        "notificacion": "18/09/2024",
+        "placa": "XVX840",
+        "secretaria": "Fundación",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 614.134  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa": "XVX841",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR070",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR072",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR074",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXS158",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXS159",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXS160",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXS203",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT070",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT071",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
     "placa": "SXT072",
+    "nombre_conductor": "OTTO ANDRES OSPINA GARCIA",
+    "Id_conductor": "1022944209",
     "resumen": {
       "comparendos": "1",
       "multas": "0",
@@ -142,325 +382,354 @@
     ]
   },
   {
-    "placa": "TTW960",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "SXT073",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "TTX363",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SNM562",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "XVB139",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "R48516",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SXT090",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "R34347",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SXT099",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SRO619",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SXR070",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "XVX751",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "XVX402",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "LKL997",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTW955",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTW956",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "WCO583",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTW770",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTX102",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTW767",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SSZ189",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SXS267",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTX353",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "XMC599",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTW955",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "XVX825",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTX243",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "GQU761",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "XVX838",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SXT083",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SXT071",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SXS146",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SNT215",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "WOM412",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTX242",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SQY211",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTW963",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "XVW111",
-    "resumen": {
-      "comparendos": "0",
-      "multas": "1",
-      "acuerdos_de_pago": "0",
-      "total": "$ 871.100"
-    },
-    "tabla_multa": [
-      {
-        "tipo": "10620  Multa  Fecha resolución: 28/11/2007",
-        "notificacion": "No aplica",
-        "placa": "XVW111",
-        "secretaria": "Buga",
-        "infraccion": "76...",
-        "estado": "Pendiente de pago",
-        "valor": "$ 867.400",
-        "valor_a_pagar": "$ 871.100  Detalle Pago"
-      }
-    ]
-  },
-  {
-    "placa": "SXS177",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TTR693",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SMI713",
-    "resumen": {
-      "comparendos": "0",
-      "multas": "1",
-      "acuerdos_de_pago": "0",
-      "total": "$ 1.333.924"
-    },
-    "tabla_multa": [
-      {
-        "tipo": "20248467  Multa  Fecha resolución: 17/09/2024",
-        "notificacion": "No aplica",
-        "placa": "SMI713",
-        "secretaria": "Barbosa (Sant)",
-        "infraccion": "C38...  Proyección pago",
-        "estado": "Pendiente de pago",
-        "valor": "$ 1.145.040  Interés $ 2.848",
-        "valor_a_pagar": "$ 1.333.924  Detalle Pago"
-      }
-    ]
-  },
-  {
-    "placa": "JUZ315",
-    "resumen": {
-      "comparendos": "3",
-      "multas": "2",
-      "acuerdos_de_pago": "0",
-      "total": "$ 2.927.475"
-    },
-    "tabla_multa": [
-      {
-        "tipo": "20013000000038604220  Comparendo  Fecha imposición: 16/05/2023",
-        "notificacion": "16/05/2023",
-        "placa": "JUZ315",
-        "secretaria": "Agustin Codazzi",
-        "infraccion": "C29...  Fotodetección",
-        "estado": "Pendiente  No tiene curso",
-        "valor": "$ 522.795",
-        "valor_a_pagar": "$ 544.795  Detalle Pago"
-      },
-      {
-        "tipo": "20013000000038604200  Comparendo  Fecha imposición: 16/05/2023",
-        "notificacion": "16/05/2023",
-        "placa": "JUZ315",
-        "secretaria": "Agustin Codazzi",
-        "infraccion": "C29...  Fotodetección",
-        "estado": "Pendiente  No tiene curso",
-        "valor": "$ 522.795",
-        "valor_a_pagar": "$ 544.795  Detalle Pago"
-      },
-      {
-        "tipo": "20013000000038603969  Comparendo  Fecha imposición: 15/05/2023",
-        "notificacion": "15/05/2023",
-        "placa": "JUZ315",
-        "secretaria": "Agustin Codazzi",
-        "infraccion": "C29...  Fotodetección",
-        "estado": "Pendiente  No tiene curso",
-        "valor": "$ 522.795",
-        "valor_a_pagar": "$ 544.795  Detalle Pago"
-      },
-      {
-        "tipo": "2023-FAD-39984  Multa  Fecha resolución: 22/12/2023",
-        "notificacion": "No aplica",
-        "placa": "JUZ315",
-        "secretaria": "San Diego-Dptal Cesar",
-        "infraccion": "C29...  Proyección pago",
-        "estado": "Pendiente de pago",
-        "valor": "$ 522.795  Interés $ 45.331",
-        "valor_a_pagar": "$ 646.545  Detalle Pago"
-      },
-      {
-        "tipo": "2023-FAD-39985  Multa  Fecha resolución: 22/12/2023",
-        "notificacion": "No aplica",
-        "placa": "JUZ315",
-        "secretaria": "San Diego-Dptal Cesar",
-        "infraccion": "C29...  Proyección pago",
-        "estado": "Pendiente de pago",
-        "valor": "$ 522.795  Interés $ 45.331",
-        "valor_a_pagar": "$ 646.545  Detalle Pago"
-      }
-    ]
-  },
-  {
-    "placa": "WFG794",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "GQU554",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "TAX207",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SXQ993",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SXR696",
-    "mensaje": "No tiene comparendos ni multas"
-  },
-  {
-    "placa": "SUE679",
+    "placa": "SXT074",
+    "nombre_conductor": "JAVIER ANDRES GOMEZ RINCON",
+    "Id_conductor": "1095810114",
     "resumen": {
       "comparendos": "2",
       "multas": "0",
       "acuerdos_de_pago": "0",
-      "total": "$ 1.169.144"
+      "total": "$ 1.145.148"
     },
     "tabla_multa": [
       {
-        "tipo": "47053000000045460245  Comparendo  Fecha imposición: 30/08/2024",
-        "notificacion": "30/08/2024",
-        "placa": "SUE679",
+        "tipo": "05001000000042039050  Comparendo  Fecha imposición: 11/03/2024",
+        "notificacion": "26/04/2024",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Fotodetección  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.628",
+        "valor_a_pagar": "$ 572.628  Detalle Pago"
+      },
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
         "secretaria": "Aracataca",
-        "infraccion": "C29...  Fotodetección  Proyección pago",
+        "infraccion": "C29...  Fotodetección",
         "estado": "Pendiente  No tiene curso",
         "valor": "$ 572.520",
         "valor_a_pagar": "$ 572.520  Detalle Pago"
-      },
-      {
-        "tipo": "47189000000044922292  Comparendo  Fecha imposición: 10/09/2024",
-        "notificacion": "10/09/2024",
-        "placa": "SUE679",
-        "secretaria": "Cienaga",
-        "infraccion": "C29...  Fotodetección  Proyección pago",
-        "estado": "Pendiente  No tiene curso",
-        "valor": "$ 572.518",
-        "valor_a_pagar": "$ 596.624  Detalle Pago"
       }
     ]
   },
   {
-    "placa": "GQU617",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "SXT079",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "TTR653",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "SXT080",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "SGN466",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "SXT081",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   },
   {
-    "placa": "GQU677",
-    "mensaje": "No tiene comparendos ni multas"
+    "placa": "SXT082",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT084",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT085",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT086",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT087",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT088",
+    "nombre_conductor": "JOSE DUNALDO RUIZ ARENAS",
+    "Id_conductor": "14575614",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 308.000"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "AT1F172741  Comparendo  Fecha imposición: 14/05/2014",
+        "notificacion": "14/05/2014",
+        "placa": "SXT088",
+        "secretaria": "Atlantico",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 308.000",
+        "valor_a_pagar": "$ 308.000  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa": "SXT089",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT090",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT091",
+    "nombre_conductor": "JAVIER ORLANDO CACERES FLOREZ",
+    "Id_conductor": "1098150716",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 416.235"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "17787  Multa  Fecha coactivo: 04/09/2020",
+        "notificacion": "No aplica",
+        "placa": "SXT091",
+        "secretaria": "Lebrija  VÍA NACIONAL",
+        "infraccion": "B02...",
+        "estado": "Cobro coactivo",
+        "valor": "$ 208.331  Interés $ 166.238",
+        "valor_a_pagar": "$ 416.235  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa": "SXT092",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT094",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT095",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT096",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT097",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT098",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXT099",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW767",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW770",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW877",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW879",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW880",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW882",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW883",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW955",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW956",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW957",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW960",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW962",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW963",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW964",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW965",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW969",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTW973",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX099",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX100",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX101",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX102",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX103",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XLL710",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVN068",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVN414",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVP067",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVP068",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVU692",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVU693",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVU695",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVU756",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVU767",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVU768",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVU769",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVX750",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVX825",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVX837",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVX838",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVX839",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "XVX842",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR696",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SMT546",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SSY498",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR680",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX352",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX353",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX361",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX362",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "TTX363",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa": "SXR906",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   }
 ]
