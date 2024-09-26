@@ -28,7 +28,6 @@ header {
 #logo {
     width: 250px;
     height: auto;
-    
 }
 
 /* Main content styling */
@@ -98,13 +97,14 @@ button:hover {
 
 #download-btn {
     margin-top: 1rem;
-    display: none;
+    display: block;
 }
 #download-btnWord {
     margin-top: 1rem;
-    display: none;
+    display: block;
 }
 
+/* Loader styling */
 #loader {
     text-align: center;
     margin-top: 20px;
@@ -115,6 +115,45 @@ button:hover {
     width: 150px;
     height: auto;
     border-radius: 10px;
+}
+
+/* Estilos para el contenedor de los botones */
+#botones-contenedor {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px; /* Separar botones del formulario */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #000;
+}
+
+#tabla-contenedor {
+    margin-top: 20px;
+    width: 100%;
+    min-width: 70%;
+    max-width: 80%; /* Ancho mínimo para que tenga un tamaño adecuado */
+    overflow: auto;   /* Scroll si se rompe */
+    max-height: 300px;
+}
+
+thead {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 /* Estilos para el sello de calidad en la esquina inferior derecha */
@@ -136,19 +175,46 @@ button:hover {
     opacity: 1;
 }
 
+/* Media Queries */
 
+/* Ajuste para tablets y dispositivos medianos */
+@media (max-width: 1024px) {
+    /* Botones en columnas */
+    #botones-contenedor {
+        flex-direction: column; /* Los botones se organizan en columnas */
+        align-items: center;
+    }
 
-/* Responsive adjustments */
+    /* Formulario más pequeño */
+    form {
+        max-width: 300px; /* Reducir un poco el tamaño del formulario */
+    }
+}
+
+/* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
     form {
-        width: 90%;
+        width: 90%; /* El formulario ocupa casi todo el ancho */
     }
 
     #logo {
-        width: 120px;
+        width: 120px; /* Logo más pequeño en móviles */
     }
 
     #sello-calidad img {
         width: 100px;
+    }
+
+    /* Botones en columna */
+    #botones-contenedor {
+        flex-direction: column; /* Los botones se organizan en columnas */
+        align-items: center;
+    }
+
+    /* Tabla con scroll horizontal si es necesario */
+    #tabla-contenedor {
+        min-width: 70%;
+        max-width: 80%; /* Hacer que la tabla sea más flexible en móviles */
+        overflow-x: scroll; /* Habilitar scroll horizontal */
     }
 }

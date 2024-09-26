@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    async function buscarConductorID(identificacion) {
+    const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27+%27))%20or%20(contains(Ucr_Name,%27+%27))%20or%20(contains(Identification,%27+%27)))";
+    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1laWQiOiI2M2Q1ZDhiNi04ZTUwLTRlMmItYjgxYS00ZDNiMmM5OTU4OTAiLCJ1bmlxdWVfbmFtZSI6IkVESEVSTkFOREVaIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9hY2Nlc3Njb250cm9sc2VydmljZS8yMDEwLzA3L2NsYWltcy9pZGVudGl0eXByb3ZpZGVyIjoiQVNQLk5FVCBJZGVudGl0eSIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiYzYwODE2YmYtMTdjMy00MTA1LWFlY2MtMmNjZGY4NmY4NWMxIiwiZW1haWwiOiJhdXhpbGlhcjEuZmxvdGFwcm9waWFAZnJpbWFjLmNvbS5jbyIsImZpcnN0TmFtZSI6IkVkd2luZyIsImxhc3ROYW1lIjoiSGVybsOhbmRleiBIZXJyZXJhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiYXVkIjoiMDk5MTUzYzI2MjUxNDliYzhlY2IzZTg1ZTAzZjAwMjIiLCJleHAiOjE3Mjc0NDM2NTMsIm5iZiI6MTcyNzM1NzI1M30.2T3PDMdKCQ_q4vL6utiLXdXUQWCMe7J6Kd-aCNXMKYQ";
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,  
+            'Accept': 'application/json',
+        }
+    };
+
+    try {
+        // Realizamos la solicitud con fetch
+        const response = await fetch(url, options);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        // Parseamos la respuesta a JSON
+        const data = await response.json();
+        
+        // Filtramos los datos
+        const filteredData = data.value.filter(item => item.Identification === identificacion);
+
+        // Verificamos si existe el usuario
+        if (filteredData.length === 0) {
+            console.log(`No se encontró ningún usuario con la identificación: ${identificacion}`);
+            return;
+        }
+
+        // Obtenemos el primer usuario encontrado
+        const usuario = filteredData[0];
+
+        // Validación si no es conductor
+        if (usuario.UtyName !== "Conductor") {
+            console.log(`El usuario con identificación ${identificacion} no es un conductor.`);
+            return;
+        }
+
+        // Validación si el estado es 2 (inactivo)
+        if (usuario.State === 2) {
+            console.log(`El usuario con identificación ${identificacion} está inactivo.`);
+            return;
+        }
+
+        // Si pasa ambas validaciones, mostramos los datos
+        console.log(`Usuario encontrado:`, usuario);
+
+    } catch (error) {
+        console.error('Hubo un error en la solicitud:', error);
+    }
+}
+
+// Llamada a la función
+(async () => {
+    const identificacion = "1004308598";  // Puedes cambiar este valor para probar con otras identificaciones
+    await buscarConductorID(identificacion);
+})();
+
+
+
+    </script>
+</body>
+</html>

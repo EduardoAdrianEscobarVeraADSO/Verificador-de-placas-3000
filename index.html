@@ -19,26 +19,33 @@
             <input type="text" id="placa-input" name="placa" placeholder="ABC123, XYZ987">
             <button type="submit">Consultar</button>
         </form>
-        <button id="download-btn" onclick="descargarExcel()">Descargar Excel</button>
-        <button id="download-btnWord" onclick="descargarCartas()">Descargar Cartas</button>
+        
+        <!-- Contenedor de botones -->
+        <div id="botones-contenedor">
+            <button id="download-btnWord" onclick="descargarCartas()">Descargar Cartas</button>
+            <button id="download-btn" onclick="descargarExcel()">Descargar Excel</button>
+        </div>
+    
         <!-- Loader -->
         <div id="loader" style="display: none;">
             <img src="/assets/loader.gif" alt="Cargando...">
             <p>Consultando información, por favor espere...</p>
         </div>
+        
+        <!-- Contenedor para la tabla dinámica -->
+        <div id="tabla-contenedor">
+            
+        </div>
     </main>
     
 
-    <!-- Sello de calidad en la esquina inferior derecha -->
+    <!-- Sello de calidad en la esquina inferior derecha ;)-->
     <div id="sello-calidad">
         <img src="/assets/logoSoft.png" alt="Sello de calidad">
     </div>
 
     <audio id="sonido-notificacion" src="/assets/notificacion.mp3" preload="auto"></audio>
+    
     <script src="/main.js"></script>
-    <script>
-       
-
-    </script>
 </body>
 </html>
