@@ -20,34 +20,79 @@
     app.post('/consultar', async (req, res) => {
         const inputPlacas = req.body.placa;
         const placasArray = inputPlacas.split(',').map(placa => placa.trim());
-
+    
         const resultados = [];
-
+    
         const browser = await puppeteer.launch({
             headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']
         });
+    
+        async function buscarConductorID(identificacion) {
+            const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27+%27))%20or%20(contains(Ucr_Name,%27+%27))%20or%20(contains(Identification,%27+%27)))";
+            const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1laWQiOiI2M2Q1ZDhiNi04ZTUwLTRlMmItYjgxYS00ZDNiMmM5OTU4OTAiLCJ1bmlxdWVfbmFtZSI6IkVESEVSTkFOREVaIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9hY2Nlc3Njb250cm9sc2VydmljZS8yMDEwLzA3L2NsYWltcy9pZGVudGl0eXByb3ZpZGVyIjoiQVNQLk5FVCBJZGVudGl0eSIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiYzYwODE2YmYtMTdjMy00MTA1LWFlY2MtMmNjZGY4NmY4NWMxIiwiZW1haWwiOiJhdXhpbGlhcjEuZmxvdGFwcm9waWFAZnJpbWFjLmNvbS5jbyIsImZpcnN0TmFtZSI6IkVkd2luZyIsImxhc3ROYW1lIjoiSGVybsOhbmRleiBIZXJyZXJhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiYXVkIjoiMDk5MTUzYzI2MjUxNDliYzhlY2IzZTg1ZTAzZjAwMjIiLCJleHAiOjE3Mjc0NDM2NTMsIm5iZiI6MTcyNzM1NzI1M30.2T3PDMdKCQ_q4vL6utiLXdXUQWCMe7J6Kd-aCNXMKYQ";
         
+            const options = {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,  
+                    'Accept': 'application/json',
+                }
+            };
         
+            try {
+
+                const response = await fetch(url, options);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                const filteredData = data.value.filter(item => item.Identification === identificacion);
+
+                if (filteredData.length === 0) {
+                    console.log(`No se encontró ningún usuario con la identificación: ${identificacion}`);
+                    usuario = "No existe";
+                    return;
+                }
+        
+                const usuario = filteredData[0];
+                    
+                if (usuario.State === 2) {
+                    console.log(`El usuario con identificación ${identificacion} está inactivo.`);
+                    usuario = "inactivo";
+                    return;
+                }
+                    
+                return usuario.Ucr_Name;
+        
+            } catch (error) {
+                console.error('Hubo un error en la solicitud:', error);
+            }
+        }
+        
+       
         for (const placa of placasArray) {
             const page = await browser.newPage();
             
             try {
                 const url = `https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`;
                 await page.goto(url, { waitUntil: 'networkidle2' });
-
+    
                 await page.waitForSelector('#resumenEstadoCuenta', { timeout: 10000 });
                 await page.waitForSelector('#multaTable', { timeout: 10000 });
-
+    
                 const textoResumen = await page.evaluate(() => {
                     const contenedor = document.querySelector('#resumenEstadoCuenta');
                     return contenedor ? contenedor.innerText : 'Contenedor No disponible';
                 });
-
+    
                 const datosTabla = await page.evaluate(() => {
                     const tabla = document.querySelector('#multaTable');
                     if (!tabla) return [];
-
+    
                     const filas = Array.from(tabla.querySelectorAll('tbody tr'));
                     return filas.map(fila => {
                         const celdas = Array.from(fila.querySelectorAll('td'));
@@ -63,11 +108,11 @@
                         };
                     });
                 });
-
+    
                 const datosTablaFiltrados = datosTabla.filter(dato => {
                     return Object.values(dato).some(valor => valor !== '');
                 });
-
+    
                 const datosResumen = textoResumen.split('\n').reduce((acc, linea) => {
                     const [clave, valor] = linea.split(':').map(str => str.trim());
                     if (clave && valor) {
@@ -75,12 +120,14 @@
                     }
                     return acc;
                 }, {});
-
+    
                 const nombrePropietario = await obtenerNombrePropietario(placa);
-
+                const conductor = await buscarConductorID(placa); 
+    
                 const resultado = {
-                    placa: placa,
-                    nombre_propietario: nombrePropietario,  
+                    placa_u_documento: placa,
+                    nombre_propietario: nombrePropietario || "N/A",  
+                    conductor: conductor || "N/A", 
                     resumen: {
                         comparendos: datosResumen.comparendos || 'No tiene comparendos ni multas',
                         multas: datosResumen.multas || 'No tiene comparendos ni multas',
@@ -89,26 +136,31 @@
                     },
                     tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : []
                 };
-
+    
                 resultados.push(resultado);
-
+    
             } catch (error) {
+                const nombrePropietario = await obtenerNombrePropietario(placa);
+                const conductor = await buscarConductorID(placa); 
                 console.error(`Error al procesar la placa ${placa}:`, error);
                 resultados.push({
-                    placa: placa,
+                    placa_u_documento: placa,
+                    nombre_propietario: nombrePropietario || "N/A",
+                    conductor: conductor || "N/A", 
                     mensaje: 'No tiene comparendos ni multas comparendos ni multas'
                 });
             } finally {
                 await page.close();
             }
         }
-
+    
         fs.writeFileSync('resultados_placas.json', JSON.stringify(resultados, null, 2), 'utf-8');
-
+    
         await browser.close();
-
+    
         res.json({ message: 'Consulta completada y resultados guardados', resultados });
     });
+    
 
     async function obtenerNombrePropietario(placa) {
         const endPoint = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewVehicle?";
@@ -150,15 +202,16 @@
     app.get('/download-excel', (req, res) => {
         const filePath = path.join(__dirname, 'resultados_placas.json');
         const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-
+        
         const wb = XLSX.utils.book_new();
 
         const summaryData = [];
 
         jsonData.forEach(item => {
             const baseRow = {
-                Placa: item.placa,
-                Nombre_Propietario: item.nombre_propietario || 'No disponible',
+                Placa_u_documento: item.placa_u_documento,
+                Nombre_Propietario: item.nombre_propietario || 'N/A',
+                conductor: item.conductor || "N/A", 
                 Comparendos: item.resumen?.comparendos || 'No tiene comparendos ni multas',
                 Multas: item.resumen?.multas || 'No tiene comparendos ni multas',
                 Acuerdos_de_pago: item.resumen?.acuerdos_de_pago || 'No tiene comparendos ni multas',
@@ -246,8 +299,8 @@
 
             const doc = new Document({
                 creator: "Buscador de placas",
-                title: `Resultados de ${item.placa}`,
-                description: `Carta con la información de las multas de ${item.placa}`,
+                title: `Resultados de ${item.placa_u_documento}`,
+                description: `Carta con la información de las multas de ${item.placa_u_documento}`,
                 sections: [],
             });
 
@@ -275,7 +328,7 @@
         
             texto.push(createParagraph(""));
             texto.push(createParagraph(`Señor:`));
-            texto.push(createParagraph(`${item.nombre_propietario} el vehiculo identificado con el numero de placa ${item.placa}, tuvo el siguiente incoveniente: `));
+            texto.push(createParagraph(`${item.conductor} tenemos un registro en el sistema de que usted tuvo el siguiente incoveniente: `));
             
             texto.push(createParagraph(""));
             texto.push(createParagraph("E.S.M"));
@@ -285,7 +338,7 @@
             texto.push(createParagraph(""));
             
             texto.push(createParagraph("Cordial Saludo."));
-            texto.push(createParagraph(`En la revisión realizada en la plataforma del SIMIT y del RUNT, se identificó y detectó que el vehiculo identificado con placas ${item.placa} presenta el (los) siguiente (s) comparendos:`));
+            texto.push(createParagraph(`En la revisión realizada en la plataforma del SIMIT y del RUNT, se identificó al señor ${item.conductor} identificado con el numero ${item.placa_u_documento} presenta el (los) siguiente (s) comparendos u/o multas:`));
 
         
             // Crear tabla para las multas
@@ -339,7 +392,7 @@
             });
 
             const buffer = await Packer.toBuffer(doc);
-            archive.append(buffer, { name: `Carta_${item.placa}.docx` });
+            archive.append(buffer, { name: `Carta_${item.placa_u_documento}.docx` });
         }
 
         await archive.finalize();
