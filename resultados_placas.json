@@ -1,24 +1,34 @@
 [
   {
-    "placa_u_documento": "91439629",
-    "nombre_propietario": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
     "conductor": "N/A",
     "resumen": {
-      "comparendos": "0",
-      "multas": "1",
+      "comparendos": "2",
+      "multas": "0",
       "acuerdos_de_pago": "0",
-      "total": "$ 2.010.566"
+      "total": "$ 1.145.148"
     },
     "tabla_multa": [
       {
-        "tipo": "219085  Multa  Fecha coactivo: 22/12/2014",
-        "notificacion": "No aplica",
-        "placa": "GMF80B",
-        "secretaria": "Bucaramanga",
-        "infraccion": "D02...",
-        "estado": "Cobro coactivo",
-        "valor": "$ 616.020  Interés $ 1.235.728",
-        "valor_a_pagar": "$ 2.010.566  Detalle Pago"
+        "tipo": "05001000000042039050  Comparendo  Fecha imposición: 11/03/2024",
+        "notificacion": "26/04/2024",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Fotodetección  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.628",
+        "valor_a_pagar": "$ 572.628  Detalle Pago"
+      },
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
       }
     ]
   }
