@@ -1,4 +1,4 @@
-/* General body styling */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,10 +8,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(247, 247, 247);
 }
 
-/* Header styles */
+
 header {
     position: fixed;
     top: 0;
@@ -25,12 +25,9 @@ header {
     z-index: 2;
 }
 
-#logo {
-    width: 250px;
-    height: auto;
-}
 
-/* Main content styling */
+
+
 main {
     display: flex;
     flex-direction: column;
@@ -43,7 +40,7 @@ form {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     display: flex;
@@ -52,10 +49,12 @@ form {
     z-index: 1;
 }
 
+
 h1 {
-    color: #ff7f50;
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    text-align: center;
+    color:#ff7f50;
 }
 
 label {
@@ -104,7 +103,6 @@ button:hover {
     display: block;
 }
 
-/* Loader styling */
 #loader {
     text-align: center;
     margin-top: 20px;
@@ -117,15 +115,13 @@ button:hover {
     border-radius: 10px;
 }
 
-/* Estilos para el contenedor de los botones */
 #botones-contenedor {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-top: 20px; /* Separar botones del formulario */
+    margin-top: 20px; 
 }
 
-/* Estilos para la tabla */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -139,10 +135,10 @@ th, td {
 #tabla-contenedor {
     margin-top: 20px;
     width: 100%;
-    min-width: 70%;
-    max-width: 80%; /* Ancho mínimo para que tenga un tamaño adecuado */
-    overflow: auto;   /* Scroll si se rompe */
-    max-height: 300px;
+    min-width: 30%;
+    max-width: 70%;
+    overflow: auto;   
+    max-height: 200px;
 }
 
 thead {
@@ -156,7 +152,7 @@ tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Estilos para el sello de calidad en la esquina inferior derecha */
+
 #sello-calidad {
     position: fixed;
     bottom: 20px;
@@ -175,46 +171,43 @@ tbody tr:nth-child(even) {
     opacity: 1;
 }
 
-/* Media Queries */
-
-/* Ajuste para tablets y dispositivos medianos */
 @media (max-width: 1024px) {
-    /* Botones en columnas */
+    
     #botones-contenedor {
-        flex-direction: column; /* Los botones se organizan en columnas */
+        flex-direction: column; 
         align-items: center;
     }
 
-    /* Formulario más pequeño */
+    
     form {
-        max-width: 300px; /* Reducir un poco el tamaño del formulario */
+        max-width: 300px; 
     }
 }
 
-/* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
     form {
-        width: 90%; /* El formulario ocupa casi todo el ancho */
+        width: 90%;
     }
 
     #logo {
-        width: 120px; /* Logo más pequeño en móviles */
+        width: 120px;
     }
 
     #sello-calidad img {
         width: 100px;
     }
 
-    /* Botones en columna */
+    
     #botones-contenedor {
-        flex-direction: column; /* Los botones se organizan en columnas */
+        flex-direction: column; 
         align-items: center;
     }
 
-    /* Tabla con scroll horizontal si es necesario */
+ 
     #tabla-contenedor {
-        min-width: 70%;
-        max-width: 80%; /* Hacer que la tabla sea más flexible en móviles */
-        overflow-x: scroll; /* Habilitar scroll horizontal */
+        min-width: 50%;
+        max-width: 70%; 
+        overflow-x: scroll; 
+        font-size: 14px;
     }
 }

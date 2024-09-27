@@ -1,34 +1,24 @@
 [
   {
-    "placa_u_documento": "1007308781",
+    "placa_u_documento": "91439629",
     "nombre_propietario": "N/A",
-    "conductor": "CARLOS DOMICIANO SUAREZ VILLAMIZAR",
+    "conductor": "N/A",
     "resumen": {
       "comparendos": "0",
-      "multas": "2",
+      "multas": "1",
       "acuerdos_de_pago": "0",
-      "total": "$ 1.789.969"
+      "total": "$ 2.010.566"
     },
     "tabla_multa": [
       {
-        "tipo": "711497  Multa  Fecha resolución: 24/08/2021",
+        "tipo": "219085  Multa  Fecha coactivo: 22/12/2014",
         "notificacion": "No aplica",
-        "placa": "DAH383",
-        "secretaria": "Bogotá D.C.",
-        "infraccion": "C29...",
-        "estado": "Pendiente de pago",
-        "valor": "$ 447.700  Interés $ 157.816",
-        "valor_a_pagar": "$ 605.516  Detalle Pago"
-      },
-      {
-        "tipo": "RO8076  Multa  Fecha resolución: 03/06/2022",
-        "notificacion": "No aplica",
-        "placa": "JOW919",
-        "secretaria": "Fusagasuga  VÍA NACIONAL",
-        "infraccion": "D13...",
-        "estado": "Pendiente de pago",
-        "valor": "$ 936.900  Interés $ 247.553",
-        "valor_a_pagar": "$ 1.184.453  Detalle Pago"
+        "placa": "GMF80B",
+        "secretaria": "Bucaramanga",
+        "infraccion": "D02...",
+        "estado": "Cobro coactivo",
+        "valor": "$ 616.020  Interés $ 1.235.728",
+        "valor_a_pagar": "$ 2.010.566  Detalle Pago"
       }
     ]
   }
