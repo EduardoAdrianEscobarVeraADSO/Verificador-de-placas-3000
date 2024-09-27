@@ -1,13 +1,13 @@
 [
   {
-    "placa_u_documento": "SXT074",
-    "nombre_propietario": "FRIMAC S.A.",
+    "placa_u_documento": "1095810114",
+    "nombre_propietario": "N/A",
     "conductor": "N/A",
     "resumen": {
-      "comparendos": "2",
+      "comparendos": "1",
       "multas": "0",
       "acuerdos_de_pago": "0",
-      "total": "$ 1.145.148"
+      "total": "$ 572.628"
     },
     "tabla_multa": [
       {
@@ -19,16 +19,6 @@
         "estado": "Pendiente  No tiene curso",
         "valor": "$ 572.628",
         "valor_a_pagar": "$ 572.628  Detalle Pago"
-      },
-      {
-        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
-        "notificacion": "01/09/2024",
-        "placa": "SXT074",
-        "secretaria": "Aracataca",
-        "infraccion": "C29...  Fotodetección",
-        "estado": "Pendiente  No tiene curso",
-        "valor": "$ 572.520",
-        "valor_a_pagar": "$ 572.520  Detalle Pago"
       }
     ]
   }
