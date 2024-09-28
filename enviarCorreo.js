@@ -28,12 +28,14 @@
 // });
 
 
-async function buscarConductorID(identificacion) {
+async function enviarCorreo(identificacion) {
         const url = `https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27${identificacion}%27))%20%20or%20(contains(Ucr_Name,%27${identificacion}%27))%20or%20(contains(Identification,%27${identificacion}%27)))`;
-        const respuesta = await authApi();
-        console.log(respuesta);
+        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1laWQiOiI2M2Q1ZDhiNi04ZTUwLTRlMmItYjgxYS00ZDNiMmM5OTU4OTAiLCJ1bmlxdWVfbmFtZSI6IkVESEVSTkFOREVaIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9hY2Nlc3Njb250cm9sc2VydmljZS8yMDEwLzA3L2NsYWltcy9pZGVudGl0eXByb3ZpZGVyIjoiQVNQLk5FVCBJZGVudGl0eSIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiYzYwODE2YmYtMTdjMy00MTA1LWFlY2MtMmNjZGY4NmY4NWMxIiwiZW1haWwiOiJhdXhpbGlhcjEuZmxvdGFwcm9waWFAZnJpbWFjLmNvbS5jbyIsImZpcnN0TmFtZSI6IkVkd2luZyIsImxhc3ROYW1lIjoiSGVybsOhbmRleiBIZXJyZXJhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiYXVkIjoiMDk5MTUzYzI2MjUxNDliYzhlY2IzZTg1ZTAzZjAwMjIiLCJleHAiOjE3Mjc1MzY0MjcsIm5iZiI6MTcyNzQ1MDAyN30.GthcI_sSTD8-C9Z1xM39_7PeeTXyZRnNRiLjmGCI_Iw";
+
+        // const respuesta = await authApi();
+        // console.log(respuesta);
         
-        const token = respuesta;
+        // const token = respuesta;
 
         const options = {
             method: 'GET',
@@ -73,7 +75,7 @@ async function buscarConductorID(identificacion) {
     }
     (async function() {
         try {
-            const nombrePropietario = await buscarConductorID("1033819281");
+            const nombrePropietario = await enviarCorreo("1033819281");
             console.log(nombrePropietario);
             // return nombrePropietario;
         } catch (error) {
@@ -81,38 +83,38 @@ async function buscarConductorID(identificacion) {
         }
     })();
 
-    async function authApi(){
+    // async function authApi(){
   
-        let user = "EDHERNANDEZ";
-        let pw = "uR5vlRIP$";
+    //     let user = "EDHERNANDEZ";
+    //     let pw = "uR5vlRIP$";
       
-        const URL ="https://tcfrimac.simplexity.com.co/Authentication/Auth/auth/token?";
+    //     const URL ="https://tcfrimac.simplexity.com.co/Authentication/Auth/auth/token?";
       
-        const header = {
-          "Content-Type": "application/x-www-form-urlencoded",
-          "authorization": "Bearer "
-        };
+    //     const header = {
+    //       "Content-Type": "application/x-www-form-urlencoded",
+    //       "authorization": "Bearer "
+    //     };
       
-        const payload = {
-          'grant_type': "password",
-          'username': user,
-          'password': pw,
-          'client_id': "099153c2625149bc8ecb3e85e03f0022"
-        };
+    //     const payload = {
+    //       'grant_type': "password",
+    //       'username': user,
+    //       'password': pw,
+    //       'client_id': "099153c2625149bc8ecb3e85e03f0022"
+    //     };
       
-        const options = {
-          'headers': header,
-          'method': "POST",
-          'payload': payload
-        };
+    //     const options = {
+    //       'headers': header,
+    //       'method': "POST",
+    //       'payload': payload
+    //     };
       
-        let response = await fetch(URL, options);
-        let responseData = await response.json();
-        console.log(responseData);
+    //     let response = await fetch(URL, options);
+    //     let responseData = await response.json();
+    //     console.log(responseData);
         
-        let token = responseData.access_token;
+    //     let token = responseData.access_token;
       
-        return token;
+    //     return token;
         
       
-      }
+    //   }

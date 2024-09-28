@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
 const { Document, Packer, Paragraph, Table, TableCell, TableRow, TextRun } = require('docx');
-
+const { readJsonFile, processJsonData, generateExcel } = require('./excelGenerator');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -54,19 +54,54 @@ app.post('/consultar', async (req, res) => {
 
             if (filteredData.length === 0) {
                 console.log(`No se encontró ningún usuario con la identificación: ${identificacion}`);
-                usuario = "No existe";
-                return;
             }
 
             const usuario = filteredData[0];
 
             if (usuario.State === 2) {
-                console.log(`El usuario con identificación ${identificacion} está inactivo.`);
-                usuario = "inactivo";
-                return;
+                console.log(`El usuario con identificación ${identificacion} está inactivo.`);              
             }
             console.log(usuario.Ucr_Name)    
             return usuario.Ucr_Name;
+
+        } catch (error) {
+            console.error('Hubo un error en la solicitud:', error);
+        }
+    }
+    async function obtenerCorreoConductor(identificacion) {
+        const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27" + identificacion + "%27))%20or%20(contains(Ucr_Name,%27" + identificacion + "%27))%20or%20(contains(Identification,%27" + identificacion + "%27)))";
+        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1laWQiOiI2M2Q1ZDhiNi04ZTUwLTRlMmItYjgxYS00ZDNiMmM5OTU4OTAiLCJ1bmlxdWVfbmFtZSI6IkVESEVSTkFOREVaIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9hY2Nlc3Njb250cm9sc2VydmljZS8yMDEwLzA3L2NsYWltcy9pZGVudGl0eXByb3ZpZGVyIjoiQVNQLk5FVCBJZGVudGl0eSIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiYzYwODE2YmYtMTdjMy00MTA1LWFlY2MtMmNjZGY4NmY4NWMxIiwiZW1haWwiOiJhdXhpbGlhcjEuZmxvdGFwcm9waWFAZnJpbWFjLmNvbS5jbyIsImZpcnN0TmFtZSI6IkVkd2luZyIsImxhc3ROYW1lIjoiSGVybsOhbmRleiBIZXJyZXJhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiYXVkIjoiMDk5MTUzYzI2MjUxNDliYzhlY2IzZTg1ZTAzZjAwMjIiLCJleHAiOjE3Mjc1MzY0MjcsIm5iZiI6MTcyNzQ1MDAyN30.GthcI_sSTD8-C9Z1xM39_7PeeTXyZRnNRiLjmGCI_Iw";
+
+        const options = {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Accept': 'application/json',
+            }
+        };
+
+        try {
+
+            const response = await fetch(url, options);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            const filteredData = data.value.filter(item => item.Identification === identificacion);
+
+            if (filteredData.length === 0) {
+                console.log(`No se encontró ningún usuario con la identificación: ${identificacion}`);
+            }
+
+            const usuario = filteredData[0];
+
+            if (usuario.State === 2) {
+                console.log(`El usuario con identificación ${identificacion} está inactivo.`);              
+            } 
+            return usuario.MainEmailAddress;
 
         } catch (error) {
             console.error('Hubo un error en la solicitud:', error);
@@ -81,8 +116,8 @@ app.post('/consultar', async (req, res) => {
             const url = `https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`;
             await page.goto(url, { waitUntil: 'networkidle2' });
 
-            await page.waitForSelector('#resumenEstadoCuenta', { timeout: 10000 });
-            await page.waitForSelector('#multaTable', { timeout: 10000 });
+            await page.waitForSelector('#resumenEstadoCuenta', { timeout: 15000 });
+            await page.waitForSelector('#multaTable', { timeout: 15000 });
 
             const textoResumen = await page.evaluate(() => {
                 const contenedor = document.querySelector('#resumenEstadoCuenta');
@@ -123,11 +158,13 @@ app.post('/consultar', async (req, res) => {
 
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
+            const correo = await obtenerCorreoConductor(placa)
 
             const resultado = {
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
                 conductor: conductor || "N/A",
+                correo: correo,
                 resumen: {
                     comparendos: datosResumen.comparendos || 'No tiene comparendos ni multas',
                     multas: datosResumen.multas || 'No tiene comparendos ni multas',
@@ -142,10 +179,13 @@ app.post('/consultar', async (req, res) => {
         } catch (error) {
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
+            const correo = await obtenerCorreoConductor(placa)
+
             console.error(`Error al procesar la placa ${placa}:`, error);
             resultados.push({
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
+                correo: correo,
                 conductor: conductor || "N/A",
                 mensaje: 'No tiene comparendos ni multas comparendos ni multas'
             });
@@ -200,73 +240,15 @@ async function obtenerNombrePropietario(placa) {
 
 
 app.get('/download-excel', (req, res) => {
-    const filePath = path.join(__dirname, 'resultados_placas.json');
-    const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-
-    const wb = XLSX.utils.book_new();
-
-    const summaryData = [];
-
-    jsonData.forEach(item => {
-        const baseRow = {
-            Placa_u_documento: item.placa_u_documento,
-            Nombre_Propietario: item.nombre_propietario || 'N/A',
-            conductor: item.conductor || "N/A",
-            Comparendos: item.resumen?.comparendos || 'No tiene comparendos ni multas',
-            Multas: item.resumen?.multas || 'No tiene comparendos ni multas',
-            Acuerdos_de_pago: item.resumen?.acuerdos_de_pago || 'No tiene comparendos ni multas',
-            Total: item.resumen?.total || 'No tiene comparendos ni multas'
-        };
-
-        if (item.tabla_multa && item.tabla_multa.length > 0) {
-            item.tabla_multa.forEach(mult => {
-                summaryData.push({
-                    ...baseRow,
-                    Tipo: mult.tipo,
-                    Notificacion: mult.notificacion,
-                    Secretaria: mult.secretaria,
-                    Infraccion: mult.infraccion,
-                    Estado: mult.estado,
-                    Valor: mult.valor,
-                    Valor_a_pagar: mult.valor_a_pagar
-                });
-            });
-        } else {
-            summaryData.push({ ...baseRow, Tipo: 'N/A', Notificacion: 'N/A', Secretaria: 'N/A', Infraccion: 'N/A', Estado: 'N/A', Valor: 'N/A', Valor_a_pagar: 'N/A' });
-        }
-    });
-
-    const ws = XLSX.utils.json_to_sheet(summaryData);
-
-
-    ws['!cols'] = [
-        { wch: 15 },
-        { wch: 20 },
-        { wch: 15 },
-        { wch: 20 },
-        { wch: 15 },
-        { wch: 25 },
-        { wch: 25 },
-        { wch: 25 },
-        { wch: 20 },
-        { wch: 15 },
-        { wch: 15 },
-        { wch: 20 }
-    ];
-
-
-    ws['!autofilter'] = { ref: "A1:L1" };
-
-    XLSX.utils.book_append_sheet(wb, ws, 'Resultados');
-
-    const excelFilePath = path.join(__dirname, 'resultados_placas.xlsx');
-    XLSX.writeFile(wb, excelFilePath);
+    const jsonData = readJsonFile('resultados_placas.json');
+    const processedData = processJsonData(jsonData);
+    const excelFilePath = generateExcel(processedData, 'resultados_placas.xlsx');
 
     res.download(excelFilePath, 'resultados_placas.xlsx', (err) => {
         if (err) {
             console.error(err);
         }
-        fs.unlinkSync(excelFilePath);
+        fs.unlinkSync(excelFilePath); 
     });
 });
 
@@ -405,9 +387,59 @@ app.get('/descargar-cartas', async (req, res) => {
 
         const buffer = await Packer.toBuffer(doc);
         archive.append(buffer, { name: `Carta_${item.placa_u_documento}.docx` });
+        const filePath = `./temp/Carta_${item.placa_u_documento}.docx`;
+        fs.writeFileSync(filePath, buffer); // Guardar el archivo
+        return filePath; // Retornar la ruta del archivo generado
     }
 
     await archive.finalize();
+});
+app.post('/enviar-correos', async (req, res) => {
+    const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
+    const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
+
+    const transporter = nodemailer.createTransport({
+        service: 'hotmail',
+        auth: {
+            user: 'frimaczonafranca@hotmail.com',
+            pass: '1234frimac'
+        }
+    });
+
+    for (const item of placasConMultas) {
+        const filePath = await generateWordFile(item); // Genera el archivo de Word
+
+        const mailOptions = {
+            from: 'frimaczonafranca@hotmail.com',
+            to: "eduardoadrianescobar12@gmail.com",
+            subject: 'Notificación de Multas',
+            text: `Estimado ${item.conductor},\n\nAdjunto encontrará la información sobre sus multas:\n\n${JSON.stringify(item.resumen, null, 2)}`,
+            attachments: [
+                {
+                    filename: path.basename(filePath),
+                    path: filePath
+                }
+            ]
+        };
+
+        try {
+            await transporter.sendMail(mailOptions);
+            console.log(`Correo enviado a: ${item.correo}`);
+        } catch (error) {
+            console.error(`Error al enviar el correo a ${item.correo}:`, error);
+        }
+
+        // Elimina el archivo de Word después de enviar el correo
+        fs.unlink(filePath, (err) => {
+            if (err) {
+                console.error(`Error al eliminar el archivo ${filePath}:`, err);
+            } else {
+                console.log(`Archivo eliminado: ${filePath}`);
+            }
+        });
+    }
+
+    res.status(200).send('Correos enviados correctamente.');
 });
 
 app.get('/api/resultados', (req, res) => {
@@ -419,6 +451,7 @@ app.get('/api/resultados', (req, res) => {
         res.json(JSON.parse(data));
     });
 });
+
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);

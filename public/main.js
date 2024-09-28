@@ -51,11 +51,6 @@ async function consultarPlacas(event) {
     document.getElementById('download-btnWord').style.display = 'block';
 }
 
-
-function descargarExcel() {
-    window.location.href = '/download-excel';
-}
-
 async function descargarCartas() {
     const response = await fetch('/descargar-cartas', {
         method: 'GET',
@@ -84,6 +79,29 @@ function descargarExcel() {
 function descargarCartas() {
     window.location.href = '/descargar-cartas';
 }
+function enviarCorreo() {
+    fetch('/enviar-correos')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.blob(); // Si la respuesta es correcta, la convierte en un blob
+        })
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'cartas.zip'; // Nombre del archivo descargado
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al enviar correos: ' + error.message); // Muestra el error en un mensaje
+        });
+}
+
 
 // Función para cargar el JSON y generar la tabla
 async function cargarTabla() {
