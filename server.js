@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer');
 const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
+const archiver = require('archiver');
 const { Document, Packer, Paragraph, Table, TableCell, TableRow, TextRun } = require('docx');
 const { readJsonFile, processJsonData, generateExcel } = require('./excelGenerator');
 
@@ -31,8 +32,8 @@ app.post('/consultar', async (req, res) => {
     const resultados = [];
 
     const browser = await puppeteer.launch({
-        headless: false,
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1920,1080']
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']
     });
     // Función para autenticar y obtener el token
     async function authApi() {
@@ -282,8 +283,6 @@ async function obtenerNombrePropietario(placa) {
     }
 }
 
-
-
 app.get('/download-excel', (req, res) => {
     const jsonData = readJsonFile('resultados_placas.json');
     const processedData = processJsonData(jsonData);
@@ -297,7 +296,6 @@ app.get('/download-excel', (req, res) => {
     });
 });
 
-const archiver = require('archiver');
 const crearCarta = async (item) => {
     const hoy = new Date();
     const dia = hoy.getDate();
@@ -403,7 +401,6 @@ const crearCarta = async (item) => {
     return Packer.toBuffer(doc);
 };
 
-// Endpoint para descargar cartas
 app.get('/descargar-cartas', async (req, res) => {
     const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
     const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
@@ -430,22 +427,70 @@ app.get('/descargar-cartas', async (req, res) => {
     await archive.finalize();
 });
 
-// Endpoint para enviar correos
+
 app.post('/enviar-correos', async (req, res) => {
     const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
     const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
+    
     for (const item of placasConMultas) {
         const conductorOPropietario = (item.conductor === "N/A") ? item.nombre_propietario : item.conductor;
         const buffer = await crearCarta(item);
         const filePath = path.join(__dirname, `Carta_${item.placa_u_documento}.docx`);
         fs.writeFileSync(filePath, buffer); // Guardar temporalmente el archivo
 
-        // Envío del correo electrónico
+        // HTML con header, footer, estilos y redes sociales
+        const htmlContent = `
+        <div style="font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6;">
+            <!-- Header -->
+            <div style="text-align: center; padding: 20px; background-color: #f4f4f4;">
+                <img src="https://www.grupofrimac.com.co/images/main/logo-header.png" alt="Logo de la empresa" style="width: 150px;" />
+            </div>
+
+            <!-- Contenido -->
+            <div style="padding: 20px;">
+                <h1 style="color: #ff7f50; font-size: 26px; text-align: center;">Notificación de comparendo o multa</h1>
+                <p style="text-align: justify;">
+                    Estimado/a <strong>${conductorOPropietario}</strong>,
+                </p>
+                <p style="text-align: justify;">
+                    Le informamos que se ha registrado uno o más comparendos o multas en su contra en el sistema SIMIT.
+                    Por favor, revise el documento adjunto para más detalles sobre los comparendos o multas correspondientes.
+                </p>
+                <p style="text-align: justify;">
+                    Si tiene alguna duda o necesita asistencia, no dude en ponerse en contacto con nuestro equipo de soporte.
+                </p>
+                <p style="margin-top: 30px; text-align: justify;">
+                    Atentamente,
+                </p>
+                <p style="text-align: justify;">
+                    <strong>Su equipo de gestión de multas</strong>
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div style="background-color: #f4f4f4; padding: 20px; text-align: center; font-size: 12px; color: #777;">
+                <p style="margin: 0;">&copy; 2024 Frimac zona franca. Todos los derechos reservados.</p>
+                <div style="margin-top: 10px;">
+                    <!-- Iconos de redes sociales -->
+                    <a href="https://www.facebook.com/tuempresa" style="margin: 0 10px;">
+                        <img src="https://static.vecteezy.com/system/resources/previews/018/930/476/original/facebook-logo-facebook-icon-transparent-free-png.png" alt="Facebook" style="width: 24px;" />
+                    </a>
+                    <a href="https://www.twitter.com/tuempresa" style="margin: 0 10px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1245px-Logo_of_Twitter.svg.png" alt="Twitter" style="width: 24px;" />
+                    </a>
+                    <a href="https://www.instagram.com/tuempresa" style="margin: 0 10px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram" style="width: 24px;" />
+                    </a>
+                </div>
+            </div>
+        </div>`;
+
+        // Envío del correo electrónico con HTML y adjunto
         await transporter.sendMail({
             from: 'eduardoadrianescobar12@gmail.com',
             to: "eduardoadrianescobar12@gmail.com",
             subject: `Notificación de comparendo/s o multa/s para ${conductorOPropietario}`,
-            text: `Estimado/a ${conductorOPropietario}, adjunto la carta con la información de sus comparendos o multas registradas en el simit.`,
+            html: htmlContent,
             attachments: [
                 {
                     filename: `Carta_${item.placa_u_documento}.docx`,
@@ -462,7 +507,7 @@ app.post('/enviar-correos', async (req, res) => {
 
 
 app.get('/api/resultados', (req, res) => {
-    const jsonPath = path.join(__dirname, 'resultados_placas.json'); // Ruta al JSON
+    const jsonPath = path.join(__dirname, 'resultados_placas.json'); 
     fs.readFile(jsonPath, 'utf8', (err, data) => {
         if (err) {
             return res.status(500).json({ error: 'Error al leer el archivo JSON' });
@@ -470,7 +515,6 @@ app.get('/api/resultados', (req, res) => {
         res.json(JSON.parse(data));
     });
 });
-
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);

@@ -31,5 +31,23 @@
         "valor_a_pagar": "$ 572.520  Detalle Pago"
       }
     ]
+  },
+  {
+    "placa_u_documento": "ABC123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa_u_documento": "EDE343",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa_u_documento": "SZX212",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   }
 ]
