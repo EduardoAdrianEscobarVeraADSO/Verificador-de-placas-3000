@@ -1,25 +1,1483 @@
 [
   {
-    "placa_u_documento": "1095810114",
+    "placa_u_documento": "1022956078",
     "nombre_propietario": "N/A",
-    "conductor": "JAVIER ANDRES GOMEZ RINCON",
-    "correo": "Javigomez9110@gmail.com",
+    "conductor": "DIEGO ARMANDO SALAZAR SALAZAR",
+    "correo": "diegoarmandosalazarsalazar@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 610.494"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "727413  Multa  Fecha resolución: 13/04/2023",
+        "notificacion": "No aplica",
+        "placa": "YJT99C",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C35...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 522.900  Interés $ 87.594",
+        "valor_a_pagar": "$ 610.494  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1001184158",
+    "nombre_propietario": "N/A",
+    "conductor": "JULIAN CAMILO MORENO QUINTERO",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa_u_documento": "1001184158",
+    "nombre_propietario": "N/A",
+    "conductor": "JULIAN CAMILO MORENO QUINTERO",
+    "correo": "jq54220@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "2",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.804.659"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "0001658850  Multa  Fecha resolución: 10/09/2024",
+        "notificacion": "No aplica",
+        "placa": "UJG93D",
+        "secretaria": "Cali",
+        "infraccion": "C35...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.520  Interés $ 3.566",
+        "valor_a_pagar": "$ 614.286  Detalle Pago"
+      },
+      {
+        "tipo": "0001658851  Multa  Fecha resolución: 10/09/2024",
+        "notificacion": "No aplica",
+        "placa": "UJG93D",
+        "secretaria": "Cali",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.145.040  Interés $ 7.133",
+        "valor_a_pagar": "$ 1.190.373  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1002642402",
+    "nombre_propietario": "N/A",
+    "conductor": "CARLOS ANDRES MARULANDA MARIN",
+    "correo": "marulandamarincarlosandres4@gmail.com",
     "resumen": {
       "comparendos": "1",
       "multas": "0",
       "acuerdos_de_pago": "0",
-      "total": "$ 572.628"
+      "total": "$ 572.520"
     },
     "tabla_multa": [
       {
-        "tipo": "05001000000042039050  Comparendo  Fecha imposición: 11/03/2024",
-        "notificacion": "26/04/2024",
-        "placa": "SXT074",
-        "secretaria": "Medellin",
-        "infraccion": "C26...  Fotodetección  Proyección pago",
+        "tipo": "99999999000005784177  Comparendo  Fecha imposición: 15/09/2024",
+        "notificacion": "No aplica",
+        "placa": "GTU510",
+        "secretaria": "Caldas (Ant)  VÍA NACIONAL",
+        "infraccion": "C11...  Proyección pago",
         "estado": "Pendiente  No tiene curso",
-        "valor": "$ 572.628",
-        "valor_a_pagar": "$ 572.628  Detalle Pago"
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1037583493",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN CARLOS OYOLA",
+    "correo": "juancarlosoyola2000@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 617.844"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "2024-FAD-08146  Multa  Fecha resolución: 21/06/2024",
+        "notificacion": "No aplica",
+        "placa": "FWM172",
+        "secretaria": "San Diego-Dptal Cesar",
+        "infraccion": "C29...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 522.795  Interés $ 16.631",
+        "valor_a_pagar": "$ 617.844  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1032414670",
+    "nombre_propietario": "N/A",
+    "conductor": "LUIS GERARDO GUEVARA ROMERO",
+    "correo": "gerardoguevara950@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 158.256"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "1803674  Multa  Fecha resolución: 28/07/2023",
+        "notificacion": "No aplica",
+        "placa": "",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "A05...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 139.500  Interés $ 18.756",
+        "valor_a_pagar": "$ 158.256  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1000577125",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN DAVID VELANDIA GARCIA",
+    "correo": "velandiadavid04@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "6",
+      "acuerdos_de_pago": "0",
+      "total": "$ 6.022.339"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042995672  Comparendo  Fecha imposición: 09/09/2024",
+        "notificacion": "No aplica",
+        "placa": "EQQ565",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C28...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "712630  Multa  Fecha resolución: 25/08/2021",
+        "notificacion": "No aplica",
+        "placa": "JYZ64D",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 895.000  Interés $ 316.333",
+        "valor_a_pagar": "$ 1.211.333  Detalle Pago"
+      },
+      {
+        "tipo": "2050340  Multa  Fecha resolución: 10/10/2022",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 937.000  Interés $ 211.038",
+        "valor_a_pagar": "$ 1.148.038  Detalle Pago"
+      },
+      {
+        "tipo": "434130  Multa  Fecha resolución: 09/03/2023",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D12...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.045.500  Interés $ 186.554",
+        "valor_a_pagar": "$ 1.232.054  Detalle Pago"
+      },
+      {
+        "tipo": "1766432  Multa  Fecha resolución: 26/07/2023",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 278.600  Interés $ 37.632",
+        "valor_a_pagar": "$ 316.232  Detalle Pago"
+      },
+      {
+        "tipo": "46198  Multa  Fecha resolución: 12/02/2024",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.144.900  Interés $ 82.851",
+        "valor_a_pagar": "$ 1.227.751  Detalle Pago"
+      },
+      {
+        "tipo": "1213589  Multa  Fecha resolución: 26/06/2024",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 305.100  Interés $ 9.231",
+        "valor_a_pagar": "$ 314.331  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1000577125",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN DAVID VELANDIA GARCIA",
+    "correo": "velandiadavid04@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "6",
+      "acuerdos_de_pago": "0",
+      "total": "$ 6.022.339"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042995672  Comparendo  Fecha imposición: 09/09/2024",
+        "notificacion": "No aplica",
+        "placa": "EQQ565",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C28...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "712630  Multa  Fecha resolución: 25/08/2021",
+        "notificacion": "No aplica",
+        "placa": "JYZ64D",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 895.000  Interés $ 316.333",
+        "valor_a_pagar": "$ 1.211.333  Detalle Pago"
+      },
+      {
+        "tipo": "2050340  Multa  Fecha resolución: 10/10/2022",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 937.000  Interés $ 211.038",
+        "valor_a_pagar": "$ 1.148.038  Detalle Pago"
+      },
+      {
+        "tipo": "434130  Multa  Fecha resolución: 09/03/2023",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D12...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.045.500  Interés $ 186.554",
+        "valor_a_pagar": "$ 1.232.054  Detalle Pago"
+      },
+      {
+        "tipo": "1766432  Multa  Fecha resolución: 26/07/2023",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 278.600  Interés $ 37.632",
+        "valor_a_pagar": "$ 316.232  Detalle Pago"
+      },
+      {
+        "tipo": "46198  Multa  Fecha resolución: 12/02/2024",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.144.900  Interés $ 82.851",
+        "valor_a_pagar": "$ 1.227.751  Detalle Pago"
+      },
+      {
+        "tipo": "1213589  Multa  Fecha resolución: 26/06/2024",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 305.100  Interés $ 9.231",
+        "valor_a_pagar": "$ 314.331  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1000577125",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN DAVID VELANDIA GARCIA",
+    "correo": "velandiadavid04@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "6",
+      "acuerdos_de_pago": "0",
+      "total": "$ 6.022.339"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042995672  Comparendo  Fecha imposición: 09/09/2024",
+        "notificacion": "No aplica",
+        "placa": "EQQ565",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C28...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "712630  Multa  Fecha resolución: 25/08/2021",
+        "notificacion": "No aplica",
+        "placa": "JYZ64D",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 895.000  Interés $ 316.333",
+        "valor_a_pagar": "$ 1.211.333  Detalle Pago"
+      },
+      {
+        "tipo": "2050340  Multa  Fecha resolución: 10/10/2022",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 937.000  Interés $ 211.038",
+        "valor_a_pagar": "$ 1.148.038  Detalle Pago"
+      },
+      {
+        "tipo": "434130  Multa  Fecha resolución: 09/03/2023",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D12...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.045.500  Interés $ 186.554",
+        "valor_a_pagar": "$ 1.232.054  Detalle Pago"
+      },
+      {
+        "tipo": "1766432  Multa  Fecha resolución: 26/07/2023",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 278.600  Interés $ 37.632",
+        "valor_a_pagar": "$ 316.232  Detalle Pago"
+      },
+      {
+        "tipo": "46198  Multa  Fecha resolución: 12/02/2024",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.144.900  Interés $ 82.851",
+        "valor_a_pagar": "$ 1.227.751  Detalle Pago"
+      },
+      {
+        "tipo": "1213589  Multa  Fecha resolución: 26/06/2024",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 305.100  Interés $ 9.231",
+        "valor_a_pagar": "$ 314.331  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1000577125",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN DAVID VELANDIA GARCIA",
+    "correo": "velandiadavid04@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "6",
+      "acuerdos_de_pago": "0",
+      "total": "$ 6.022.339"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042995672  Comparendo  Fecha imposición: 09/09/2024",
+        "notificacion": "No aplica",
+        "placa": "EQQ565",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C28...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "712630  Multa  Fecha resolución: 25/08/2021",
+        "notificacion": "No aplica",
+        "placa": "JYZ64D",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 895.000  Interés $ 316.333",
+        "valor_a_pagar": "$ 1.211.333  Detalle Pago"
+      },
+      {
+        "tipo": "2050340  Multa  Fecha resolución: 10/10/2022",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 937.000  Interés $ 211.038",
+        "valor_a_pagar": "$ 1.148.038  Detalle Pago"
+      },
+      {
+        "tipo": "434130  Multa  Fecha resolución: 09/03/2023",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D12...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.045.500  Interés $ 186.554",
+        "valor_a_pagar": "$ 1.232.054  Detalle Pago"
+      },
+      {
+        "tipo": "1766432  Multa  Fecha resolución: 26/07/2023",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 278.600  Interés $ 37.632",
+        "valor_a_pagar": "$ 316.232  Detalle Pago"
+      },
+      {
+        "tipo": "46198  Multa  Fecha resolución: 12/02/2024",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.144.900  Interés $ 82.851",
+        "valor_a_pagar": "$ 1.227.751  Detalle Pago"
+      },
+      {
+        "tipo": "1213589  Multa  Fecha resolución: 26/06/2024",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 305.100  Interés $ 9.231",
+        "valor_a_pagar": "$ 314.331  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1000577125",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN DAVID VELANDIA GARCIA",
+    "correo": "velandiadavid04@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "6",
+      "acuerdos_de_pago": "0",
+      "total": "$ 6.022.339"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042995672  Comparendo  Fecha imposición: 09/09/2024",
+        "notificacion": "No aplica",
+        "placa": "EQQ565",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C28...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "712630  Multa  Fecha resolución: 25/08/2021",
+        "notificacion": "No aplica",
+        "placa": "JYZ64D",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 895.000  Interés $ 316.333",
+        "valor_a_pagar": "$ 1.211.333  Detalle Pago"
+      },
+      {
+        "tipo": "2050340  Multa  Fecha resolución: 10/10/2022",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 937.000  Interés $ 211.038",
+        "valor_a_pagar": "$ 1.148.038  Detalle Pago"
+      },
+      {
+        "tipo": "434130  Multa  Fecha resolución: 09/03/2023",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D12...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.045.500  Interés $ 186.554",
+        "valor_a_pagar": "$ 1.232.054  Detalle Pago"
+      },
+      {
+        "tipo": "1766432  Multa  Fecha resolución: 26/07/2023",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 278.600  Interés $ 37.632",
+        "valor_a_pagar": "$ 316.232  Detalle Pago"
+      },
+      {
+        "tipo": "46198  Multa  Fecha resolución: 12/02/2024",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.144.900  Interés $ 82.851",
+        "valor_a_pagar": "$ 1.227.751  Detalle Pago"
+      },
+      {
+        "tipo": "1213589  Multa  Fecha resolución: 26/06/2024",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 305.100  Interés $ 9.231",
+        "valor_a_pagar": "$ 314.331  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1000577125",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN DAVID VELANDIA GARCIA",
+    "correo": "velandiadavid04@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "6",
+      "acuerdos_de_pago": "0",
+      "total": "$ 6.022.339"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042995672  Comparendo  Fecha imposición: 09/09/2024",
+        "notificacion": "No aplica",
+        "placa": "EQQ565",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C28...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "712630  Multa  Fecha resolución: 25/08/2021",
+        "notificacion": "No aplica",
+        "placa": "JYZ64D",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 895.000  Interés $ 316.333",
+        "valor_a_pagar": "$ 1.211.333  Detalle Pago"
+      },
+      {
+        "tipo": "2050340  Multa  Fecha resolución: 10/10/2022",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 937.000  Interés $ 211.038",
+        "valor_a_pagar": "$ 1.148.038  Detalle Pago"
+      },
+      {
+        "tipo": "434130  Multa  Fecha resolución: 09/03/2023",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D12...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.045.500  Interés $ 186.554",
+        "valor_a_pagar": "$ 1.232.054  Detalle Pago"
+      },
+      {
+        "tipo": "1766432  Multa  Fecha resolución: 26/07/2023",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 278.600  Interés $ 37.632",
+        "valor_a_pagar": "$ 316.232  Detalle Pago"
+      },
+      {
+        "tipo": "46198  Multa  Fecha resolución: 12/02/2024",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.144.900  Interés $ 82.851",
+        "valor_a_pagar": "$ 1.227.751  Detalle Pago"
+      },
+      {
+        "tipo": "1213589  Multa  Fecha resolución: 26/06/2024",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 305.100  Interés $ 9.231",
+        "valor_a_pagar": "$ 314.331  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1000577125",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN DAVID VELANDIA GARCIA",
+    "correo": "velandiadavid04@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "6",
+      "acuerdos_de_pago": "0",
+      "total": "$ 6.022.339"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042995672  Comparendo  Fecha imposición: 09/09/2024",
+        "notificacion": "No aplica",
+        "placa": "EQQ565",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C28...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "712630  Multa  Fecha resolución: 25/08/2021",
+        "notificacion": "No aplica",
+        "placa": "JYZ64D",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 895.000  Interés $ 316.333",
+        "valor_a_pagar": "$ 1.211.333  Detalle Pago"
+      },
+      {
+        "tipo": "2050340  Multa  Fecha resolución: 10/10/2022",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D01...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 937.000  Interés $ 211.038",
+        "valor_a_pagar": "$ 1.148.038  Detalle Pago"
+      },
+      {
+        "tipo": "434130  Multa  Fecha resolución: 09/03/2023",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D12...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.045.500  Interés $ 186.554",
+        "valor_a_pagar": "$ 1.232.054  Detalle Pago"
+      },
+      {
+        "tipo": "1766432  Multa  Fecha resolución: 26/07/2023",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 278.600  Interés $ 37.632",
+        "valor_a_pagar": "$ 316.232  Detalle Pago"
+      },
+      {
+        "tipo": "46198  Multa  Fecha resolución: 12/02/2024",
+        "notificacion": "No aplica",
+        "placa": "GZC65G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.144.900  Interés $ 82.851",
+        "valor_a_pagar": "$ 1.227.751  Detalle Pago"
+      },
+      {
+        "tipo": "1213589  Multa  Fecha resolución: 26/06/2024",
+        "notificacion": "No aplica",
+        "placa": "PEN07G",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "B03...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 305.100  Interés $ 9.231",
+        "valor_a_pagar": "$ 314.331  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1006233322",
+    "nombre_propietario": "N/A",
+    "conductor": "HERLAN ARANDA",
+    "correo": "herlanaranda34@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "2",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.414.000"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "0001682754  Multa  Fecha resolución: 27/09/2024",
+        "notificacion": "No aplica",
+        "placa": "WHV897",
+        "secretaria": "Cali",
+        "infraccion": "D04...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.145.040  Interés $ 1.067",
+        "valor_a_pagar": "$ 1.184.307  Detalle Pago"
+      },
+      {
+        "tipo": "000001079803024  Multa  Fecha resolución: 19/09/2024",
+        "notificacion": "No aplica",
+        "placa": "WHV897",
+        "secretaria": "Cali",
+        "infraccion": "H13...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 190.840  Interés $ 653",
+        "valor_a_pagar": "$ 229.693  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1006233322",
+    "nombre_propietario": "N/A",
+    "conductor": "HERLAN ARANDA",
+    "correo": "herlanaranda34@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "2",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.414.000"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "0001682754  Multa  Fecha resolución: 27/09/2024",
+        "notificacion": "No aplica",
+        "placa": "WHV897",
+        "secretaria": "Cali",
+        "infraccion": "D04...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.145.040  Interés $ 1.067",
+        "valor_a_pagar": "$ 1.184.307  Detalle Pago"
+      },
+      {
+        "tipo": "000001079803024  Multa  Fecha resolución: 19/09/2024",
+        "notificacion": "No aplica",
+        "placa": "WHV897",
+        "secretaria": "Cali",
+        "infraccion": "H13...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 190.840  Interés $ 653",
+        "valor_a_pagar": "$ 229.693  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1007308781",
+    "nombre_propietario": "N/A",
+    "conductor": "CARLOS DOMICIANO SUAREZ VILLAMIZAR",
+    "correo": "carlosuarez636@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "2",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.791.704"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "711497  Multa  Fecha resolución: 24/08/2021",
+        "notificacion": "No aplica",
+        "placa": "DAH383",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C29...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 447.700  Interés $ 158.377",
+        "valor_a_pagar": "$ 606.077  Detalle Pago"
+      },
+      {
+        "tipo": "RO8076  Multa  Fecha resolución: 03/06/2022",
+        "notificacion": "No aplica",
+        "placa": "JOW919",
+        "secretaria": "Fusagasuga  VÍA NACIONAL",
+        "infraccion": "D13...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 936.900  Interés $ 248.727",
+        "valor_a_pagar": "$ 1.185.627  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1007308781",
+    "nombre_propietario": "N/A",
+    "conductor": "CARLOS DOMICIANO SUAREZ VILLAMIZAR",
+    "correo": "carlosuarez636@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "2",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.791.704"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "711497  Multa  Fecha resolución: 24/08/2021",
+        "notificacion": "No aplica",
+        "placa": "DAH383",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C29...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 447.700  Interés $ 158.377",
+        "valor_a_pagar": "$ 606.077  Detalle Pago"
+      },
+      {
+        "tipo": "RO8076  Multa  Fecha resolución: 03/06/2022",
+        "notificacion": "No aplica",
+        "placa": "JOW919",
+        "secretaria": "Fusagasuga  VÍA NACIONAL",
+        "infraccion": "D13...",
+        "estado": "Pendiente de pago",
+        "valor": "$ 936.900  Interés $ 248.727",
+        "valor_a_pagar": "$ 1.185.627  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1020798588",
+    "nombre_propietario": "N/A",
+    "conductor": "CRISTHIAN GIOVANI ALMANZA SUAREZ",
+    "correo": "cristhiangiovany9411@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 597.156"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "RS-1360-2024  Multa  Fecha resolución: 16/05/2024",
+        "notificacion": "No aplica",
+        "placa": "WCZ597",
+        "secretaria": "Guaduas",
+        "infraccion": "C11...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.515  Interés $ 24.641",
+        "valor_a_pagar": "$ 597.156  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1036598288",
+    "nombre_propietario": "N/A",
+    "conductor": "NORLAN CAMILO RAMIREZ ESTRADA",
+    "correo": "ramirezcsmilo@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "1",
+      "total": "$ 1.177.085"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "000000039040024  Multa  Fecha resolución: 29/08/2024",
+        "notificacion": "No aplica",
+        "placa": "NHP22B",
+        "secretaria": "La Estrella",
+        "infraccion": "C35...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.520  Interés $ 5.891",
+        "valor_a_pagar": "$ 578.411  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1026556413",
+    "nombre_propietario": "N/A",
+    "conductor": "CRISTIAN CAMILO RAMIREZ GARZON",
+    "correo": "cristiancamilorall@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "2",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.159.324"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "2520267  Multa  Fecha resolución: 19/10/2023",
+        "notificacion": "No aplica",
+        "placa": "WCT911",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C35...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 522.900  Interés $ 56.762",
+        "valor_a_pagar": "$ 579.662  Detalle Pago"
+      },
+      {
+        "tipo": "2520261  Multa  Fecha resolución: 19/10/2023",
+        "notificacion": "No aplica",
+        "placa": "WCT911",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C31...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 522.900  Interés $ 56.762",
+        "valor_a_pagar": "$ 579.662  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1026556413",
+    "nombre_propietario": "N/A",
+    "conductor": "CRISTIAN CAMILO RAMIREZ GARZON",
+    "correo": "cristiancamilorall@gmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "2",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.159.324"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "2520267  Multa  Fecha resolución: 19/10/2023",
+        "notificacion": "No aplica",
+        "placa": "WCT911",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C35...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 522.900  Interés $ 56.762",
+        "valor_a_pagar": "$ 579.662  Detalle Pago"
+      },
+      {
+        "tipo": "2520261  Multa  Fecha resolución: 19/10/2023",
+        "notificacion": "No aplica",
+        "placa": "WCT911",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C31...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 522.900  Interés $ 56.762",
+        "valor_a_pagar": "$ 579.662  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1032391812",
+    "nombre_propietario": "N/A",
+    "conductor": "JHON EDISSON FORERO QUINTERO",
+    "correo": "Jhon.edisson644@gmail.com",
+    "resumen": {
+      "comparendos": "3",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.200"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "99999999000003639459  Comparendo  Fecha imposición: 09/06/2019",
+        "notificacion": "No aplica",
+        "placa": "WCV367",
+        "secretaria": "Caqueza  VÍA NACIONAL",
+        "infraccion": "H03...",
+        "estado": "Pendiente Curso  No tiene curso",
+        "valor": "$ 0",
+        "valor_a_pagar": "$ 0  Detalle Pago"
+      },
+      {
+        "tipo": "11001000000042849919  Comparendo  Fecha imposición: 30/07/2024",
+        "notificacion": "No aplica",
+        "placa": "WCV367",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C02...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "11001000000042886464  Comparendo  Fecha imposición: 13/08/2024",
+        "notificacion": "No aplica",
+        "placa": "WCV367",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C02...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1032391812",
+    "nombre_propietario": "N/A",
+    "conductor": "JHON EDISSON FORERO QUINTERO",
+    "correo": "Jhon.edisson644@gmail.com",
+    "resumen": {
+      "comparendos": "3",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.200"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "99999999000003639459  Comparendo  Fecha imposición: 09/06/2019",
+        "notificacion": "No aplica",
+        "placa": "WCV367",
+        "secretaria": "Caqueza  VÍA NACIONAL",
+        "infraccion": "H03...",
+        "estado": "Pendiente Curso  No tiene curso",
+        "valor": "$ 0",
+        "valor_a_pagar": "$ 0  Detalle Pago"
+      },
+      {
+        "tipo": "11001000000042849919  Comparendo  Fecha imposición: 30/07/2024",
+        "notificacion": "No aplica",
+        "placa": "WCV367",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C02...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "11001000000042886464  Comparendo  Fecha imposición: 13/08/2024",
+        "notificacion": "No aplica",
+        "placa": "WCV367",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C02...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1032391812",
+    "nombre_propietario": "N/A",
+    "conductor": "JHON EDISSON FORERO QUINTERO",
+    "correo": "Jhon.edisson644@gmail.com",
+    "resumen": {
+      "comparendos": "3",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.200"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "99999999000003639459  Comparendo  Fecha imposición: 09/06/2019",
+        "notificacion": "No aplica",
+        "placa": "WCV367",
+        "secretaria": "Caqueza  VÍA NACIONAL",
+        "infraccion": "H03...",
+        "estado": "Pendiente Curso  No tiene curso",
+        "valor": "$ 0",
+        "valor_a_pagar": "$ 0  Detalle Pago"
+      },
+      {
+        "tipo": "11001000000042849919  Comparendo  Fecha imposición: 30/07/2024",
+        "notificacion": "No aplica",
+        "placa": "WCV367",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C02...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "11001000000042886464  Comparendo  Fecha imposición: 13/08/2024",
+        "notificacion": "No aplica",
+        "placa": "WCV367",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C02...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1022392404",
+    "nombre_propietario": "N/A",
+    "conductor": "JOSE CESAR SIERRA VERGARA",
+    "correo": "cesarsierra3014@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 572.518"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "25307000000044085506  Comparendo  Fecha imposición: 31/07/2024",
+        "notificacion": "No aplica",
+        "placa": "LZN624",
+        "secretaria": "Girardot",
+        "infraccion": "C31...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.518",
+        "valor_a_pagar": "$ 572.518  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1005543047",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN PABLO CORTES GUALDRON",
+    "correo": "cortesgualdronj@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 572.520"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "68276000000045197644  Comparendo  Fecha imposición: 20/09/2024",
+        "notificacion": "No aplica",
+        "placa": "SMH977",
+        "secretaria": "Floridablanca",
+        "infraccion": "C14...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1014233803",
+    "nombre_propietario": "N/A",
+    "conductor": "EMMANUEL SANTIAGO BERNAL GARCIA",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa_u_documento": "1026256148",
+    "nombre_propietario": "N/A",
+    "conductor": "JHON RICARDO GARCIA PINEDA",
+    "correo": "ricardog05658@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "2",
+      "acuerdos_de_pago": "1",
+      "total": "$ 4.185.044"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042700427  Comparendo  Fecha imposición: 23/05/2024",
+        "notificacion": "En proceso notificación",
+        "placa": "BRS922",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente Curso  No tiene curso",
+        "valor": "$ 357.800",
+        "valor_a_pagar": "$ 357.800  Detalle Pago"
+      },
+      {
+        "tipo": "0001486798  Multa  Fecha resolución: 20/05/2024",
+        "notificacion": "No aplica",
+        "placa": "EST84D",
+        "secretaria": "Cali",
+        "infraccion": "C35...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.520  Interés $ 23.927",
+        "valor_a_pagar": "$ 634.647  Detalle Pago"
+      },
+      {
+        "tipo": "0001480432  Multa  Fecha resolución: 14/05/2024",
+        "notificacion": "No aplica",
+        "placa": "EST84D",
+        "secretaria": "Cali",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.145.040  Interés $ 49.997",
+        "valor_a_pagar": "$ 1.233.237  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1026256148",
+    "nombre_propietario": "N/A",
+    "conductor": "JHON RICARDO GARCIA PINEDA",
+    "correo": "ricardog05658@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "2",
+      "acuerdos_de_pago": "1",
+      "total": "$ 4.185.044"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042700427  Comparendo  Fecha imposición: 23/05/2024",
+        "notificacion": "En proceso notificación",
+        "placa": "BRS922",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente Curso  No tiene curso",
+        "valor": "$ 357.800",
+        "valor_a_pagar": "$ 357.800  Detalle Pago"
+      },
+      {
+        "tipo": "0001486798  Multa  Fecha resolución: 20/05/2024",
+        "notificacion": "No aplica",
+        "placa": "EST84D",
+        "secretaria": "Cali",
+        "infraccion": "C35...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.520  Interés $ 23.927",
+        "valor_a_pagar": "$ 634.647  Detalle Pago"
+      },
+      {
+        "tipo": "0001480432  Multa  Fecha resolución: 14/05/2024",
+        "notificacion": "No aplica",
+        "placa": "EST84D",
+        "secretaria": "Cali",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.145.040  Interés $ 49.997",
+        "valor_a_pagar": "$ 1.233.237  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1026256148",
+    "nombre_propietario": "N/A",
+    "conductor": "JHON RICARDO GARCIA PINEDA",
+    "correo": "ricardog05658@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "2",
+      "acuerdos_de_pago": "1",
+      "total": "$ 4.185.044"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042700427  Comparendo  Fecha imposición: 23/05/2024",
+        "notificacion": "En proceso notificación",
+        "placa": "BRS922",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente Curso  No tiene curso",
+        "valor": "$ 357.800",
+        "valor_a_pagar": "$ 357.800  Detalle Pago"
+      },
+      {
+        "tipo": "0001486798  Multa  Fecha resolución: 20/05/2024",
+        "notificacion": "No aplica",
+        "placa": "EST84D",
+        "secretaria": "Cali",
+        "infraccion": "C35...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.520  Interés $ 23.927",
+        "valor_a_pagar": "$ 634.647  Detalle Pago"
+      },
+      {
+        "tipo": "0001480432  Multa  Fecha resolución: 14/05/2024",
+        "notificacion": "No aplica",
+        "placa": "EST84D",
+        "secretaria": "Cali",
+        "infraccion": "D02...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 1.145.040  Interés $ 49.997",
+        "valor_a_pagar": "$ 1.233.237  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1007543560",
+    "nombre_propietario": "N/A",
+    "conductor": "SEBASTIAN QUIRAMA SABOGAL",
+    "correo": "esequielantonio02@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 572.520"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "76109000000040853356  Comparendo  Fecha imposición: 16/08/2024",
+        "notificacion": "No aplica",
+        "placa": "LFL571",
+        "secretaria": "Buenaventura",
+        "infraccion": "C38...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1040045696",
+    "nombre_propietario": "N/A",
+    "conductor": "JUAN DIEGO VILLADA GARCIA",
+    "correo": "juandivillada87@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 0"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "05615000000045517948  Comparendo  Fecha imposición: 26/08/2024",
+        "notificacion": "No aplica",
+        "placa": "TRG619",
+        "secretaria": "Rionegro",
+        "infraccion": "H03...",
+        "estado": "Pendiente Curso  No tiene curso",
+        "valor": "$ 0",
+        "valor_a_pagar": "$ 0  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1014219907",
+    "nombre_propietario": "N/A",
+    "conductor": "EDISSON JAVIER CABIATIVA FAJARDO",
+    "correo": "javierdiana30@hotmail.com",
+    "resumen": {
+      "comparendos": "0",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 587.242"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "1340763  Multa  Fecha resolución: 11/07/2024",
+        "notificacion": "No aplica",
+        "placa": "HVL807",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C14...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.600  Interés $ 14.642",
+        "valor_a_pagar": "$ 587.242  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1005451844",
+    "nombre_propietario": "N/A",
+    "conductor": "CHAYANNE AREVALO QUIROGA",
+    "correo": "chayannearevalo@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 572.600"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042930839  Comparendo  Fecha imposición: 21/08/2024",
+        "notificacion": "No aplica",
+        "placa": "XXB384",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C29...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1032502463",
+    "nombre_propietario": "N/A",
+    "conductor": "ESTEBAN CALLE OSUNA",
+    "correo": "dxbogota@gmail.com",
+    "resumen": {
+      "comparendos": "2",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.200"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042820989  Comparendo  Fecha imposición: 06/07/2024",
+        "notificacion": "No aplica",
+        "placa": "WOU526",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C02...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "11001000000042844198  Comparendo  Fecha imposición: 24/07/2024",
+        "notificacion": "No aplica",
+        "placa": "WOU526",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C06...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1032502463",
+    "nombre_propietario": "N/A",
+    "conductor": "ESTEBAN CALLE OSUNA",
+    "correo": "dxbogota@gmail.com",
+    "resumen": {
+      "comparendos": "2",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.200"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042820989  Comparendo  Fecha imposición: 06/07/2024",
+        "notificacion": "No aplica",
+        "placa": "WOU526",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C02...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      },
+      {
+        "tipo": "11001000000042844198  Comparendo  Fecha imposición: 24/07/2024",
+        "notificacion": "No aplica",
+        "placa": "WOU526",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C06...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "1001877659",
+    "nombre_propietario": "N/A",
+    "conductor": "JOSE DAVID AHUMADA SEGURA",
+    "correo": "josedavidahumada951@gmail.com",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 572.600"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "11001000000042883486  Comparendo  Fecha imposición: 10/08/2024",
+        "notificacion": "No aplica",
+        "placa": "WFD229",
+        "secretaria": "Bogotá D.C.",
+        "infraccion": "C02...  Proyección pago",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.600",
+        "valor_a_pagar": "$ 572.600  Detalle Pago"
       }
     ]
   }

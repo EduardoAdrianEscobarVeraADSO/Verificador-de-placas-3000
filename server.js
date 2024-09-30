@@ -1,6 +1,7 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
@@ -16,7 +17,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
-
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'eduardoadrianescobar12@gmail.com', 
+      pass: 'yzcx wblj gwrw pmzv'          
+    }
+  });
 app.post('/consultar', async (req, res) => {
     const inputPlacas = req.body.placa;
     const placasArray = inputPlacas.split(',').map(placa => placa.trim());
@@ -24,13 +31,13 @@ app.post('/consultar', async (req, res) => {
     const resultados = [];
 
     const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']
+        headless: false,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1920,1080']
     });
 
     async function buscarConductorID(identificacion) {
         const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27" + identificacion + "%27))%20or%20(contains(Ucr_Name,%27" + identificacion + "%27))%20or%20(contains(Identification,%27" + identificacion + "%27)))";
-        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1laWQiOiI2M2Q1ZDhiNi04ZTUwLTRlMmItYjgxYS00ZDNiMmM5OTU4OTAiLCJ1bmlxdWVfbmFtZSI6IkVESEVSTkFOREVaIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9hY2Nlc3Njb250cm9sc2VydmljZS8yMDEwLzA3L2NsYWltcy9pZGVudGl0eXByb3ZpZGVyIjoiQVNQLk5FVCBJZGVudGl0eSIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiYzYwODE2YmYtMTdjMy00MTA1LWFlY2MtMmNjZGY4NmY4NWMxIiwiZW1haWwiOiJhdXhpbGlhcjEuZmxvdGFwcm9waWFAZnJpbWFjLmNvbS5jbyIsImZpcnN0TmFtZSI6IkVkd2luZyIsImxhc3ROYW1lIjoiSGVybsOhbmRleiBIZXJyZXJhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiYXVkIjoiMDk5MTUzYzI2MjUxNDliYzhlY2IzZTg1ZTAzZjAwMjIiLCJleHAiOjE3Mjc1MzY0MjcsIm5iZiI6MTcyNzQ1MDAyN30.GthcI_sSTD8-C9Z1xM39_7PeeTXyZRnNRiLjmGCI_Iw";
+        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1laWQiOiI2M2Q1ZDhiNi04ZTUwLTRlMmItYjgxYS00ZDNiMmM5OTU4OTAiLCJ1bmlxdWVfbmFtZSI6IkVESEVSTkFOREVaIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9hY2Nlc3Njb250cm9sc2VydmljZS8yMDEwLzA3L2NsYWltcy9pZGVudGl0eXByb3ZpZGVyIjoiQVNQLk5FVCBJZGVudGl0eSIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiYzYwODE2YmYtMTdjMy00MTA1LWFlY2MtMmNjZGY4NmY4NWMxIiwiZW1haWwiOiJhdXhpbGlhcjEuZmxvdGFwcm9waWFAZnJpbWFjLmNvbS5jbyIsImZpcnN0TmFtZSI6IkVkd2luZyIsImxhc3ROYW1lIjoiSGVybsOhbmRleiBIZXJyZXJhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiYXVkIjoiMDk5MTUzYzI2MjUxNDliYzhlY2IzZTg1ZTAzZjAwMjIiLCJleHAiOjE3Mjc3OTA0MjQsIm5iZiI6MTcyNzcwNDAyNH0.YvU7B-nfwfP2T5fAco65lamkayjAtNpgoYbYZSyWR2c";
 
         const options = {
             method: 'GET',
@@ -50,16 +57,19 @@ app.post('/consultar', async (req, res) => {
 
             const data = await response.json();
 
-            const filteredData = data.value.filter(item => item.Identification === identificacion);
 
-            if (filteredData.length === 0) {
+            if (data.length === 0) {
                 console.log(`No se encontró ningún usuario con la identificación: ${identificacion}`);
+                usuario = "No existe";
+                return;
             }
 
-            const usuario = filteredData[0];
+            const usuario = data.value[0];
 
             if (usuario.State === 2) {
-                console.log(`El usuario con identificación ${identificacion} está inactivo.`);              
+                console.log(`El usuario con identificación ${identificacion} está inactivo.`);
+                usuario = "inactivo";
+                return;
             }
             console.log(usuario.Ucr_Name)    
             return usuario.Ucr_Name;
@@ -68,9 +78,9 @@ app.post('/consultar', async (req, res) => {
             console.error('Hubo un error en la solicitud:', error);
         }
     }
-    async function obtenerCorreoConductor(identificacion) {
+    async function ObtenerCorreo(identificacion) {
         const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27" + identificacion + "%27))%20or%20(contains(Ucr_Name,%27" + identificacion + "%27))%20or%20(contains(Identification,%27" + identificacion + "%27)))";
-        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1laWQiOiI2M2Q1ZDhiNi04ZTUwLTRlMmItYjgxYS00ZDNiMmM5OTU4OTAiLCJ1bmlxdWVfbmFtZSI6IkVESEVSTkFOREVaIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9hY2Nlc3Njb250cm9sc2VydmljZS8yMDEwLzA3L2NsYWltcy9pZGVudGl0eXByb3ZpZGVyIjoiQVNQLk5FVCBJZGVudGl0eSIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiYzYwODE2YmYtMTdjMy00MTA1LWFlY2MtMmNjZGY4NmY4NWMxIiwiZW1haWwiOiJhdXhpbGlhcjEuZmxvdGFwcm9waWFAZnJpbWFjLmNvbS5jbyIsImZpcnN0TmFtZSI6IkVkd2luZyIsImxhc3ROYW1lIjoiSGVybsOhbmRleiBIZXJyZXJhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiYXVkIjoiMDk5MTUzYzI2MjUxNDliYzhlY2IzZTg1ZTAzZjAwMjIiLCJleHAiOjE3Mjc1MzY0MjcsIm5iZiI6MTcyNzQ1MDAyN30.GthcI_sSTD8-C9Z1xM39_7PeeTXyZRnNRiLjmGCI_Iw";
+        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1laWQiOiI2M2Q1ZDhiNi04ZTUwLTRlMmItYjgxYS00ZDNiMmM5OTU4OTAiLCJ1bmlxdWVfbmFtZSI6IkVESEVSTkFOREVaIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9hY2Nlc3Njb250cm9sc2VydmljZS8yMDEwLzA3L2NsYWltcy9pZGVudGl0eXByb3ZpZGVyIjoiQVNQLk5FVCBJZGVudGl0eSIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiYzYwODE2YmYtMTdjMy00MTA1LWFlY2MtMmNjZGY4NmY4NWMxIiwiZW1haWwiOiJhdXhpbGlhcjEuZmxvdGFwcm9waWFAZnJpbWFjLmNvbS5jbyIsImZpcnN0TmFtZSI6IkVkd2luZyIsImxhc3ROYW1lIjoiSGVybsOhbmRleiBIZXJyZXJhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiYXVkIjoiMDk5MTUzYzI2MjUxNDliYzhlY2IzZTg1ZTAzZjAwMjIiLCJleHAiOjE3Mjc3OTA0MjQsIm5iZiI6MTcyNzcwNDAyNH0.YvU7B-nfwfP2T5fAco65lamkayjAtNpgoYbYZSyWR2c";
 
         const options = {
             method: 'GET',
@@ -90,17 +100,21 @@ app.post('/consultar', async (req, res) => {
 
             const data = await response.json();
 
-            const filteredData = data.value.filter(item => item.Identification === identificacion);
 
-            if (filteredData.length === 0) {
+            if (data.length === 0) {
                 console.log(`No se encontró ningún usuario con la identificación: ${identificacion}`);
+                usuario = "No existe";
+                return;
             }
 
-            const usuario = filteredData[0];
+            const usuario = data.value[0];
 
             if (usuario.State === 2) {
-                console.log(`El usuario con identificación ${identificacion} está inactivo.`);              
-            } 
+                console.log(`El usuario con identificación ${identificacion} está inactivo.`);
+                usuario = "inactivo";
+                return;
+            }
+            console.log(usuario.MainEmailAddress)    
             return usuario.MainEmailAddress;
 
         } catch (error) {
@@ -108,16 +122,18 @@ app.post('/consultar', async (req, res) => {
         }
     }
 
-
     for (const placa of placasArray) {
         const page = await browser.newPage();
 
         try {
-            const url = `https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`;
-            await page.goto(url, { waitUntil: 'networkidle2' });
+            
+            await page.goto(`https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`, {  waitUntil: 'networkidle2', timeout: 20000});
 
-            await page.waitForSelector('#resumenEstadoCuenta', { timeout: 15000 });
-            await page.waitForSelector('#multaTable', { timeout: 15000 });
+
+            await Promise.all([
+                page.waitForSelector('#resumenEstadoCuenta', { timeout: 20000 }),
+                page.waitForSelector('#multaTable', { timeout: 20000 })
+            ]);
 
             const textoResumen = await page.evaluate(() => {
                 const contenedor = document.querySelector('#resumenEstadoCuenta');
@@ -158,7 +174,7 @@ app.post('/consultar', async (req, res) => {
 
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
-            const correo = await obtenerCorreoConductor(placa)
+            const correo = await ObtenerCorreo(placa);
 
             const resultado = {
                 placa_u_documento: placa,
@@ -179,13 +195,10 @@ app.post('/consultar', async (req, res) => {
         } catch (error) {
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
-            const correo = await obtenerCorreoConductor(placa)
-
             console.error(`Error al procesar la placa ${placa}:`, error);
             resultados.push({
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
-                correo: correo,
                 conductor: conductor || "N/A",
                 mensaje: 'No tiene comparendos ni multas comparendos ni multas'
             });
@@ -200,7 +213,6 @@ app.post('/consultar', async (req, res) => {
 
     res.json({ message: 'Consulta completada y resultados guardados', resultados });
 });
-
 
 async function obtenerNombrePropietario(placa) {
     const endPoint = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewVehicle?";
@@ -248,19 +260,124 @@ app.get('/download-excel', (req, res) => {
         if (err) {
             console.error(err);
         }
-        fs.unlinkSync(excelFilePath); 
+        fs.unlinkSync(excelFilePath);
     });
 });
 
 const archiver = require('archiver');
+const crearCarta = async (item) => {
+    const hoy = new Date();
+    const dia = hoy.getDate();
+    const mes = hoy.getMonth() + 1;
+    const anio = hoy.getFullYear();
+    const conductorOPropietario = (item.conductor === "N/A") ? item.nombre_propietario : item.conductor;
 
+    const doc = new Document({
+        creator: "Buscador de placas",
+        title: `Resultados de ${item.placa_u_documento}`,
+        description: `Carta con la información de las multas de ${item.placa_u_documento}`,
+        sections: [],
+    });
+
+    const createParagraph = (text, isBold = false) => {
+        return new Paragraph({
+            alignment: 'left',
+            spacing: {
+                after: 200,
+            },
+            children: [
+                new TextRun({
+                    text,
+                    size: 22,
+                    font: "Arial",
+                    color: "000000",
+                    bold: isBold,
+                }),
+            ],
+        });
+    };
+
+    const texto = [];
+    texto.push(createParagraph(`Floridablanca, ${dia}/${mes}/${anio}`));
+    texto.push(createParagraph(""));
+    texto.push(createParagraph(`Señor:`));
+    texto.push(createParagraph(`${conductorOPropietario} `, true));
+    texto.push(createParagraph(""));
+    texto.push(createParagraph("E.S.M"));
+    texto.push(createParagraph(""));
+    texto.push(createParagraph("ASUNTO: Notificacion de comparendo", true));
+    texto.push(createParagraph(""));
+    texto.push(createParagraph("Cordial Saludo."));
+    texto.push(createParagraph(`En la revisión realizada en la plataforma del SIMIT y del RUNT, se detectó que el señor u organización  ${conductorOPropietario} presenta el (los) siguiente (s) comparendos o multas sobre el criterio de búsqueda ${item.placa_u_documento}:`));
+
+    const descriptions = require('./description.json');
+
+    const table = new Table({
+        rows: [
+            new TableRow({
+                children: [
+                    new TableCell({ children: [createParagraph("Tipo", true)] }),
+                    new TableCell({ children: [createParagraph("Infracción", true)] }),
+                    new TableCell({ children: [createParagraph("Descripción", true)] }),
+                    new TableCell({ children: [createParagraph("Valor", true)] }),
+                ],
+            }),
+            ...item.tabla_multa.map(multa => {
+                let descripcion = "Descripción no disponible";
+                for (const key in descriptions) {
+                    if (multa.infraccion.includes(key)) {
+                        descripcion = descriptions[key];
+                        break;
+                    }
+                }
+
+                return new TableRow({
+                    children: [
+                        new TableCell({ children: [createParagraph(multa.tipo)] }),
+                        new TableCell({ children: [createParagraph(multa.infraccion.substring(0, 5))] }),
+                        new TableCell({ children: [createParagraph(descripcion)] }),
+                        new TableCell({ children: [createParagraph(multa.valor.toString())] }),
+                    ],
+                });
+            }),
+            new TableRow({
+                children: [
+                    new TableCell({ children: [createParagraph("Total")], columnSpan: 3 }),
+                    new TableCell({ children: [createParagraph(item.resumen.total.toString())] })
+                ],
+            }),
+        ],
+    });
+
+    // Agregar la tabla al documento
+    doc.addSection({
+        children: [
+            ...texto,
+            table,
+            createParagraph(""),
+            createParagraph("Es importante que tenga en cuenta que para Frimac S.A., es indispensable estar a paz y salvo con los requerimientos exigidos por el Ministerio de Transporte, Secretaría de Tránsito, entre otros Organismos de Tránsito. Por tanto, solicitamos su colaboración en la gestión correspondiente para el pago inmediato de los comparendos y/o multas y pendientes hacernos llegar el respectivo paz y salvo o realizar acuerdos de pago y enviar soporte de la evidencia del trámite realizado."),
+            createParagraph(""),
+            createParagraph("Atentamente, "),
+            createParagraph("GISVELL BERNAL", true),
+            createParagraph("Jefe Operación de Distribución Urbana Centro", true),
+            createParagraph("Recibido: "),
+            createParagraph(""),
+            createParagraph("Nombre: _______________________________"),
+            createParagraph("Firma: _______________________________"),
+        ],
+    });
+
+    return Packer.toBuffer(doc);
+};
+
+// Endpoint para descargar cartas
 app.get('/descargar-cartas', async (req, res) => {
     const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
     const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
     const zipFilePath = path.join(__dirname, 'cartas.zip');
     const output = fs.createWriteStream(zipFilePath);
     const archive = archiver('zip', { zlib: { level: 9 } });
-    
+
     output.on('close', () => {
         res.download(zipFilePath, 'cartas.zip', (err) => {
             if (err) {
@@ -269,178 +386,47 @@ app.get('/descargar-cartas', async (req, res) => {
             fs.unlinkSync(zipFilePath); // Eliminar el archivo ZIP después de enviarlo
         });
     });
-    
+
     archive.pipe(output);
-    
+
     for (const item of placasConMultas) {
-        const hoy = new Date();
-        const dia = hoy.getDate();
-        const mes = hoy.getMonth() + 1;
-        const anio = hoy.getFullYear();
-        const conductorOPropietario = (item.conductor === "N/A") ? item.nombre_propietario : item.conductor;
-
-        const doc = new Document({
-            creator: "Buscador de placas",
-            title: `Resultados de ${item.placa_u_documento}`,
-            description: `Carta con la información de las multas de ${item.placa_u_documento}`,
-            sections: [],
-        });
-
-        const createParagraph = (text, isBold = false) => {
-            return new Paragraph({
-                alignment: 'left',
-                spacing: {
-                    after: 200,
-                },
-                children: [
-                    new TextRun({
-                        text,
-                        size: 22,
-                        font: "Arial",
-                        color: "000000",
-                        bold: isBold,
-                    }),
-                ],
-            });
-        };
-
-
-        const texto = [];
-        texto.push(createParagraph(`Floridablanca, ${dia}/${mes}/${anio}`));
-
-        texto.push(createParagraph(""));
-        texto.push(createParagraph(`Señor:`));
-        texto.push(createParagraph(`${conductorOPropietario} `, true));
-
-        texto.push(createParagraph(""));
-        texto.push(createParagraph("E.S.M"));
-
-        texto.push(createParagraph(""));
-        texto.push(createParagraph("ASUNTO: Notificacion de comparendo", true));
-        texto.push(createParagraph(""));
-
-        texto.push(createParagraph("Cordial Saludo."));
-        texto.push(createParagraph(`En la revisión realizada en la plataforma del SIMIT y del RUNT, se detectó que el señor u organizacion  ${conductorOPropietario} presenta el (los) siguiente (s) comparendos o multas sobre el criterio de busqueda ${item.placa_u_documento}:`));
-
-
-        
-        const descriptions = require('./description.json'); 
-
-        const table = new Table({
-            rows: [
-                new TableRow({
-                    children: [
-                        new TableCell({ children: [createParagraph("Tipo", true)] }),
-                        new TableCell({ children: [createParagraph("Infracción", true)] }),
-                        new TableCell({ children: [createParagraph("Descripción", true)] }),
-                        new TableCell({ children: [createParagraph("Valor", true)] }),
-                    ],
-                }),
-                ...item.tabla_multa.map(multa => {
-                    
-                    let descripcion = "Descripción no disponible";
-                    for (const key in descriptions) {
-                        
-                        if (multa.infraccion.includes(key)) {
-                            descripcion = descriptions[key];  
-                            break;  
-                        }
-                    }
-
-                    return new TableRow({
-                        children: [
-                            new TableCell({ children: [createParagraph(multa.tipo)] }),
-                            new TableCell({ children: [createParagraph(multa.infraccion.substring(0, 5))] }),  
-                            new TableCell({ children: [createParagraph(descripcion)] }),  
-                            new TableCell({ children: [createParagraph(multa.valor.toString())] }),
-                        ],
-                    });
-                }),
-                new TableRow({
-                    children: [
-                        new TableCell({ children: [createParagraph("Total")], columnSpan: 3 }),
-                        new TableCell({ children: [createParagraph(item.resumen.total.toString())] })
-                    ],
-                }),
-            ],
-        });
-
-
-
-        // Agregar la tabla al documento
-        doc.addSection({
-            children: [
-                ...texto,
-                table,
-                createParagraph(""),
-                createParagraph("Es importante que tenga en cuenta que para Frimac S.A., es indispensable estar a paz y salvo con los requerimientos exigidos por el Ministerio de Transporte, Secretaría de Tránsito, entre otros Organismos de Tránsito. Por tanto, solicitamos su colaboración en la gestión correspondiente para el pago inmediato de los comparendos y/o multas y pendientes hacernos llegar el respectivo paz y salvo o realizar acuerdos de pago y enviar soporte de la evidencia del trámite realizado."),
-                createParagraph(""),
-                createParagraph("Atentamente, "),
-                createParagraph("GISVELL BERNAL", true),
-                createParagraph("Jefe Operación de Distribución Urbana Centro", true),
-                createParagraph("Recibido: "),
-                createParagraph(""),
-                createParagraph("Nombre: _______________________________"),
-                createParagraph("Firma: _______________________________"),
-            ],
-        });
-
-        const buffer = await Packer.toBuffer(doc);
+        const buffer = await crearCarta(item);
         archive.append(buffer, { name: `Carta_${item.placa_u_documento}.docx` });
-        const filePath = `./temp/Carta_${item.placa_u_documento}.docx`;
-        fs.writeFileSync(filePath, buffer); // Guardar el archivo
-        return filePath; // Retornar la ruta del archivo generado
     }
 
     await archive.finalize();
 });
+
+// Endpoint para enviar correos
 app.post('/enviar-correos', async (req, res) => {
     const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
     const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
-
-    const transporter = nodemailer.createTransport({
-        service: 'hotmail',
-        auth: {
-            user: 'frimaczonafranca@hotmail.com',
-            pass: '1234frimac'
-        }
-    });
-
     for (const item of placasConMultas) {
-        const filePath = await generateWordFile(item); // Genera el archivo de Word
+        const conductorOPropietario = (item.conductor === "N/A") ? item.nombre_propietario : item.conductor;
+        const buffer = await crearCarta(item);
+        const filePath = path.join(__dirname, `Carta_${item.placa_u_documento}.docx`);
+        fs.writeFileSync(filePath, buffer); // Guardar temporalmente el archivo
 
-        const mailOptions = {
-            from: 'frimaczonafranca@hotmail.com',
+        // Envío del correo electrónico
+        await transporter.sendMail({
+            from: 'eduardoadrianescobar12@gmail.com',
             to: "eduardoadrianescobar12@gmail.com",
-            subject: 'Notificación de Multas',
-            text: `Estimado ${item.conductor},\n\nAdjunto encontrará la información sobre sus multas:\n\n${JSON.stringify(item.resumen, null, 2)}`,
+            subject: `Notificación de comparendo/s o multa/s para ${conductorOPropietario}`,
+            text: `Estimado/a ${conductorOPropietario}, adjunto la carta con la información de sus comparendos o multas registradas en el simit.`,
             attachments: [
                 {
-                    filename: path.basename(filePath),
-                    path: filePath
-                }
-            ]
-        };
-
-        try {
-            await transporter.sendMail(mailOptions);
-            console.log(`Correo enviado a: ${item.correo}`);
-        } catch (error) {
-            console.error(`Error al enviar el correo a ${item.correo}:`, error);
-        }
-
-        // Elimina el archivo de Word después de enviar el correo
-        fs.unlink(filePath, (err) => {
-            if (err) {
-                console.error(`Error al eliminar el archivo ${filePath}:`, err);
-            } else {
-                console.log(`Archivo eliminado: ${filePath}`);
-            }
+                    filename: `Carta_${item.placa_u_documento}.docx`,
+                    path: filePath,
+                },
+            ],
         });
+
+        fs.unlinkSync(filePath); // Eliminar el archivo después de enviarlo
     }
 
-    res.status(200).send('Correos enviados correctamente.');
+    res.json({ message: 'Correos enviados exitosamente.' });
 });
+
 
 app.get('/api/resultados', (req, res) => {
     const jsonPath = path.join(__dirname, 'resultados_placas.json'); // Ruta al JSON

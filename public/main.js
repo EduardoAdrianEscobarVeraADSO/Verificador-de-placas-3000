@@ -1,5 +1,5 @@
 function validarFor(event) {
-    let input = document.getElementById("placa-input").value;
+    let input = document.getElementById("placa-input").value.trim();
 
     if (input === "") {
         alert("Los campos no pueden quedar vacíos");
@@ -31,7 +31,7 @@ async function consultarPlacas(event) {
     console.log(result);
     
     const sonido = document.getElementById('sonido-notificacion');
-    
+
     try {
         await sonido.play(); // Esperar a que se reproduzca el sonido
     } catch (error) {
@@ -41,12 +41,10 @@ async function consultarPlacas(event) {
     // Ocultar el loader después de que se complete la consulta
     document.getElementById('loader').style.display = 'none';
 
-    // Reproducir el sonido de notificación y esperar a que termine antes de mostrar el alert
-
     // Mostrar el alert después de reproducir el sonido
     alert(result.message);
 
-    // Mostrar el botón de descarga después de la consulta
+    // Mostrar los botones de descarga
     document.getElementById('download-btn').style.display = 'block';
     document.getElementById('download-btnWord').style.display = 'block';
 }
@@ -71,37 +69,30 @@ async function descargarCartas() {
     }
 }
 
-// Funciones para descargar archivos
 function descargarExcel() {
     window.location.href = '/download-excel';
 }
 
-function descargarCartas() {
-    window.location.href = '/descargar-cartas';
-}
-function enviarCorreo() {
-    fetch('/enviar-correos')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.blob(); // Si la respuesta es correcta, la convierte en un blob
-        })
-        .then(blob => {
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'cartas.zip'; // Nombre del archivo descargado
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error al enviar correos: ' + error.message); // Muestra el error en un mensaje
-        });
-}
+async function enviarCorreo() {
+    const response = await fetch('/enviar-correos', {
+        method: 'POST',
+    });
 
+    if (response.ok) {
+        const blob = await response.blob(); // Convertir la respuesta en un blob
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'cartas.zip'; // Nombre del archivo descargado
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(url);
+    } else {
+        console.error('Error al enviar correos:', response.statusText);
+        alert('Error al enviar correos: ' + response.statusText); // Muestra el error en un mensaje
+    }
+}
 
 // Función para cargar el JSON y generar la tabla
 async function cargarTabla() {
@@ -116,8 +107,7 @@ async function cargarTabla() {
         // Filtrar los datos para incluir solo los que tienen comparendos o multas
         const datosFiltrados = data.filter(item => 
             item.resumen && 
-            item.resumen.comparendos > "0" || 
-            item.resumen.multas > "0"
+            (item.resumen.comparendos > "0" || item.resumen.multas > "0")
         );
 
         const tablaContenedor = document.getElementById('tabla-contenedor');
@@ -177,5 +167,3 @@ async function cargarTabla() {
 window.onload = () => {
     cargarTabla();
 };
-
-
