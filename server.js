@@ -472,14 +472,11 @@ app.post('/enviar-correos', async (req, res) => {
                 <p style="margin: 0;">&copy; 2024 Frimac zona franca. Todos los derechos reservados.</p>
                 <div style="margin-top: 10px;">
                     <!-- Iconos de redes sociales -->
-                    <a href="https://www.facebook.com/tuempresa" style="margin: 0 10px;">
-                        <img src="https://static.vecteezy.com/system/resources/previews/018/930/476/original/facebook-logo-facebook-icon-transparent-free-png.png" alt="Facebook" style="width: 24px;" />
-                    </a>
-                    <a href="https://www.twitter.com/tuempresa" style="margin: 0 10px;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1245px-Logo_of_Twitter.svg.png" alt="Twitter" style="width: 24px;" />
+                    <a href="https://www.facebook.com/profile.php?id=61561661547362&mibextid=LQQJ4d" style="margin: 0 10px;">
+                        <img src="https://img.icons8.com/?size=100&id=yGcWL8copNNQ&format=png&color=000000" alt="Facebook" style="width: 24px;" />
                     </a>
                     <a href="https://www.instagram.com/tuempresa" style="margin: 0 10px;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram" style="width: 24px;" />
+                        <img src="https://img.icons8.com/color/512/linkedin.png" alt="Linkedin" style="width: 24px;" />
                     </a>
                 </div>
             </div>
