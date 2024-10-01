@@ -25,6 +25,46 @@ header {
     z-index: 2;
 }
 
+#notification-container {
+    position: fixed; /* Fijo para que se mantenga en la esquina */
+    top: 10px; /* Espaciado desde la parte superior */
+    left: 10px; /* Espaciado desde la izquierda */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.notification {
+    background-color: #d9edf7; /* Color de fondo (azul claro) */
+    color: #31708f; /* Color del texto (azul oscuro) */
+    padding: 15px; /* Aumentar el padding */
+    margin-bottom: 10px;
+    border: 1px solid #bce8f1; /* Bordes de notificación */
+    border-radius: 5px; /* Bordes redondeados */
+    position: relative; /* Para el botón de cerrar */
+    animation: slideDown 0.5s ease; /* Animación de llegada */
+}
+
+.close-btn {
+    position: absolute; /* Para posicionar el botón en la esquina */
+    top: 5px;
+    right: 5px;
+    border: none;
+    background: none;
+    cursor: pointer; /* Muestra que es clickeable */
+    font-weight: bold;
+    color: #31708f; /* Color del botón de cerrar */
+}
+
+/* Animación de entrada */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px); /* Empieza desde arriba */
+        opacity: 0; /* Invisible al inicio */
+    }
+    to {
+        transform: translateY(0); /* A su posición final */
+        opacity: 1; /* Totalmente visible */
+    }
+}
 
 
 

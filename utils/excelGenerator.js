@@ -3,7 +3,7 @@ const path = require('path');
 const XLSX = require('xlsx');
 
 function readJsonFile(filePath) {
-    const fullPath = path.join(__dirname, filePath);
+    const fullPath = path.join("./", filePath);
     const jsonData = fs.readFileSync(fullPath, 'utf-8');
     return JSON.parse(jsonData);
 }

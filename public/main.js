@@ -9,6 +9,22 @@ function validarFor(event) {
 
     return true;
 }
+function mostrarNotificacion() {
+    const notificationContainer = document.getElementById('notification-container');
+
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.innerHTML = `
+        Puedes descargar tanto el excel como las cartas del último proceso de consulta!
+    `;
+
+    notificationContainer.appendChild(notification);
+}
+
+function cerrarNotificacion(btn) {
+    const notification = btn.parentElement;
+    notification.remove();
+}
 
 async function consultarPlacas(event) {
     if (!validarFor(event)) {
@@ -166,4 +182,5 @@ async function cargarTabla() {
 // Llamar a la función para cargar la tabla al cargar la página
 window.onload = () => {
     cargarTabla();
+    mostrarNotificacion();
 };
