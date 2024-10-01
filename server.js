@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const archiver = require('archiver');
 const utils = require('./utils'); 
+const { timeout } = require('puppeteer');
 const { readJsonFile, processJsonData, generateExcel, crearCarta, buscarConductorID, ObtenerCorreo, obtenerNombrePropietario } = utils;
 
 
@@ -31,9 +32,21 @@ app.post('/consultar', async (req, res) => {
     const placasArray = inputPlacas.split(',').map(placa => placa.trim());
     const resultados = [];
     const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']
+        headless: false,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1900,1080']
     });
+    async function interactuarConModal(page) {
+        try {
+            await page.keyboard.press('Tab'); // Mueve el foco al primer elemento del modal
+            await page.keyboard.press('Tab'); // Mueve el foco al primer div (rdPerRep0)
+            await page.keyboard.press('Space'); // Activa el primer div (rdPerRep0)
+            await page.keyboard.press('Tab'); // Mueve el foco al botón "Continuar"
+            await page.keyboard.press('Space'); // Activa el botón "Continuar"
+            await page.waitForTimeout(8000); // Esperar para que el modal se cierre completamente
+        } catch (error) {
+            console.error("Error interactuando con el modal:", error);
+        }
+    }
     
 
     for (const placa of placasArray) {
@@ -42,8 +55,12 @@ app.post('/consultar', async (req, res) => {
         try {
 
             await page.goto(`https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`, { waitUntil: 'networkidle2', timeout: 20000 });
+            
+            await interactuarConModal(page);
+                  
 
-
+                
+            
             await Promise.all([
                 page.waitForSelector('#resumenEstadoCuenta', { timeout: 20000 }),
                 page.waitForSelector('#multaTable', { timeout: 20000 })
@@ -142,8 +159,6 @@ app.get('/download-excel', (req, res) => {
         fs.unlinkSync(excelFilePath);
     });
 });
-
-
 app.get('/descargar-cartas', async (req, res) => {
     const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
     const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
@@ -169,8 +184,6 @@ app.get('/descargar-cartas', async (req, res) => {
 
     await archive.finalize();
 });
-
-
 app.post('/enviar-correos', async (req, res) => {
     const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
     const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);

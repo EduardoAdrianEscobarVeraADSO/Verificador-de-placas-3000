@@ -1,14 +1,19 @@
 [
   {
-    "placa_u_documento": "1095810114",
-    "nombre_propietario": "N/A",
-    "conductor": "JAVIER ANDRES GOMEZ RINCON",
-    "correo": "Javigomez9110@gmail.com",
+    "placa_u_documento": "JUZ718",
+    "nombre_propietario": "BANCO BBVA COLOMBIA",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
     "resumen": {
-      "comparendos": "1",
+      "comparendos": "2",
       "multas": "0",
       "acuerdos_de_pago": "0",
-      "total": "$ 572.628"
+      "total": "$ 1.145.148"
     },
     "tabla_multa": [
       {
@@ -20,7 +25,62 @@
         "estado": "Pendiente  No tiene curso",
         "valor": "$ 572.628",
         "valor_a_pagar": "$ 572.628  Detalle Pago"
+      },
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
       }
     ]
+  },
+  {
+    "placa_u_documento": "SXT095",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "placa_u_documento": "XVX840",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "resumen": {
+      "comparendos": "2",
+      "multas": "0",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.228.268"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47288000000044826785  Comparendo  Fecha imposición: 11/09/2024",
+        "notificacion": "18/09/2024",
+        "placa": "XVX840",
+        "secretaria": "Fundación",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 614.134  Detalle Pago"
+      },
+      {
+        "tipo": "47288000000044827047  Comparendo  Fecha imposición: 11/09/2024",
+        "notificacion": "24/09/2024",
+        "placa": "XVX840",
+        "secretaria": "Fundación",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 614.134  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "placa_u_documento": "EDE123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   }
 ]
