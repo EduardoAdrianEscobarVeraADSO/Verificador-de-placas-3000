@@ -4,13 +4,12 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 const path = require('path');
-import dotenv from 'dotenv';
 const archiver = require('archiver');
 const utils = require('./utils');
 const { timeout } = require('puppeteer');
 const { readJsonFile, processJsonData, generateExcel, crearCarta, buscarConductorID, ObtenerCorreo, obtenerNombrePropietario } = utils;
 
-dotenv.config();
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -26,8 +25,8 @@ app.get('/', (req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER, 
-        pass: process.env.EMAIL_PASS
+        user: "eduardoadrianescobar12@gmail.com", 
+        pass: "yzcx wblj gwrw pmzv"
     }
 });
 
@@ -291,8 +290,8 @@ app.post('/enviar-correos', async (req, res) => {
 
         // Enviamos el correo utilizando Nodemailer
         await transporter.sendMail({
-            from: process.env.EMAIL_USER, // Remitente
-            to: item.correo, // Destinatario
+            from: "eduardoadrianescobar12@gmail.com", // Remitente
+            to: "eduardoadrianescobar12@gmail.com", // Destinatario
             subject: `Notificación de comparendo/s o multa/s para ${conductorOPropietario}`, // Asunto del correo
             html: htmlContent, // Contenido HTML del correo
             attachments: [
