@@ -29,6 +29,7 @@ function processJsonData(jsonData) {
                     Tipo: mult.tipo,
                     Notificacion: mult.notificacion,
                     Secretaria: mult.secretaria,
+                    Placa: mult.placa,
                     Infraccion: mult.infraccion,
                     Estado: mult.estado,
                     Valor: mult.valor,

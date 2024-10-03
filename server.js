@@ -4,77 +4,89 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 const path = require('path');
+import dotenv from 'dotenv';
 const archiver = require('archiver');
-const utils = require('./utils'); 
+const utils = require('./utils');
 const { timeout } = require('puppeteer');
 const { readJsonFile, processJsonData, generateExcel, crearCarta, buscarConductorID, ObtenerCorreo, obtenerNombrePropietario } = utils;
 
-
+dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Endpoint GET para servir el archivo index.html
 app.get('/', (req, res) => {
+    // Envía el archivo index.html como respuesta
     res.sendFile(path.join(__dirname, 'index.html'));
 });
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'eduardoadrianescobar12@gmail.com',
-        pass: 'yzcx wblj gwrw pmzv'
+        user: process.env.EMAIL_USER, 
+        pass: process.env.EMAIL_PASS
     }
 });
 
+// Endpoint POST para consultar información de multas basado en placas de vehículos
 app.post('/consultar', async (req, res) => {
-    const inputPlacas = req.body.placa;
-    const placasArray = inputPlacas.split(',').map(placa => placa.trim());
-    const resultados = [];
+    const inputPlacas = req.body.placa;  // Se obtiene el parámetro "placa" del cuerpo de la solicitud
+    const placasArray = inputPlacas.split(',').map(placa => placa.trim());  // Separamos las placas si hay más de una
+    const resultados = [];  // Array donde se almacenarán los resultados de cada placa consultada
+
+    // Configuración del navegador utilizando Puppeteer
     const browser = await puppeteer.launch({
-        headless: false,
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1900,1080']
+        headless: true,  // Modo headless para que no se muestre el navegador
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']  // Argumentos para mejorar el rendimiento
     });
+
+    // Función para interactuar con el modal de la página
     async function interactuarConModal(page) {
         try {
-            await page.keyboard.press('Tab'); // Mueve el foco al primer elemento del modal
-            await page.keyboard.press('Tab'); // Mueve el foco al primer div (rdPerRep0)
-            await page.keyboard.press('Space'); // Activa el primer div (rdPerRep0)
-            await page.keyboard.press('Tab'); // Mueve el foco al botón "Continuar"
-            await page.keyboard.press('Space'); // Activa el botón "Continuar"
-            await page.waitForTimeout(8000); // Esperar para que el modal se cierre completamente
+            // Simulamos la navegación por el modal mediante la tecla Tab y se presiona Space cuando sea necesario
+            await page.keyboard.press('Tab');
+            await page.keyboard.press('Tab');
+            await page.keyboard.press('Space');
+            await page.keyboard.press('Tab');
+            await page.keyboard.press('Space');
+            await page.waitForTimeout(8000);  // Esperamos 8 segundos para asegurar que el modal se procese correctamente
         } catch (error) {
-            console.error("Error interactuando con el modal:", error);
+            console.error("Error interactuando con el modal:", error);  // Manejamos cualquier error que ocurra durante la interacción
         }
     }
-    
 
+    // Iteramos por cada placa proporcionada
     for (const placa of placasArray) {
-        const page = await browser.newPage();
+        const page = await browser.newPage();  // Se abre una nueva página en el navegador
 
         try {
-
+            // Navegamos a la página de estado de cuenta del SIMIT con la placa actual
             await page.goto(`https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`, { waitUntil: 'networkidle2', timeout: 20000 });
-            
-            await interactuarConModal(page);
-                  
 
-                
-            
+            // Interactuamos con el modal de la página
+            await interactuarConModal(page);
+
+            // Esperamos a que las tablas de resumen y multa estén disponibles en la página
             await Promise.all([
-                page.waitForSelector('#resumenEstadoCuenta', { timeout: 20000 }),
-                page.waitForSelector('#multaTable', { timeout: 20000 })
+                page.waitForSelector('#resumenEstadoCuenta', { timeout: 20000 }),  // Espera a que el resumen esté disponible
+                page.waitForSelector('#multaTable', { timeout: 20000 })  // Espera a que la tabla de multas esté disponible
             ]);
 
+            // Extraemos el texto del resumen de estado de cuenta
             const textoResumen = await page.evaluate(() => {
                 const contenedor = document.querySelector('#resumenEstadoCuenta');
                 return contenedor ? contenedor.innerText : 'Contenedor No disponible';
             });
 
+            // Extraemos los datos de la tabla de multas
             const datosTabla = await page.evaluate(() => {
                 const tabla = document.querySelector('#multaTable');
-                if (!tabla) return [];
+                if (!tabla) return [];  // Si no existe la tabla, retornamos un array vacío
 
+                // Procesamos cada fila de la tabla para obtener los datos de cada multa
                 const filas = Array.from(tabla.querySelectorAll('tbody tr'));
                 return filas.map(fila => {
                     const celdas = Array.from(fila.querySelectorAll('td'));
@@ -91,10 +103,12 @@ app.post('/consultar', async (req, res) => {
                 });
             });
 
+            // Filtramos las filas vacías de la tabla
             const datosTablaFiltrados = datosTabla.filter(dato => {
                 return Object.values(dato).some(valor => valor !== '');
             });
 
+            // Procesamos el resumen para convertirlo en un objeto
             const datosResumen = textoResumen.split('\n').reduce((acc, linea) => {
                 const [clave, valor] = linea.split(':').map(str => str.trim());
                 if (clave && valor) {
@@ -103,10 +117,12 @@ app.post('/consultar', async (req, res) => {
                 return acc;
             }, {});
 
+            // Llamamos a funciones para obtener datos adicionales: nombre del propietario, conductor y correo
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
             const correo = await ObtenerCorreo(placa);
 
+            // Creamos el objeto de resultado para la placa actual
             const resultado = {
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
@@ -121,12 +137,14 @@ app.post('/consultar', async (req, res) => {
                 tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : []
             };
 
-            resultados.push(resultado);
+            resultados.push(resultado);  // Agregamos el resultado al array
 
         } catch (error) {
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
             console.error(`Error al procesar la placa ${placa}:`, error);
+
+            // Si ocurre un error, añadimos un mensaje de error a los resultados
             resultados.push({
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
@@ -134,67 +152,100 @@ app.post('/consultar', async (req, res) => {
                 mensaje: 'No tiene comparendos ni multas comparendos ni multas'
             });
         } finally {
-            await page.close();
+            await page.close();  // Cerramos la página actual
         }
     }
 
+    // Escribimos los resultados en un archivo JSON
     fs.writeFileSync('resultados_placas.json', JSON.stringify(resultados, null, 2), 'utf-8');
 
-    await browser.close();
+    await browser.close();  // Cerramos el navegador
 
+    // Enviamos la respuesta al cliente
     res.json({ message: 'Consulta completada y resultados guardados', resultados });
 });
 
 
-
+// Endpoint GET para descargar un archivo Excel con los resultados de las placas
 app.get('/download-excel', (req, res) => {
+    // Leemos el archivo JSON que contiene los resultados de las placas
     const jsonData = readJsonFile('resultados_placas.json');
+
+    // Procesamos los datos JSON para prepararlos para la generación del archivo Excel
     const processedData = processJsonData(jsonData);
+
+    // Generamos el archivo Excel a partir de los datos procesados
     const excelFilePath = generateExcel(processedData, 'resultados_placas.xlsx');
 
+    // Iniciamos la descarga del archivo Excel
     res.download(excelFilePath, 'resultados_placas.xlsx', (err) => {
         if (err) {
+            // Si ocurre un error durante la descarga, lo registramos en la consola
             console.error(err);
         }
+
+        // Eliminamos el archivo Excel del sistema después de que se haya descargado
         fs.unlinkSync(excelFilePath);
     });
 });
-app.get('/descargar-cartas', async (req, res) => {
-    const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
-    const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
-    const zipFilePath = path.join(__dirname, 'cartas.zip');
-    const output = fs.createWriteStream(zipFilePath);
-    const archive = archiver('zip', { zlib: { level: 9 } });
 
+// Endpoint GET para descargar cartas generadas en formato ZIP
+app.get('/descargar-cartas', async (req, res) => {
+    // Leemos el archivo JSON que contiene los resultados de las placas
+    const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
+
+    // Filtramos los resultados para obtener solo las placas que tienen multas
+    const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
+
+    // Definimos la ruta del archivo ZIP donde se guardarán las cartas generadas
+    const zipFilePath = path.join(__dirname, 'cartas.zip');
+    const output = fs.createWriteStream(zipFilePath);  // Creamos un flujo de escritura para el archivo ZIP
+    const archive = archiver('zip', { zlib: { level: 9 } });  // Creamos un objeto archiver para manejar la compresión
+
+    // Cuando el flujo de salida se cierra, iniciamos la descarga del archivo ZIP
     output.on('close', () => {
         res.download(zipFilePath, 'cartas.zip', (err) => {
             if (err) {
+                // Si ocurre un error durante la descarga, lo registramos en la consola
                 console.error(err);
             }
-            fs.unlinkSync(zipFilePath); // Eliminar el archivo ZIP después de enviarlo
+            // Eliminamos el archivo ZIP del sistema después de que se haya descargado
+            fs.unlinkSync(zipFilePath);
         });
     });
 
+    // Conectamos el archivo ZIP al flujo de salida
     archive.pipe(output);
 
+    // Iteramos sobre cada placa con multas para generar su carta
     for (const item of placasConMultas) {
-        const buffer = await crearCarta(item);
-        archive.append(buffer, { name: `Carta_${item.placa_u_documento}.docx` });
+        const buffer = await crearCarta(item);  // Llamamos a la función para crear la carta, que retorna un buffer
+        archive.append(buffer, { name: `Carta_${item.placa_u_documento}.docx` });  // Agregamos la carta al archivo ZIP
     }
 
+    // Finalizamos el archivo ZIP para que se pueda descargar
     await archive.finalize();
 });
+
+// Endpoint POST para enviar correos con cartas de notificación de comparendos o multas
 app.post('/enviar-correos', async (req, res) => {
+    // Leemos el archivo JSON que contiene los resultados de las placas
     const resultados = JSON.parse(fs.readFileSync('resultados_placas.json', 'utf-8'));
+
+    // Filtramos los resultados para obtener solo las placas que tienen multas
     const placasConMultas = resultados.filter(item => item.tabla_multa && item.tabla_multa.length > 0);
-    
+
+    // Iteramos sobre cada placa con multas para enviar correos
     for (const item of placasConMultas) {
+        // Determinamos el nombre del conductor o propietario
         const conductorOPropietario = (item.conductor === "N/A") ? item.nombre_propietario : item.conductor;
+
+        // Creamos la carta y guardamos su contenido en un buffer
         const buffer = await crearCarta(item);
         const filePath = path.join(__dirname, `Carta_${item.placa_u_documento}.docx`);
-        fs.writeFileSync(filePath, buffer); // Guardar temporalmente el archivo
+        fs.writeFileSync(filePath, buffer); // Guardamos el buffer en un archivo .docx
 
-        // HTML con header, footer, estilos y redes sociales
+        // Contenido HTML del correo electrónico
         const htmlContent = `
         <div style="font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6;">
             <!-- Header -->
@@ -238,37 +289,49 @@ app.post('/enviar-correos', async (req, res) => {
             </div>
         </div>`;
 
-        // Envío del correo electrónico con HTML y adjunto
+        // Enviamos el correo utilizando Nodemailer
         await transporter.sendMail({
-            from: 'eduardoadrianescobar12@gmail.com',
-            to: "eduardoadrianescobar12@gmail.com",
-            subject: `Notificación de comparendo/s o multa/s para ${conductorOPropietario}`,
-            html: htmlContent,
+            from: process.env.EMAIL_USER, // Remitente
+            to: item.correo, // Destinatario
+            subject: `Notificación de comparendo/s o multa/s para ${conductorOPropietario}`, // Asunto del correo
+            html: htmlContent, // Contenido HTML del correo
             attachments: [
                 {
-                    filename: `Carta_${item.placa_u_documento}.docx`,
-                    path: filePath,
+                    filename: `Carta_${item.placa_u_documento}.docx`, // Nombre del archivo adjunto
+                    path: filePath, // Ruta del archivo adjunto
                 },
             ],
         });
 
-        fs.unlinkSync(filePath); // Eliminar el archivo después de enviarlo
+        // Eliminamos el archivo .docx temporal después de enviar el correo
+        fs.unlinkSync(filePath);
     }
 
+    // Enviamos una respuesta al cliente confirmando que los correos se han enviado
     res.json({ message: 'Correos enviados exitosamente.' });
 });
 
 
+// Endpoint GET para obtener los resultados desde un archivo JSON
 app.get('/api/resultados', (req, res) => {
-    const jsonPath = path.join(__dirname, 'resultados_placas.json'); 
+    // Ruta del archivo JSON que contiene los resultados de las placas
+    const jsonPath = path.join(__dirname, 'resultados_placas.json');
+    
+    // Leemos el archivo JSON de manera asíncrona
     fs.readFile(jsonPath, 'utf8', (err, data) => {
+        // Manejo de errores en caso de que la lectura falle
         if (err) {
-            return res.status(500).json({ error: 'Error al leer el archivo JSON' });
+            return res.status(500).json({ error: 'Error al leer el archivo JSON' }); // Devuelve un error 500
         }
+        
+        // Enviamos los datos leídos como respuesta en formato JSON
         res.json(JSON.parse(data));
     });
 });
 
+// Inicia el servidor en el puerto especificado
 app.listen(port, () => {
+    // Mensaje en la consola indicando que el servidor está en funcionamiento
     console.log(`Servidor escuchando en http://localhost:${port}`);
 });
+
