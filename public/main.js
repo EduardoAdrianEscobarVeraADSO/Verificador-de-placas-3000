@@ -31,6 +31,11 @@ async function consultarPlacas(event) {
         return;
     }
 
+    // Deshabilitar el botón de "Consultar"
+    const botonConsultar = document.querySelector('form button[type="submit"]');
+    botonConsultar.disabled = true;
+    botonConsultar.innerText = 'Consultando...'; // Cambiar el texto del botón mientras carga
+
     // Mostrar el loader
     document.getElementById('loader').style.display = 'block';
 
@@ -57,6 +62,10 @@ async function consultarPlacas(event) {
     // Ocultar el loader después de que se complete la consulta
     document.getElementById('loader').style.display = 'none';
 
+    // Habilitar nuevamente el botón de "Consultar"
+    botonConsultar.disabled = false;
+    botonConsultar.innerText = 'Consultar'; // Restaurar el texto original del botón
+
     // Mostrar el alert después de reproducir el sonido
     alert(result.message);
 
@@ -64,6 +73,7 @@ async function consultarPlacas(event) {
     document.getElementById('download-btn').style.display = 'block';
     document.getElementById('download-btnWord').style.display = 'block';
 }
+
 
 async function descargarCartas() {
     const response = await fetch('/descargar-cartas', {

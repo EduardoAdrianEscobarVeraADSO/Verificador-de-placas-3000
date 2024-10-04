@@ -85,7 +85,6 @@ app.post('/consultar', async (req, res) => {
                 const tabla = document.querySelector('#multaTable');
                 if (!tabla) return [];  // Si no existe la tabla, retornamos un array vacío
 
-                // Procesamos cada fila de la tabla para obtener los datos de cada multa
                 const filas = Array.from(tabla.querySelectorAll('tbody tr'));
                 return filas.map(fila => {
                     const celdas = Array.from(fila.querySelectorAll('td'));
@@ -102,12 +101,10 @@ app.post('/consultar', async (req, res) => {
                 });
             });
 
-            // Filtramos las filas vacías de la tabla
             const datosTablaFiltrados = datosTabla.filter(dato => {
                 return Object.values(dato).some(valor => valor !== '');
             });
 
-            // Procesamos el resumen para convertirlo en un objeto
             const datosResumen = textoResumen.split('\n').reduce((acc, linea) => {
                 const [clave, valor] = linea.split(':').map(str => str.trim());
                 if (clave && valor) {
@@ -116,12 +113,11 @@ app.post('/consultar', async (req, res) => {
                 return acc;
             }, {});
 
-            // Llamamos a funciones para obtener datos adicionales: nombre del propietario, conductor y correo
+            
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
             const correo = await ObtenerCorreo(placa);
 
-            // Creamos el objeto de resultado para la placa actual
             const resultado = {
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
@@ -136,14 +132,14 @@ app.post('/consultar', async (req, res) => {
                 tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : []
             };
 
-            resultados.push(resultado);  // Agregamos el resultado al array
+            resultados.push(resultado);  
 
         } catch (error) {
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
             console.error(`Error al procesar la placa ${placa}:`, error);
 
-            // Si ocurre un error, añadimos un mensaje de error a los resultados
+            
             resultados.push({
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
@@ -151,21 +147,19 @@ app.post('/consultar', async (req, res) => {
                 mensaje: 'No tiene comparendos ni multas comparendos ni multas'
             });
         } finally {
-            await page.close();  // Cerramos la página actual
+            await page.close();  
         }
     }
 
-    // Escribimos los resultados en un archivo JSON
     fs.writeFileSync('resultados_placas.json', JSON.stringify(resultados, null, 2), 'utf-8');
 
-    await browser.close();  // Cerramos el navegador
-
-    // Enviamos la respuesta al cliente
+    await browser.close();  
+    
     res.json({ message: 'Consulta completada y resultados guardados', resultados });
 });
 
 
-// Endpoint GET para descargar un archivo Excel con los resultados de las placas
+
 app.get('/download-excel', (req, res) => {
     // Leemos el archivo JSON que contiene los resultados de las placas
     const jsonData = readJsonFile('resultados_placas.json');
