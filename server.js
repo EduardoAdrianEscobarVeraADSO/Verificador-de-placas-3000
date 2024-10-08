@@ -33,7 +33,7 @@ const transporter = nodemailer.createTransport({
 // Endpoint POST para consultar información de multas basado en placas de vehículos
 app.post('/consultar', async (req, res) => {
     const inputPlacas = req.body.placa;  // Se obtiene el parámetro "placa" del cuerpo de la solicitud
-    const placasArray = inputPlacas.split(',').map(placa => placa.trim());  // Separamos las placas si hay más de una
+    const placasArray = inputPlacas.split(' ').map(placa => placa.trim());  // Separamos las placas si hay más de una
     const resultados = [];  // Array donde se almacenarán los resultados de cada placa consultada
 
     // Configuración del navegador utilizando Puppeteer

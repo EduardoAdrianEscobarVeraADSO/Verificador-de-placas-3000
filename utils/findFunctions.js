@@ -154,9 +154,96 @@ async function obtenerNombrePropietario(placa) {
     }
 }
 
+async function ObtenerTipoId(identificacion) {
+    const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27" + identificacion + "%27))%20or%20(contains(Ucr_Name,%27" + identificacion + "%27))%20or%20(contains(Identification,%27" + identificacion + "%27)))";
+    const token = await authApi();
+    const options = {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/json',
+        }
+    };
+
+    try {
+
+        const response = await fetch(url, options);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+
+        if (data.length === 0) {
+            console.log(`No se encontró ningún usuario con la identificación: ${identificacion}`);
+            usuario = "No existe";
+            return;
+        }
+
+        const usuario = data.value[0];
+
+        if (usuario.State === 2) {
+            console.log(`El usuario con identificación ${identificacion} está inactivo.`);
+            usuario = "inactivo";
+            return;
+        }
+        console.log(usuario.IdentificationType)
+        return usuario.IdentificationType;
+
+    } catch (error) {
+        console.error('Hubo un error en la solicitud:', error);
+    }
+}
+async function ObtenerIdentificacion(identificacion) {
+    const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27" + identificacion + "%27))%20or%20(contains(Ucr_Name,%27" + identificacion + "%27))%20or%20(contains(Identification,%27" + identificacion + "%27)))";
+    const token = await authApi();
+    const options = {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/json',
+        }
+    };
+
+    try {
+
+        const response = await fetch(url, options);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+
+        if (data.length === 0) {
+            console.log(`No se encontró ningún usuario con la identificación: ${identificacion}`);
+            usuario = "No existe";
+            return;
+        }
+
+        const usuario = data.value[0];
+
+        if (usuario.State === 2) {
+            console.log(`El usuario con identificación ${identificacion} está inactivo.`);
+            usuario = "inactivo";
+            return;
+        }
+        console.log(usuario.Identification)
+        return usuario.Identification;
+
+    } catch (error) {
+        console.error('Hubo un error en la solicitud:', error);
+    }
+}
+
 module.exports = {
     authApi,
     buscarConductorID,
     ObtenerCorreo,
-    obtenerNombrePropietario
+    obtenerNombrePropietario,
+    ObtenerIdentificacion,
+    ObtenerTipoId
 };
