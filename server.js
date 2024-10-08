@@ -7,7 +7,7 @@ const path = require('path');
 const archiver = require('archiver');
 const utils = require('./utils');
 const { timeout } = require('puppeteer');
-const { readJsonFile, processJsonData, generateExcel, crearCarta, buscarConductorID, ObtenerCorreo, obtenerNombrePropietario } = utils;
+const { readJsonFile, processJsonData, generateExcel, crearCarta, buscarConductorID, ObtenerCorreo, obtenerNombrePropietario, ObtenerIdentificacion, ObtenerTipoId } = utils;
 
 
 const app = express();
@@ -117,8 +117,12 @@ app.post('/consultar', async (req, res) => {
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
             const correo = await ObtenerCorreo(placa);
+            const tipoId = await ObtenerTipoId(placa);
+            const iD = await ObtenerIdentificacion(placa);
 
             const resultado = {
+                tipoId: tipoId,
+                iD: iD,
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
                 conductor: conductor || "N/A",
@@ -141,6 +145,8 @@ app.post('/consultar', async (req, res) => {
 
             
             resultados.push({
+                tipoId: tipoId,
+                iD: iD,
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
                 conductor: conductor || "N/A",
