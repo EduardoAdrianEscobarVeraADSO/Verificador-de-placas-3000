@@ -12,7 +12,9 @@ function processJsonData(jsonData) {
     const summaryData = [];
     jsonData.forEach(item => {
         const baseRow = {
-            Placa_u_documento: item.placa_u_documento,
+            Tipo_Documento: item.tipoId,
+            Documento: item.iD,
+            Criterio_busqueda: item.placa_u_documento,
             Nombre_Propietario: item.nombre_propietario || 'N/A',
             conductor: item.conductor || "N/A",
             Correo: item.correo,
