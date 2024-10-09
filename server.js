@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const archiver = require('archiver');
 const utils = require('./utils');
+const convertDocx = require('docx-pdf');
 const { timeout } = require('puppeteer');
 const { readJsonFile, processJsonData, generateExcel, crearCarta, buscarConductorID, ObtenerCorreo, obtenerNombrePropietario, ObtenerIdentificacion, ObtenerTipoId } = utils;
 
@@ -121,12 +122,12 @@ app.post('/consultar', async (req, res) => {
             const iD = await ObtenerIdentificacion(placa);
 
             const resultado = {
-                tipoId: tipoId,
-                iD: iD,
+                tipoID: tipoId || "N/A",
+                ID: iD || "N/A",
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
                 conductor: conductor || "N/A",
-                correo: correo,
+                correo: correo || "N/A",
                 resumen: {
                     comparendos: datosResumen.comparendos || 'No tiene comparendos ni multas',
                     multas: datosResumen.multas || 'No tiene comparendos ni multas',
@@ -141,12 +142,16 @@ app.post('/consultar', async (req, res) => {
         } catch (error) {
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
-            console.error(`Error al procesar la placa ${placa}:`, error);
-
+            const tipoId = await ObtenerTipoId(placa);
+            console.log(tipoId);
             
+            const iD = await ObtenerIdentificacion(placa);
+            console.log(iD);
+            
+            console.error(`Error al procesar la placa ${placa}:`, error);
             resultados.push({
-                tipoId: tipoId,
-                iD: iD,
+                tipoID: tipoId || "N/A",
+                ID: iD || "N/A",
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
                 conductor: conductor || "N/A",
@@ -218,14 +223,42 @@ app.get('/descargar-cartas', async (req, res) => {
 
     // Iteramos sobre cada placa con multas para generar su carta
     for (const item of placasConMultas) {
-        const buffer = await crearCarta(item);  // Llamamos a la función para crear la carta, que retorna un buffer
-        archive.append(buffer, { name: `Carta_${item.placa_u_documento}.docx` });  // Agregamos la carta al archivo ZIP
+        // 1. Crear la carta en formato .docx
+        const docxBuffer = await crearCarta(item);  // Función que genera el .docx y devuelve un buffer
+        const docxFileName = `Carta_${item.placa_u_documento}.docx`;
+        const tempDocxPath = path.join(__dirname, docxFileName);
+        
+        // Escribimos el archivo .docx temporalmente
+        fs.writeFileSync(tempDocxPath, docxBuffer);
+        archive.append(docxBuffer, { name: docxFileName });  // Agregamos el .docx al archivo ZIP
+
+        // 2. Convertir el archivo .docx a .pdf
+        const tempPdfPath = path.join(__dirname, `Carta_${item.placa_u_documento}.pdf`);
+        await convertirDocxAPdf(tempDocxPath, tempPdfPath);  // Convertimos .docx a .pdf
+        const pdfBuffer = fs.readFileSync(tempPdfPath);
+        archive.append(pdfBuffer, { name: `Carta_${item.placa_u_documento}.pdf` });  // Agregamos el .pdf al archivo ZIP
+
+        // Eliminar los archivos temporales
+        fs.unlinkSync(tempDocxPath);
+        fs.unlinkSync(tempPdfPath);
     }
 
     // Finalizamos el archivo ZIP para que se pueda descargar
     await archive.finalize();
 });
 
+// Función para convertir .docx a .pdf usando docx-pdf
+async function convertirDocxAPdf(inputPath, outputPath) {
+    return new Promise((resolve, reject) => {
+        convertDocx(inputPath, outputPath, function (err, result) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        });
+    });
+}
 // Endpoint POST para enviar correos con cartas de notificación de comparendos o multas
 app.post('/enviar-correos', async (req, res) => {
     // Leemos el archivo JSON que contiene los resultados de las placas

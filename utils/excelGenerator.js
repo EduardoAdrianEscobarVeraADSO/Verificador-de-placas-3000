@@ -12,8 +12,8 @@ function processJsonData(jsonData) {
     const summaryData = [];
     jsonData.forEach(item => {
         const baseRow = {
-            Tipo_Documento: item.tipoId,
-            Documento: item.iD,
+            Tipo_Documento: item.tipoID,
+            Documento: item.ID,
             Criterio_busqueda: item.placa_u_documento,
             Nombre_Propietario: item.nombre_propietario || 'N/A',
             conductor: item.conductor || "N/A",
