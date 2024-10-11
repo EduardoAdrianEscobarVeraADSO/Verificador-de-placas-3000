@@ -30,7 +30,6 @@ function processJsonData(jsonData) {
                 conductor: item.conductor || "N/A",
                 Nombre_Propietario: item.nombre_propietario || 'N/A',
                 Correo: item.correo,
-                Total: item.resumen?.total || 'No tiene comparendos ni multas',
             };
 
             if (item.tabla_multa && item.tabla_multa.length > 0) {
@@ -64,15 +63,16 @@ function processJsonData(jsonData) {
 
                 summaryData.push({
                     ...baseRow,
-                    Tipo: 'N/A',
-                    Notificacion: 'N/A',
-                    Infraccion: 'N/A',
-                    Placa: 'N/A',
-                    Valor: 'N/A',
-                    Ciudad_de_la_infraccion: 'N/A',
-                    Organismo_de_transito: 'N/A',
-                    Estado: 'N/A',
-                    Valor_a_pagar: 'N/A'
+                    Fecha_multa: "N/A",
+                        Acuerdos_de_pago: "N/A",
+                        Valor: "N/A",
+                        tipo:"N/A",
+                        Placa: "N/A",
+                        Infraccion: "N/A",
+                        Ciudad_de_la_infraccion: "N/A",
+                        Organismo_de_transito: "N/A",
+                        Estado: "N/A",
+                        Descripcion: "N/A",
                 });
             }
         });
