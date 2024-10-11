@@ -12,7 +12,7 @@ const { readJsonFile, processJsonData, generateExcel, crearCarta, buscarConducto
 
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -39,8 +39,8 @@ app.post('/consultar', async (req, res) => {
 
     // Configuración del navegador utilizando Puppeteer
     const browser = await puppeteer.launch({
-        headless: false,  // Modo headless para que no se muestre el navegador
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1900,1900']  // Argumentos para mejorar el rendimiento
+        headless: true,  // Modo headless para que no se muestre el navegador
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']  // Argumentos para mejorar el rendimiento
     });
 
     // Función para interactuar con el modal de la página
