@@ -39,8 +39,8 @@ app.post('/consultar', async (req, res) => {
 
     // Configuración del navegador utilizando Puppeteer
     const browser = await puppeteer.launch({
-        headless: true,  // Modo headless para que no se muestre el navegador
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1,1']  // Argumentos para mejorar el rendimiento
+        headless: false,  // Modo headless para que no se muestre el navegador
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1900,1900']  // Argumentos para mejorar el rendimiento
     });
 
     // Función para interactuar con el modal de la página
@@ -58,10 +58,9 @@ app.post('/consultar', async (req, res) => {
         }
     }
 
-    // Iteramos por cada placa proporcionada
-    for (const placa of placasArray) {
+    // Función para procesar una placa
+    async function procesarPlaca(placa) {
         const page = await browser.newPage();  // Se abre una nueva página en el navegador
-
         try {
             // Navegamos a la página de estado de cuenta del SIMIT con la placa actual
             await page.goto(`https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`, { waitUntil: 'networkidle2', timeout: 20000 });
@@ -114,14 +113,13 @@ app.post('/consultar', async (req, res) => {
                 return acc;
             }, {});
 
-            
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
             const correo = await ObtenerCorreo(placa);
             const tipoId = await ObtenerTipoId(placa);
             const iD = await ObtenerIdentificacion(placa);
 
-            const resultado = {
+            return {
                 tipoID: tipoId || "N/A",
                 ID: iD || "N/A",
                 placa_u_documento: placa,
@@ -137,29 +135,39 @@ app.post('/consultar', async (req, res) => {
                 tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : []
             };
 
-            resultados.push(resultado);  
-
         } catch (error) {
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
             const tipoId = await ObtenerTipoId(placa);
-            console.log(tipoId);
-            
             const iD = await ObtenerIdentificacion(placa);
-            console.log(iD);
             
             console.error(`Error al procesar la placa ${placa}:`, error);
-            resultados.push({
+            return {
                 tipoID: tipoId || "N/A",
                 ID: iD || "N/A",
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
                 conductor: conductor || "N/A",
                 mensaje: 'No tiene comparendos ni multas comparendos ni multas'
-            });
+            };
         } finally {
             await page.close();  
         }
+    }
+
+    // Ejecutamos las consultas en paralelo en grupos de 5
+    const chunkSize = 15;
+    for (let i = 0; i < placasArray.length; i += chunkSize) {
+        const chunk = placasArray.slice(i, i + chunkSize);  // Tomamos un grupo de placas
+        const resultadosChunk = await Promise.allSettled(chunk.map(procesarPlaca));  // Procesamos las placas en paralelo
+
+        resultadosChunk.forEach((resultado) => {
+            if (resultado.status === 'fulfilled') {
+                resultados.push(resultado.value);
+            } else {
+                console.error('Error en una de las consultas:', resultado.reason);
+            }
+        });
     }
 
     fs.writeFileSync('resultados_placas.json', JSON.stringify(resultados, null, 2), 'utf-8');
@@ -168,6 +176,7 @@ app.post('/consultar', async (req, res) => {
     
     res.json({ message: 'Consulta completada y resultados guardados', resultados });
 });
+
 
 
 

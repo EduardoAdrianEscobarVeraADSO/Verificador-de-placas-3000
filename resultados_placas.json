@@ -10,7 +10,7 @@
       "comparendos": "1",
       "multas": "1",
       "acuerdos_de_pago": "0",
-      "total": "$ 1.145.682"
+      "total": "$ 1.145.860"
     },
     "tabla_multa": [
       {
@@ -30,9 +30,5253 @@
         "secretaria": "Medellin",
         "infraccion": "C26...  Proyección pago",
         "estado": "Pendiente de pago",
-        "valor": "$ 572.628  Interés $ 534",
-        "valor_a_pagar": "$ 573.162  Detalle Pago"
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
       }
     ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "resumen": {
+      "comparendos": "1",
+      "multas": "1",
+      "acuerdos_de_pago": "0",
+      "total": "$ 1.145.860"
+    },
+    "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
+      {
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 712",
+        "valor_a_pagar": "$ 573.340  Detalle Pago"
+      }
+    ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACD176",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SSD223",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "ACV123",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas"
   }
 ]
