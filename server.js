@@ -8,7 +8,7 @@ const archiver = require('archiver');
 const utils = require('./utils');
 const convertDocx = require('docx-pdf');
 const { timeout } = require('puppeteer');
-const { readJsonFile, processJsonData, generateExcel, crearCarta, buscarConductorID, ObtenerCorreo, obtenerNombrePropietario, ObtenerIdentificacion, ObtenerTipoId } = utils;
+const { readJsonFile, processJsonData, generateExcel, generateExcelForUsersAndPlates, crearCarta, buscarConductorID, ObtenerCorreo, obtenerNombrePropietario, ObtenerIdentificacion, ObtenerTipoId, allPlates, allUsers } = utils;
 
 
 const app = express();
@@ -44,19 +44,40 @@ app.post('/consultar', async (req, res) => {
     });
 
     // Función para interactuar con el modal de la página
-    async function interactuarConModal(page) {
-        try {
-            // Simulamos la navegación por el modal mediante la tecla Tab y se presiona Space cuando sea necesario
-            await page.keyboard.press('Tab');
-            await page.keyboard.press('Tab');
-            await page.keyboard.press('Space');
-            await page.keyboard.press('Tab');
-            await page.keyboard.press('Space');
-            await page.waitForTimeout(8000);  // Esperamos 8 segundos para asegurar que el modal se procese correctamente
-        } catch (error) {
-            console.error("Error interactuando con el modal:", error);  // Manejamos cualquier error que ocurra durante la interacción
-        }
-    }
+    // async function interactuarConModal() {
+    //     try {
+    //         // Simulamos la navegación por el modal mediante la tecla Tab y se presiona Space cuando sea necesario
+            
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //         await page.keyboard.press('Tab');
+    //         await page.keyboard.press('Space');
+    //           // Esperamos 8 segundos para asegurar que el modal se procese correctamente
+    //     } catch (error) {
+    //         console.error("Error interactuando con el modal:", error);  // Manejamos cualquier error que ocurra durante la interacción
+    //     }
+    // }
 
     // Función para procesar una placa
     async function procesarPlaca(placa) {
@@ -65,8 +86,10 @@ app.post('/consultar', async (req, res) => {
             // Navegamos a la página de estado de cuenta del SIMIT con la placa actual
             await page.goto(`https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`, { waitUntil: 'networkidle2', timeout: 20000 });
 
-            // Interactuamos con el modal de la página
-            await interactuarConModal(page);
+            const modalPresente = await page.$('#modal-multiples-personas') !== null;
+            if (modalPresente) {
+                console.log("funciona")
+            }
 
             // Esperamos a que las tablas de resumen y multa estén disponibles en la página
             await Promise.all([
@@ -240,34 +263,15 @@ app.get('/descargar-cartas', async (req, res) => {
         // Escribimos el archivo .docx temporalmente
         fs.writeFileSync(tempDocxPath, docxBuffer);
         archive.append(docxBuffer, { name: docxFileName });  // Agregamos el .docx al archivo ZIP
-
-        // 2. Convertir el archivo .docx a .pdf
-        const tempPdfPath = path.join(__dirname, `Carta_${item.placa_u_documento}.pdf`);
-        await convertirDocxAPdf(tempDocxPath, tempPdfPath);  // Convertimos .docx a .pdf
-        const pdfBuffer = fs.readFileSync(tempPdfPath);
-        archive.append(pdfBuffer, { name: `Carta_${item.placa_u_documento}.pdf` });  // Agregamos el .pdf al archivo ZIP
-
         // Eliminar los archivos temporales
         fs.unlinkSync(tempDocxPath);
-        fs.unlinkSync(tempPdfPath);
     }
 
     // Finalizamos el archivo ZIP para que se pueda descargar
     await archive.finalize();
 });
 
-// Función para convertir .docx a .pdf usando docx-pdf
-async function convertirDocxAPdf(inputPath, outputPath) {
-    return new Promise((resolve, reject) => {
-        convertDocx(inputPath, outputPath, function (err, result) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(result);
-            }
-        });
-    });
-}
+
 // Endpoint POST para enviar correos con cartas de notificación de comparendos o multas
 app.post('/enviar-correos', async (req, res) => {
     // Leemos el archivo JSON que contiene los resultados de las placas
@@ -368,6 +372,41 @@ app.get('/api/resultados', (req, res) => {
         // Enviamos los datos leídos como respuesta en formato JSON
         res.json(JSON.parse(data));
     });
+});
+
+app.get('/buscarTodos', async (req, res) => {
+    try {
+        // Llamamos a las funciones que obtienen los usuarios y placas
+        const usuarios = await allUsers();
+        const placas = await allPlates();
+
+        console.log('Usuarios activos:', usuarios);
+        console.log('Placas activas:', placas);
+
+        // Combinamos los datos en un solo JSON
+        const resultado = {
+            usuariosActivos: usuarios,
+            placasActivas: placas
+        };
+
+        // Generamos el archivo Excel con los datos de usuarios y placas
+        const excelFilePath = generateExcelForUsersAndPlates(resultado, 'datos.xlsx');
+
+        // Inicia la descarga del archivo Excel directamente
+        res.download(excelFilePath, 'datos.xlsx', (err) => {
+            if (err) {
+                console.error('Error al descargar el archivo:', err);
+                return res.status(500).json({ message: 'Error al descargar el archivo Excel' });
+            }
+
+            // Eliminamos el archivo Excel después de que se haya descargado
+            fs.unlinkSync(excelFilePath);
+        });
+
+    } catch (error) {
+        console.error('Error al generar los datos:', error);
+        res.status(500).json({ message: 'Error al generar los datos' });
+    }
 });
 
 // Inicia el servidor en el puerto especificado

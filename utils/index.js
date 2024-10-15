@@ -1,15 +1,19 @@
-const { readJsonFile, processJsonData, generateExcel } = require('./excelGenerator');
+const { readJsonFile, processJsonData, generateExcel, generateExcelForUsersAndPlates } = require('./excelGenerator');
 const { crearCarta } = require('./cartasGenerator');
 const { buscarConductorID, ObtenerCorreo, obtenerNombrePropietario, ObtenerIdentificacion, ObtenerTipoId } = require('./findFunctions');
+const { allPlates, allUsers } = require('./allFindFunctions')
 
 module.exports = {
     readJsonFile,
     processJsonData,
     generateExcel,
+    generateExcelForUsersAndPlates,
     crearCarta,
     buscarConductorID,
     ObtenerCorreo,
     obtenerNombrePropietario, 
     ObtenerIdentificacion,
-    ObtenerTipoId
+    ObtenerTipoId,
+    allPlates, 
+    allUsers
 };

@@ -105,6 +105,7 @@ async function ObtenerCorreo(identificacion) {
         }
 
         const usuario = data.value[0];
+        console.log(usuario)
 
         if (usuario.State === 2) {
             console.log(`El usuario con identificación ${identificacion} está inactivo.`);

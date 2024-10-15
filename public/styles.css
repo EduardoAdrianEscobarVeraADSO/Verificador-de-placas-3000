@@ -26,43 +26,43 @@ header {
 }
 
 #notification-container {
-    position: fixed; /* Fijo para que se mantenga en la esquina */
-    top: 10px; /* Espaciado desde la parte superior */
-    left: 10px; /* Espaciado desde la izquierda */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    position: fixed; 
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
 }
 
 .notification {
-    background-color: #d9edf7; /* Color de fondo (azul claro) */
-    color: #31708f; /* Color del texto (azul oscuro) */
-    padding: 15px; /* Aumentar el padding */
+    background-color: #d9edf7;
+    color: #31708f; 
+    padding: 15px; 
     margin-bottom: 10px;
-    border: 1px solid #bce8f1; /* Bordes de notificación */
-    border-radius: 5px; /* Bordes redondeados */
-    position: relative; /* Para el botón de cerrar */
-    animation: slideDown 0.5s ease; /* Animación de llegada */
+    border: 1px solid #bce8f1;
+    border-radius: 5px; 
+    position: relative;
+    animation: slideDown 0.5s ease; 
 }
 
 .close-btn {
-    position: absolute; /* Para posicionar el botón en la esquina */
+    position: absolute; 
     top: 5px;
     right: 5px;
     border: none;
     background: none;
-    cursor: pointer; /* Muestra que es clickeable */
+    cursor: pointer; 
     font-weight: bold;
-    color: #31708f; /* Color del botón de cerrar */
+    color: #31708f; 
 }
 
 /* Animación de entrada */
 @keyframes slideDown {
     from {
-        transform: translateY(-20px); /* Empieza desde arriba */
-        opacity: 0; /* Invisible al inicio */
+        transform: translateY(-20px); 
+        opacity: 0; 
     }
     to {
-        transform: translateY(0); /* A su posición final */
-        opacity: 1; /* Totalmente visible */
+        transform: translateY(0);
+        opacity: 1; 
     }
 }
 
@@ -162,35 +162,55 @@ button:hover {
     margin-top: 20px; 
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 8px;
-    border: 1px solid #000;
-}
 
 #tabla-contenedor {
+    max-width: 100%;
+    overflow-x: auto;  
+    overflow-y: auto;  
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd;
+    border-radius: 5px;
     margin-top: 20px;
+}
+
+
+.tabla-resultados {
     width: 100%;
-    min-width: 30%;
-    max-width: 70%;
-    overflow: auto;   
-    max-height: 200px;
+    min-width: 600px; /* Ancho mínimo */
+    border-collapse: collapse;
+    background-color: #fff;
+    margin-bottom: 30px;
 }
 
-thead {
-    background-color: #f2f2f2;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+/* Estilo para las celdas del encabezado */
+.tabla-resultados thead th {
+    background: linear-gradient(135deg, #ff7f50, #ff4500, #ff6347);
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
 }
 
-tbody tr:nth-child(even) {
+/* Estilo para las celdas del cuerpo */
+.tabla-resultados tbody td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap;  /* Evitar que el texto se divida en líneas nuevas */
+}
+
+/* Alternar color de fondo en las filas del cuerpo */
+.tabla-resultados tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+
+/* Mejorar la visibilidad del hover en las filas */
+.tabla-resultados tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
 
 
 #sello-calidad {
@@ -245,9 +265,6 @@ tbody tr:nth-child(even) {
 
  
     #tabla-contenedor {
-        min-width: 50%;
-        max-width: 70%; 
-        overflow-x: scroll; 
-        font-size: 14px;
+        display: none;
     }
 }

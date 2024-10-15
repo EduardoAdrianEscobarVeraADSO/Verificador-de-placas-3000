@@ -26,6 +26,7 @@ function cerrarNotificacion(btn) {
     notification.remove();
 }
 
+
 async function consultarPlacas(event) {
     if (!validarFor(event)) {
         return;
@@ -187,6 +188,10 @@ async function cargarTabla() {
     } catch (error) {
         console.error('Error al cargar la tabla:', error);
     }
+}
+
+function buscarTodos() {
+    window.location.href = '/buscarTodos';
 }
 
 // Llamar a la función para cargar la tabla al cargar la página
