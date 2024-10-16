@@ -5,12 +5,22 @@
     "placa_u_documento": "800197456",
     "nombre_propietario": "N/A",
     "conductor": "FRIMAC S.A.",
-    "correo": "serviciocliente@frimac.com.co",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas",
+    "requiere_revision_adicional": "No"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "sxt074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "requiere_revision_adicional": "No",
     "resumen": {
-      "comparendos": "3",
-      "multas": "0",
+      "comparendos": "1",
+      "multas": "1",
       "acuerdos_de_pago": "0",
-      "total": "$ 1.800.788"
+      "total": "$ 1.146.572"
     },
     "tabla_multa": [
       {
@@ -24,25 +34,24 @@
         "valor_a_pagar": "$ 572.520  Detalle Pago"
       },
       {
-        "tipo": "47288000000044826785  Comparendo  Fecha imposición: 11/09/2024",
-        "notificacion": "18/09/2024",
-        "placa": "XVX840",
-        "secretaria": "Fundación",
-        "infraccion": "C29...  Fotodetección",
-        "estado": "Pendiente  No tiene curso",
-        "valor": "$ 572.520",
-        "valor_a_pagar": "$ 614.134  Detalle Pago"
-      },
-      {
-        "tipo": "47288000000044827047  Comparendo  Fecha imposición: 11/09/2024",
-        "notificacion": "24/09/2024",
-        "placa": "XVX840",
-        "secretaria": "Fundación",
-        "infraccion": "C29...  Fotodetección",
-        "estado": "Pendiente  No tiene curso",
-        "valor": "$ 572.520",
-        "valor_a_pagar": "$ 614.134  Detalle Pago"
+        "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
+        "notificacion": "No aplica",
+        "placa": "SXT074",
+        "secretaria": "Medellin",
+        "infraccion": "C26...  Proyección pago",
+        "estado": "Pendiente de pago",
+        "valor": "$ 572.628  Interés $ 1.424",
+        "valor_a_pagar": "$ 574.052  Detalle Pago"
       }
     ]
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "edev334",
+    "nombre_propietario": "N/A",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas",
+    "requiere_revision_adicional": "No"
   }
 ]

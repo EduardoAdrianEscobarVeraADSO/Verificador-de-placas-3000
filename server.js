@@ -8,6 +8,7 @@ const archiver = require('archiver');
 const utils = require('./utils');
 const convertDocx = require('docx-pdf');
 const { timeout } = require('puppeteer');
+const { log } = require('console');
 const { readJsonFile, processJsonData, generateExcel, generateExcelForUsersAndPlates, crearCarta, buscarConductorID, ObtenerCorreo, obtenerNombrePropietario, ObtenerIdentificacion, ObtenerTipoId, allPlates, allUsers } = utils;
 
 
@@ -33,81 +34,47 @@ const transporter = nodemailer.createTransport({
 
 // Endpoint POST para consultar información de multas basado en placas de vehículos
 app.post('/consultar', async (req, res) => {
-    const inputPlacas = req.body.placa;  // Se obtiene el parámetro "placa" del cuerpo de la solicitud
-    const placasArray = inputPlacas.split(' ').map(placa => placa.trim());  // Separamos las placas si hay más de una
-    const resultados = [];  // Array donde se almacenarán los resultados de cada placa consultada
+    const inputPlacas = req.body.placa;
+    const placasArray = inputPlacas.split(' ').map(placa => placa.trim());
+    const resultados = [];
 
-    // Configuración del navegador utilizando Puppeteer
     const browser = await puppeteer.launch({
-        headless: false,  // Modo headless para que no se muestre el navegador
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1900,1900']  // Argumentos para mejorar el rendimiento
+        headless: false,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-size=1900,1900']
     });
 
-    // Función para interactuar con el modal de la página
-    // async function interactuarConModal() {
-    //     try {
-    //         // Simulamos la navegación por el modal mediante la tecla Tab y se presiona Space cuando sea necesario
-            
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //         await page.keyboard.press('Tab');
-    //         await page.keyboard.press('Space');
-    //           // Esperamos 8 segundos para asegurar que el modal se procese correctamente
-    //     } catch (error) {
-    //         console.error("Error interactuando con el modal:", error);  // Manejamos cualquier error que ocurra durante la interacción
-    //     }
-    // }
-
-    // Función para procesar una placa
     async function procesarPlaca(placa) {
+        let requiereRevision = false;
         const page = await browser.newPage();  // Se abre una nueva página en el navegador
         try {
             // Navegamos a la página de estado de cuenta del SIMIT con la placa actual
             await page.goto(`https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`, { waitUntil: 'networkidle2', timeout: 20000 });
-
-            const modalPresente = await page.$('#modal-multiples-personas') !== null;
-            if (modalPresente) {
-                console.log("funciona")
-            }
-
+    
+            // Verificamos la clase del modal para determinar si está activo o inactivo
+            const modalClase = await page.evaluate(() => {
+                const modal = document.querySelector('#modal-multiples-personas');
+                return modal ? modal.className : '';
+            });
+    
+            const requiereRevision = modalClase.includes('show');  // Si la clase incluye 'show', requiere revisión adicional
+    
             // Esperamos a que las tablas de resumen y multa estén disponibles en la página
             await Promise.all([
                 page.waitForSelector('#resumenEstadoCuenta', { timeout: 20000 }),  // Espera a que el resumen esté disponible
                 page.waitForSelector('#multaTable', { timeout: 20000 })  // Espera a que la tabla de multas esté disponible
             ]);
-
+    
             // Extraemos el texto del resumen de estado de cuenta
             const textoResumen = await page.evaluate(() => {
                 const contenedor = document.querySelector('#resumenEstadoCuenta');
                 return contenedor ? contenedor.innerText : 'Contenedor No disponible';
             });
-
+    
             // Extraemos los datos de la tabla de multas
             const datosTabla = await page.evaluate(() => {
                 const tabla = document.querySelector('#multaTable');
                 if (!tabla) return [];  // Si no existe la tabla, retornamos un array vacío
-
+    
                 const filas = Array.from(tabla.querySelectorAll('tbody tr'));
                 return filas.map(fila => {
                     const celdas = Array.from(fila.querySelectorAll('td'));
@@ -123,11 +90,11 @@ app.post('/consultar', async (req, res) => {
                     };
                 });
             });
-
+    
             const datosTablaFiltrados = datosTabla.filter(dato => {
                 return Object.values(dato).some(valor => valor !== '');
             });
-
+    
             const datosResumen = textoResumen.split('\n').reduce((acc, linea) => {
                 const [clave, valor] = linea.split(':').map(str => str.trim());
                 if (clave && valor) {
@@ -135,13 +102,13 @@ app.post('/consultar', async (req, res) => {
                 }
                 return acc;
             }, {});
-
+    
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
             const correo = await ObtenerCorreo(placa);
             const tipoId = await ObtenerTipoId(placa);
             const iD = await ObtenerIdentificacion(placa);
-
+    
             return {
                 tipoID: tipoId || "N/A",
                 ID: iD || "N/A",
@@ -149,6 +116,7 @@ app.post('/consultar', async (req, res) => {
                 nombre_propietario: nombrePropietario || "N/A",
                 conductor: conductor || "N/A",
                 correo: correo || "N/A",
+                requiere_revision_adicional: requiereRevision ? 'Sí' : 'No',  // Agregamos el campo de revisión
                 resumen: {
                     comparendos: datosResumen.comparendos || 'No tiene comparendos ni multas',
                     multas: datosResumen.multas || 'No tiene comparendos ni multas',
@@ -157,7 +125,7 @@ app.post('/consultar', async (req, res) => {
                 },
                 tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : []
             };
-
+    
         } catch (error) {
             const nombrePropietario = await obtenerNombrePropietario(placa);
             const conductor = await buscarConductorID(placa);
@@ -171,18 +139,20 @@ app.post('/consultar', async (req, res) => {
                 placa_u_documento: placa,
                 nombre_propietario: nombrePropietario || "N/A",
                 conductor: conductor || "N/A",
-                mensaje: 'No tiene comparendos ni multas comparendos ni multas'
+                mensaje: 'No tiene comparendos ni multas comparendos ni multas',
+                requiere_revision_adicional: requiereRevision ? 'Sí' : 'No'  // Agregamos el campo de revisión
+
             };
         } finally {
             await page.close();  
         }
     }
+    
 
-    // Ejecutamos las consultas en paralelo en grupos de 5
     const chunkSize = 15;
     for (let i = 0; i < placasArray.length; i += chunkSize) {
-        const chunk = placasArray.slice(i, i + chunkSize);  // Tomamos un grupo de placas
-        const resultadosChunk = await Promise.allSettled(chunk.map(procesarPlaca));  // Procesamos las placas en paralelo
+        const chunk = placasArray.slice(i, i + chunkSize);
+        const resultadosChunk = await Promise.allSettled(chunk.map(procesarPlaca));
 
         resultadosChunk.forEach((resultado) => {
             if (resultado.status === 'fulfilled') {
@@ -195,8 +165,8 @@ app.post('/consultar', async (req, res) => {
 
     fs.writeFileSync('resultados_placas.json', JSON.stringify(resultados, null, 2), 'utf-8');
 
-    await browser.close();  
-    
+    await browser.close();
+
     res.json({ message: 'Consulta completada y resultados guardados', resultados });
 });
 

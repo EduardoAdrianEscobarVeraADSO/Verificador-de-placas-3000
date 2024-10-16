@@ -2,7 +2,7 @@
 const { authApi } = require('./findFunctions');
 
 async function allUsers() {
-    const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27*%27))%20%20or%20(contains(Ucr_Name,%27*%27))%20or%20(contains(Identification,%27*%27)))";
+    const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?";
     const token = await authApi();
     const options = {
         method: 'GET',
@@ -52,7 +52,7 @@ async function allUsers() {
 
 
 async function allPlates() {
-    const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewVehicle?$filter=(SocId%20eq%2053)%20and%20((VcnType%20eq%20%27TRUCK%27)%20%20%20%20%20%20%20%20%20or%20(VcnType%20eq%20%27HEAD%27)%20or%20(VcnType%20eq%20%27SET%27))%20and%20contains(Plate,%27*%27)%20or%20contains(DriverName,%27*%27)%20or%20contains(CarrierName,%27*%27)%20or%20contains(Trailer,%27*%27)%20or%20contains(TraPlate,%27*%27)%20or%20contains(OwnerName,%27*%27)";
+    const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewVehicle?";
     const token = await authApi();
     const options = {
         method: 'GET',
@@ -76,18 +76,18 @@ async function allPlates() {
             return [];
         }
 
-        // Filtrar las placas activas 
-        const placasActiva = data.value.filter(placas => placas.StaName !== "Inactivo");
-        
-        
+        // Filtrar las placas activas y de tipo TRUCK
+        const placasActiva = data.value.filter(placas => 
+            placas.StaName !== "Inactivo" && placas.VcnType === "TRUCK" || placas.VcnType === "TRUCK" 
+        );
 
         if (placasActiva.length === 0) {
-            console.log('No se encontraron usuarios activos.');
+            console.log('No se encontraron vehículos activos de tipo TRUCK.');
             return [];
         }
+        
         const placasActivas = placasActiva.map(placas => placas.Code);
 
-        console.log('Usuarios activos:', placasActivas);
         return placasActivas;
 
     } catch (error) {

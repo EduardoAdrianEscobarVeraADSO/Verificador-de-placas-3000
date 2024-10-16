@@ -33,12 +33,9 @@ const crearCarta = async (item) => {
 
     const texto = [];
     texto.push(createParagraph(`Floridablanca, ${dia}/${mes}/${anio}`));
-    texto.push(createParagraph(""));
     texto.push(createParagraph(`Señor:`));
     texto.push(createParagraph(`${conductorOPropietario} `, true));
-    texto.push(createParagraph(""));
     texto.push(createParagraph("E.S.M"));
-    texto.push(createParagraph(""));
     texto.push(createParagraph("ASUNTO: Notificacion de comparendo", true));
     texto.push(createParagraph(""));
     texto.push(createParagraph("Cordial Saludo."));
@@ -94,8 +91,8 @@ const crearCarta = async (item) => {
             createParagraph("Atentamente, "),
             createParagraph("Comite de seguridad Vial Frimac", true),
             createParagraph("Recibido: "),
-            createParagraph(""),
             createParagraph("Firma: _______________________________"),
+            createParagraph("Al firmar este documento, usted acepta y confirma que ha leído y comprendido todo su contenido.", true)
         ],
     });
 
