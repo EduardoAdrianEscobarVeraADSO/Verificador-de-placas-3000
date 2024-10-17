@@ -20,7 +20,7 @@
       "comparendos": "1",
       "multas": "1",
       "acuerdos_de_pago": "0",
-      "total": "$ 1.146.572"
+      "total": "$ 1.146.750"
     },
     "tabla_multa": [
       {
@@ -40,8 +40,8 @@
         "secretaria": "Medellin",
         "infraccion": "C26...  Proyección pago",
         "estado": "Pendiente de pago",
-        "valor": "$ 572.628  Interés $ 1.424",
-        "valor_a_pagar": "$ 574.052  Detalle Pago"
+        "valor": "$ 572.628  Interés $ 1.602",
+        "valor_a_pagar": "$ 574.230  Detalle Pago"
       }
     ]
   },
