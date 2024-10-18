@@ -58,8 +58,7 @@ module.exports = { allUsers };
 
 
 async function allPlates() {
-    const url = "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewVehicle?$filter=(SocId%20eq%2053)%20and%20((VcnType%20eq%20%27TRUCK%27)%20%20%20%20%20%20%20%20%20or%20(VcnType%20eq%20%27HEAD%27)%20or%20(VcnType%20eq%20%27SET%27))%20and%20contains(Plate,%27*%27)%20or%20contains(DriverName,%27*%27)%20or%20contains(CarrierName,%27*%27)%20or%20contains(Trailer,%27*%27)%20or%20contains(TraPlate,%27*%27)%20or%20contains(OwnerName,%27*%27)";
-    const token = await authApi();
+    const token = await authApi(); // Autenticación obteniendo el token
     const options = {
         method: 'GET',
         headers: {
@@ -68,39 +67,50 @@ async function allPlates() {
         }
     };
 
-    try {
-        const response = await fetch(url, options);
+    let vehiculosActivosUnicos = []; // Acumulador para todos los códigos únicos de vehículos
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+    // Expresión regular para filtrar placas en formato ABC123 (3 letras seguidas de 3 números)
+    const regexPlacaValida = /^[A-Za-z]{3}[0-9]{3}$/;
+
+    // Bucle que recorre cada operación
+    for (const operacion of operaciones) {
+        // Construir la URL con la operación interpolada
+        const url = `https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewVehicle?%24filter=(OperationTypeCode%20eq%20%27${operacion}%27)%20and%20(StaName%20eq%20%27Activo%27)`;
+
+        try {
+            const respuesta = await fetch(url, options);
+
+            if (!respuesta.ok) {
+                throw new Error(`Error HTTP! estado: ${respuesta.status} para la operación ${operacion}`);
+            }
+
+            const datos = await respuesta.json();
+
+            if (datos.value.length === 0) {
+                console.log(`No se encontraron vehículos activos para la operación ${operacion}.`);
+                continue; // Saltar a la siguiente operación
+            }
+
+            // Obtener todos los códigos de vehículos y filtrar solo las placas válidas
+            const codigosVehiculos = datos.value
+                .map(vehiculo => vehiculo.Code)
+                .filter(placa => regexPlacaValida.test(placa)); // Filtrar placas con el formato correcto
+
+            // Eliminar duplicados utilizando un Set
+            const vehiculosUnicos = [...new Set(codigosVehiculos)];
+
+            // Acumular los códigos únicos en el array principal
+            vehiculosActivosUnicos = [...new Set([...vehiculosActivosUnicos, ...vehiculosUnicos])];
+
+        } catch (error) {
+            console.error(`Hubo un error en la solicitud para la operación ${operacion}:`, error);
         }
-
-        const data = await response.json();
-
-        if (data.value.length === 0) {
-            console.log('No se encontraron placas.');
-            return [];
-        }
-
-        // Filtrar las placas activas y de tipo TRUCK
-        const placasActiva = data.value.filter(placas => 
-            placas.StaName !== "Inactivo"  
-        );
-
-        if (placasActiva.length === 0) {
-            console.log('No se encontraron vehículos activos de tipo TRUCK.');
-            return [];
-        }
-        
-        const placasActivas = data.value.map(placas => placas.Code);
-
-        return placasActivas;
-
-    } catch (error) {
-        console.error('Hubo un error en la solicitud:', error);
-        return [];
     }
+
+    // Retornar todos los códigos únicos de vehículos activos con placas válidas
+    return vehiculosActivosUnicos;
 }
+
 
 
 module.exports = {
