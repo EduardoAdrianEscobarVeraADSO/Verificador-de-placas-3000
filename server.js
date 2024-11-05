@@ -125,7 +125,7 @@ app.post("/consultar", async (req, res) => {
         nombre_propietario: nombrePropietario || "N/A",
         conductor: conductor || "N/A",
         correo: correo || "N/A",
-        operacion: oP || "N/A",
+        operacion: oP || "NA",
         resumen: {
           comparendos:
             datosResumen.comparendos || "No tiene comparendos ni multas",
@@ -149,7 +149,7 @@ app.post("/consultar", async (req, res) => {
         ID: iD || "N/A",
         placa_u_documento: placa,
         nombre_propietario: nombrePropietario || "N/A",
-        operacion: oP || "N/A",
+        operacion: oP || "NA",
         conductor: conductor || "N/A",
         mensaje: "No tiene comparendos ni multas comparendos ni multas",
         requiere_revision_adicional: requiereRevision ? "Sí" : "No",

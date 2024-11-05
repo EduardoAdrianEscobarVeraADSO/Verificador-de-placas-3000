@@ -1,19 +1,29 @@
 [
   {
-    "tipoID": "C",
-    "ID": "1095810114",
-    "placa_u_documento": "1095810114",
-    "nombre_propietario": "N/A",
-    "conductor": "JAVIER ANDRES GOMEZ RINCON",
-    "correo": "Javigomez9110@gmail.com",
-    "operacion": "REFRI",
+    "tipoID": "N/A",
+    "ID": "N/A",
+    "placa_u_documento": "SXT074",
+    "nombre_propietario": "FRIMAC S.A.",
+    "conductor": "N/A",
+    "correo": "N/A",
+    "operacion": "NA",
     "resumen": {
-      "comparendos": "0",
+      "comparendos": "1",
       "multas": "1",
       "acuerdos_de_pago": "0",
-      "total": "$ 574.944"
+      "total": "$ 1.150.142"
     },
     "tabla_multa": [
+      {
+        "tipo": "47053000000045460346  Comparendo  Fecha imposición: 01/09/2024",
+        "notificacion": "01/09/2024",
+        "placa": "SXT074",
+        "secretaria": "Aracataca",
+        "infraccion": "C29...  Fotodetección",
+        "estado": "Pendiente  No tiene curso",
+        "valor": "$ 572.520",
+        "valor_a_pagar": "$ 572.520  Detalle Pago"
+      },
       {
         "tipo": "0000107568  Multa  Fecha resolución: 09/10/2024",
         "notificacion": "No aplica",
@@ -21,8 +31,8 @@
         "secretaria": "Medellin",
         "infraccion": "C26...  Proyección pago",
         "estado": "Pendiente de pago",
-        "valor": "$ 572.628  Interés $ 2.316",
-        "valor_a_pagar": "$ 574.944  Detalle Pago"
+        "valor": "$ 572.628  Interés $ 4.994",
+        "valor_a_pagar": "$ 577.622  Detalle Pago"
       }
     ]
   }
