@@ -23,7 +23,10 @@ function processJsonData(jsonData) {
       Documento: item.placa_u_documento,
       conductor: item.conductor || "N/A",
       Nombre_Propietario: item.nombre_propietario || "N/A",
+      Celular: item.celular,
       Correo: item.correo,
+      Estado_civil: "Union Libre",
+      No_licencia: item.placa_u_documento,
     };
     if (item.tabla_multa && item.tabla_multa.length > 0) {
       item.tabla_multa.forEach((mult) => {
