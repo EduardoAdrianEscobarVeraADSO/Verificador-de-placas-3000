@@ -23,6 +23,7 @@ const {
   ObtenerOperacion,
   allPlates,
   allUsers,
+  obtenerNumeroTelefonico
 } = utils;
 const app = express();
 const port = process.env.PORT || 3002;
@@ -118,12 +119,15 @@ app.post("/consultar", async (req, res) => {
       const tipoId = await ObtenerTipoId(placa);
       const iD = await ObtenerIdentificacion(placa);
       const oP = await ObtenerOperacion(placa)
+      const numero = await obtenerNumeroTelefonico(placa);
+
       return {
         tipoID: tipoId || "N/A",
         ID: iD || "N/A",
         placa_u_documento: placa,
         nombre_propietario: nombrePropietario || "N/A",
         conductor: conductor || "N/A",
+        celular: numero || "N/A",
         correo: correo || "N/A",
         operacion: oP || "NA",
         resumen: {
