@@ -75,7 +75,7 @@ const crearCarta = async (item) => {
             }),
             new TableCell({ children: [createParagraph(descripcion)] }),
             new TableCell({
-              children: [createParagraph(multa.valor.toString())],
+              children: [createParagraph(multa.valor_a_pagar.replace(/Detalle Pago/gi, '').toString())],
             }),
           ],
         });

@@ -33,7 +33,7 @@ function processJsonData(jsonData) {
         const descriptions = require("../description.json");
         let tipoMulta = mult.tipo;
         let infra = mult.infraccion;
-        let valor = mult.valor;
+        let valor = mult.valor_a_pagar;
         let resultado = valor.match(
           /\b(20\.000\.000|[1-9]([0-9]{0,2}(?:\.[0-9]{3})*)?)\b/
         );

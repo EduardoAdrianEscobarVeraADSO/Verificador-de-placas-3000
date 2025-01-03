@@ -130,12 +130,10 @@ async function cargarTabla() {
                                 <td>${item.placa_u_documento}</td>
                                 <td>${item.nombre_propietario}</td>
                                 <td>${
-                                  multa.tipo.includes("Comparendo")
-                                    ? "Comparendo"
-                                    : "Multa"
+                                  multa.tipo
                                 }</td>
                                 <td>${
-                                  multa.tipo.split("Fecha imposición: ")[1]
+                                  multa.tipo.split("Fecha resolución: ")[1]
                                 }</td>
                                 <td>${multa.infraccion}</td>
                                 <td>${multa.estado}</td>

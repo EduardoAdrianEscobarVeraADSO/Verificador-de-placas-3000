@@ -49,7 +49,7 @@ app.post("/consultar", async (req, res) => {
       "--no-sandbox",
       "--disable-setuid-sandbox",
       "--disable-infobars",
-      "--window-size=1,1",
+      "--window-size=0,0",
     ],
   });
   async function procesarPlaca(placa) {
