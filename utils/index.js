@@ -11,7 +11,8 @@ const {
   obtenerNombrePropietario,
   ObtenerIdentificacion,
   ObtenerTipoId,
-  ObtenerOperacion,
+  ObtenerOperacionPersona,
+  ObtenerOperacionVehiculo,
   obtenerNumeroTelefonico
 } = require("./findFunctions");
 const { allPlates, allUsers } = require("./allFindFunctions");
@@ -28,6 +29,7 @@ module.exports = {
   ObtenerTipoId,
   allPlates,
   allUsers,
-  ObtenerOperacion,
+  ObtenerOperacionPersona,
+  ObtenerOperacionVehiculo,
   obtenerNumeroTelefonico
 };

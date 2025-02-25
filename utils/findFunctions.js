@@ -183,7 +183,7 @@ async function ObtenerIdentificacion(identificacion) {
     console.error("Hubo un error en la solicitud:", error);
   }
 }
-async function ObtenerOperacion(identificacion) {
+async function ObtenerOperacionPersona(identificacion) {
     const url =
       "https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewUcrTercero?$filter=UcrSocId%20eq%2053%20and%20((contains(Ucr_Code,%27" +
       identificacion +
@@ -217,7 +217,34 @@ async function ObtenerOperacion(identificacion) {
       console.error("Hubo un error en la solicitud:", error);
     }
   }
+async function ObtenerOperacionVehiculo(placa) {
+    const url = `https://tcfrimac.simplexity.com.co/OData/api/Tc4ViewVehicle?$filter=(SocId%20eq%2053)%20and%20((VcnType%20eq%20%27TRUCK%27)%20%20%20%20%20%20%20%20%20or%20(VcnType%20eq%20%27HEAD%27)%20or%20(VcnType%20eq%20%27SET%27))%20and%20contains(Plate,%27${placa}%27)%20or%20contains(DriverName,%27${placa}%27)%20or%20contains(CarrierName,%27${placa}%27)%20or%20contains(Trailer,%27${placa}%27)%20or%20contains(TraPlate,%27s${placa}%27)%20or%20contains(OwnerName,%27${placa}%27)`
 
+    const token = await authApi();
+    const options = {
+      method: "GET",
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/json" },
+    };
+    try {
+      const response = await fetch(url, options);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      if (data.length === 0) {
+        console.log(
+          `No se encontró ningún usuario con la identificación: ${identificacion}`
+        );
+        usuario = "No existe";
+        return;
+      }
+      const usuario = data.value[0];
+      console.log(usuario.OperationTypeCode);
+      return usuario.OperationTypeCode;
+    } catch (error) {
+      console.error("Hubo un error en la solicitud:", error);
+    }
+  }
 async function obtenerNumeroTelefonico(identificacion){
   const url =
       `https://tcfrimac.simplexity.com.co/OData/api/UcLocation/GetLocation?$filter=UloUCRUcr%20eq%20%27${identificacion}%27`;
@@ -251,8 +278,9 @@ module.exports = {
   buscarConductorID,
   ObtenerCorreo,
   obtenerNombrePropietario,
-  ObtenerIdentificacion,
   ObtenerTipoId,
-  ObtenerOperacion,
+  ObtenerIdentificacion,
+  ObtenerOperacionPersona,
+  ObtenerOperacionVehiculo,
   obtenerNumeroTelefonico
 };

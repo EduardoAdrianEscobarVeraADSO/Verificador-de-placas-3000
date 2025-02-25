@@ -6,9 +6,6 @@ const fs = require("fs");
 const path = require("path");
 const archiver = require("archiver");
 const utils = require("./utils");
-const convertDocx = require("docx-pdf");
-const { timeout } = require("puppeteer");
-const { log } = require("console");
 const {
   readJsonFile,
   processJsonData,
@@ -20,7 +17,8 @@ const {
   obtenerNombrePropietario,
   ObtenerIdentificacion,
   ObtenerTipoId,
-  ObtenerOperacion,
+  ObtenerOperacionVehiculo,
+  ObtenerOperacionPersona,
   allPlates,
   allUsers,
   obtenerNumeroTelefonico
@@ -118,7 +116,8 @@ app.post("/consultar", async (req, res) => {
       const correo = await ObtenerCorreo(placa);
       const tipoId = await ObtenerTipoId(placa);
       const iD = await ObtenerIdentificacion(placa);
-      const oP = await ObtenerOperacion(placa)
+      const oPP = await ObtenerOperacionPersona(placa);
+      const OPV = await ObtenerOperacionVehiculo(placa);
       const numero = await obtenerNumeroTelefonico(placa);
 
       return {
@@ -129,7 +128,8 @@ app.post("/consultar", async (req, res) => {
         conductor: conductor || "N/A",
         celular: numero || "N/A",
         correo: correo || "N/A",
-        operacion: oP || "NA",
+        operacionPersona: oPP || "NA",
+        operacionVehiculo: OPV || "NA",
         resumen: {
           comparendos:
             datosResumen.comparendos || "No tiene comparendos ni multas",
@@ -146,14 +146,16 @@ app.post("/consultar", async (req, res) => {
       const conductor = await buscarConductorID(placa);
       const tipoId = await ObtenerTipoId(placa);
       const iD = await ObtenerIdentificacion(placa);
-      const oP = await ObtenerOperacion(placa)
+      const oPP = await ObtenerOperacionPersona(placa);
+      const OPV = await ObtenerOperacionVehiculo(placa);
       console.error(`Error al procesar la placa ${placa}:`, error);
       return {
         tipoID: tipoId || "N/A",
         ID: iD || "N/A",
         placa_u_documento: placa,
         nombre_propietario: nombrePropietario || "N/A",
-        operacion: oP || "NA",
+        operacionPersona: oPP || "NA",
+        operacionVehiculo: OPV || "NA",
         conductor: conductor || "N/A",
         mensaje: "No tiene comparendos ni multas comparendos ni multas",
         requiere_revision_adicional: requiereRevision ? "Sí" : "No",

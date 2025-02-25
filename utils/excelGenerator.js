@@ -23,6 +23,7 @@ function processJsonData(jsonData) {
       Documento: item.placa_u_documento,
       conductor: item.conductor || "N/A",
       Nombre_Propietario: item.nombre_propietario || "N/A",
+      Operacion:item.operacionVehiculo,
       Celular: item.celular,
       Correo: item.correo,
       Estado_civil: "Union Libre",
