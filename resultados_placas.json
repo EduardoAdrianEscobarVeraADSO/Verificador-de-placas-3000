@@ -2,6 +2,17 @@
   {
     "tipoID": "N/A",
     "ID": "UCR00000251",
+    "placa_u_documento": "sxt073",
+    "nombre_propietario": "FRIMAC S.A.",
+    "operacionPersona": "NA",
+    "operacionVehiculo": "REFRI",
+    "conductor": "N/A",
+    "mensaje": "No tiene comparendos ni multas comparendos ni multas",
+    "requiere_revision_adicional": "No"
+  },
+  {
+    "tipoID": "N/A",
+    "ID": "UCR00000251",
     "placa_u_documento": "sxt074",
     "nombre_propietario": "FRIMAC S.A.",
     "operacionPersona": "NA",

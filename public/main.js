@@ -130,7 +130,7 @@ async function cargarTabla() {
                                 <td>${item.placa_u_documento}</td>
                                 <td>${item.nombre_propietario}</td>
                                 <td>${
-                                  multa.tipo
+                                  multa.tipos
                                 }</td>
                                 <td>${
                                   multa.tipo.split("Fecha resolución: ")[1]
