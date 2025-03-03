@@ -44,6 +44,7 @@ app.post("/consultar", async (req, res) => {
   const browser = await puppeteer.launch({
     headless: true,
     args: [
+      "--disable-gpu",
       "--no-sandbox",
       "--disable-setuid-sandbox",
       "--disable-infobars",
@@ -56,91 +57,149 @@ app.post("/consultar", async (req, res) => {
     try {
       await page.goto(
         `https://www.fcm.org.co/simit/#/estado-cuenta?numDocPlacaProp=${placa}`,
-        { waitUntil: "networkidle2", timeout: 20000 }
+        { waitUntil: "networkidle2", timeout: 40000 }
       );
-      
-      await Promise.all([
-        page.waitForSelector("#resumenEstadoCuenta", { timeout: 20000 }),
-        page.waitForSelector("#multaTable", { timeout: 20000 }),
-      ]);
-      const textoResumen = await page.evaluate(() => {
-        const contenedor = document.querySelector("#resumenEstadoCuenta");
-        return contenedor ? contenedor.innerText : "Contenedor No disponible";
-      });
-      const datosTabla = await page.evaluate(() => {
-        const tabla = document.querySelector("#multaTable");
-        if (!tabla) return [];
-        const filas = Array.from(tabla.querySelectorAll("tbody tr"));
-        return filas.map((fila) => {
-          const celdas = Array.from(fila.querySelectorAll("td"));
-          return {
-            tipo: celdas[0]
-              ? celdas[0].innerText.replace(/\n/g, " ").trim()
-              : "",
-            notificacion: celdas[1]
-              ? celdas[1].innerText.replace(/\n/g, " ").trim()
-              : "",
-            placa: celdas[2]
-              ? celdas[2].innerText.replace(/\n/g, " ").trim()
-              : "",
-            secretaria: celdas[3]
-              ? celdas[3].innerText.replace(/\n/g, " ").trim()
-              : "",
-            infraccion: celdas[4]
-              ? celdas[4].innerText.replace(/\n/g, " ").trim()
-              : "",
-            estado: celdas[5]
-              ? celdas[5].innerText.replace(/\n/g, " ").trim()
-              : "",
-            valor: celdas[6]
-              ? celdas[6].innerText.replace(/\n/g, " ").trim()
-              : "",
-            valor_a_pagar: celdas[7]
-              ? celdas[7].innerText.replace(/\n/g, " ").trim()
-              : "",
-          };
-        });
-      });
-      const datosTablaFiltrados = datosTabla.filter((dato) => {
-        return Object.values(dato).some((valor) => valor !== "");
-      });
-      const datosResumen = textoResumen.split("\n").reduce((acc, linea) => {
-        const [clave, valor] = linea.split(":").map((str) => str.trim());
-        if (clave && valor) {
-          acc[clave.replace(/\s+/g, "_").toLowerCase()] = valor;
-        }
-        return acc;
-      }, {});
-      const nombrePropietario = await obtenerNombrePropietario(placa);
-      const conductor = await buscarConductorID(placa);
-      const correo = await ObtenerCorreo(placa);
-      const tipoId = await ObtenerTipoId(placa);
-      const iD = await ObtenerIdentificacion(placa);
-      const oPP = await ObtenerOperacionPersona(placa);
-      const OPV = await ObtenerOperacionVehiculo(placa);
-      const numero = await obtenerNumeroTelefonico(placa);
 
-      return {
-        tipoID: tipoId || "N/A",
-        ID: iD || "N/A",
-        placa_u_documento: placa,
-        nombre_propietario: nombrePropietario || "N/A",
-        conductor: conductor || "N/A",
-        celular: numero || "N/A",
-        correo: correo || "N/A",
-        operacionPersona: oPP || "NA",
-        operacionVehiculo: OPV || "NA",
-        resumen: {
-          comparendos:
-            datosResumen.comparendos || "No tiene comparendos ni multas",
-          multas: datosResumen.multas || "No tiene comparendos ni multas",
-          acuerdos_de_pago:
-            datosResumen.acuerdos_de_pago || "No tiene comparendos ni multas",
-          total:
-            datosResumen.total || "No tiene comparendos ni multas comparendos",
-        },
-        tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : [],
-      };
+
+      // await Promise.all([
+      //   page.waitForSelector("#resumenEstadoCuenta", { timeout: 20000 }),
+      //   page.waitForSelector("#multaTable", { timeout: 20000 }),
+      // ]);
+      try{
+
+        // await Promise.all([
+        //     page.waitForSelector("#resumenEstadoCuenta", { timeout: 20000 }),
+        //     page.waitForSelector("#multaTable", { timeout: 20000 }),
+        //     page.waitForSelector("#acuerdoPagoTable", { timeout: 20000 })
+        //   ]);
+        await page.waitForFunction(() => {
+          return document.querySelector("#resumenEstadoCuenta") ||
+                 document.querySelector("#multaTable") || document.querySelector("#acuerdoPagoTable");
+        }, { timeout: 20000 });
+      
+
+        const textoResumen = await page.evaluate(() => {
+          const contenedor = document.querySelector("#resumenEstadoCuenta");
+          return contenedor ? contenedor.innerText : "Contenedor No disponible";
+        });
+        const datosTabla = await page.evaluate(() => {
+          const tabla = document.querySelector("#multaTable");
+          if (!tabla) return [];
+          const filas = Array.from(tabla.querySelectorAll("tbody tr"));
+          return filas.map((fila) => {
+            const celdas = Array.from(fila.querySelectorAll("td"));
+            return {
+              tipo: celdas[0]
+                ? celdas[0].innerText.replace(/\n/g, " ").trim()
+                : "",
+              notificacion: celdas[1]
+                ? celdas[1].innerText.replace(/\n/g, " ").trim()
+                : "",
+              placa: celdas[2]
+                ? celdas[2].innerText.replace(/\n/g, " ").trim()
+                : "",
+              secretaria: celdas[3]
+                ? celdas[3].innerText.replace(/\n/g, " ").trim()
+                : "",
+              infraccion: celdas[4]
+                ? celdas[4].innerText.replace(/\n/g, " ").trim()
+                : "",
+              estado: celdas[5]
+                ? celdas[5].innerText.replace(/\n/g, " ").trim()
+                : "",
+              valor: celdas[6]
+                ? celdas[6].innerText.replace(/\n/g, " ").trim()
+                : "",
+              valor_a_pagar: celdas[7]
+                ? celdas[7].innerText.replace(/\n/g, " ").trim()
+                : "",
+            };
+          });
+        });
+        const datosTablaFiltrados = datosTabla.filter((dato) => {
+          return Object.values(dato).some((valor) => valor !== "");
+        });
+        const datosResumen = textoResumen.split("\n").reduce((acc, linea) => {
+          const [clave, valor] = linea.split(":").map((str) => str.trim());
+          if (clave && valor) {
+            acc[clave.replace(/\s+/g, "_").toLowerCase()] = valor;
+          }
+          return acc;
+        }, {});
+        const nombrePropietario = await obtenerNombrePropietario(placa);
+        const conductor = await buscarConductorID(placa);
+        const correo = await ObtenerCorreo(placa);
+        const tipoId = await ObtenerTipoId(placa);
+        const iD = await ObtenerIdentificacion(placa);
+        const oPP = await ObtenerOperacionPersona(placa);
+        const OPV = await ObtenerOperacionVehiculo(placa);
+        const numero = await obtenerNumeroTelefonico(placa);
+
+        return {
+          tipoID: tipoId || "N/A",
+          ID: iD || "N/A",
+          placa_u_documento: placa,
+          nombre_propietario: nombrePropietario || "N/A",
+          conductor: conductor || "N/A",
+          celular: numero || "N/A",
+          correo: correo || "N/A",
+          operacionPersona: oPP || "NA",
+          operacionVehiculo: OPV || "NA",
+          resumen: {
+            comparendos:
+              datosResumen.comparendos || "No tiene comparendos ni multas",
+            multas: datosResumen.multas || "No tiene comparendos ni multas",
+            acuerdos_de_pago:
+              datosResumen.acuerdos_de_pago || "No tiene comparendos ni multas",
+            total:
+              datosResumen.total || "No tiene comparendos ni multas comparendos",
+          },
+          tabla_multa: datosTablaFiltrados.length > 0 ? datosTablaFiltrados : [],
+        };
+      } catch (error) {
+        try{
+          await page.waitForSelector(".container-fluid.mb-4 h3", { timeout: 20000 });
+          const h3Text = await page.$eval(".container-fluid.mb-4 h3", el => el.textContent.trim());
+          console.log(h3Text)
+          const nombrePropietario = await obtenerNombrePropietario(placa);
+          const conductor = await buscarConductorID(placa);
+          const tipoId = await ObtenerTipoId(placa);
+          const iD = await ObtenerIdentificacion(placa);
+          const oPP = await ObtenerOperacionPersona(placa);
+          const OPV = await ObtenerOperacionVehiculo(placa);
+          return {
+            tipoID: tipoId || "N/A",
+            ID: iD || "N/A",
+            placa_u_documento: placa,
+            nombre_propietario: nombrePropietario || "N/A",
+            operacionPersona: oPP || "NA",
+            operacionVehiculo: OPV || "NA",
+            conductor: conductor || "N/A",
+            mensaje: h3Text,
+            requiere_revision_adicional: requiereRevision ? "Sí" : "No",
+          };          
+
+        } catch (error) {
+          const nombrePropietario = await obtenerNombrePropietario(placa);
+          const conductor = await buscarConductorID(placa);
+          const tipoId = await ObtenerTipoId(placa);
+          const iD = await ObtenerIdentificacion(placa);
+          const oPP = await ObtenerOperacionPersona(placa);
+          const OPV = await ObtenerOperacionVehiculo(placa);
+          console.error(`Error al buscar los id's y el h3:`, error);
+          return {
+            tipoID: tipoId || "N/A",
+            ID: iD || "N/A",
+            placa_u_documento: placa,
+            nombre_propietario: nombrePropietario || "N/A",
+            operacionPersona: oPP || "NA",
+            operacionVehiculo: OPV || "NA",
+            conductor: conductor || "N/A",
+            mensaje: "No cargaron los módulos",
+            requiere_revision_adicional: requiereRevision ? "Sí" : "No",
+          };
+        }
+      }  
     } catch (error) {
       const nombrePropietario = await obtenerNombrePropietario(placa);
       const conductor = await buscarConductorID(placa);
@@ -157,14 +216,14 @@ app.post("/consultar", async (req, res) => {
         operacionPersona: oPP || "NA",
         operacionVehiculo: OPV || "NA",
         conductor: conductor || "N/A",
-        mensaje: "No tiene comparendos ni multas comparendos ni multas",
+        mensaje: "No cargó la página",
         requiere_revision_adicional: requiereRevision ? "Sí" : "No",
       };
     } finally {
       await page.close();
     }
   }
-  const chunkSize = 15;
+  const chunkSize = 5;
   for (let i = 0; i < placasArray.length; i += chunkSize) {
     const chunk = placasArray.slice(i, i + chunkSize);
     const resultadosChunk = await Promise.allSettled(chunk.map(procesarPlaca));

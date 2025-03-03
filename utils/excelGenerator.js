@@ -85,7 +85,7 @@ function processJsonData(jsonData) {
         Ciudad_de_la_infraccion: "N/A",
         Organismo_de_transito: "N/A",
         Estado: "N/A",
-        Descripcion: "N/A",
+        Descripcion: item.mensaje,
       });
     }
   });
